@@ -10,6 +10,7 @@
 		EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3281EB0C12800814F26 /* Fp.c */; };
 		EF1FA32F1EB0C12800814F26 /* Fp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32A1EB0C12800814F26 /* Fp2.c */; };
 		EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32C1EB0C12800814F26 /* Fp4.c */; };
+		EF1FA3331EB0CE6600814F26 /* Fp8.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3311EB0CE6600814F26 /* Fp8.c */; };
 		EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8CE1EB03A9B00F008F0 /* main.c */; };
 		EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF90C8D51EB03C2100F008F0 /* libgmp.a */; };
 		EFA241FB1EB077F300036D7D /* Settings.c in Sources */ = {isa = PBXBuildFile; fileRef = EFA241F91EB077F300036D7D /* Settings.c */; };
@@ -34,6 +35,8 @@
 		EF1FA32B1EB0C12800814F26 /* Fp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp2.h; sourceTree = "<group>"; };
 		EF1FA32C1EB0C12800814F26 /* Fp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp4.c; sourceTree = "<group>"; };
 		EF1FA32D1EB0C12800814F26 /* Fp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp4.h; sourceTree = "<group>"; };
+		EF1FA3311EB0CE6600814F26 /* Fp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp8.c; sourceTree = "<group>"; };
+		EF1FA3321EB0CE6600814F26 /* Fp8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp8.h; sourceTree = "<group>"; };
 		EF90C8CB1EB03A9B00F008F0 /* KSS16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KSS16; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EF90C8D51EB03C2100F008F0 /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				EF1FA32B1EB0C12800814F26 /* Fp2.h */,
 				EF1FA32C1EB0C12800814F26 /* Fp4.c */,
 				EF1FA32D1EB0C12800814F26 /* Fp4.h */,
+				EF1FA3311EB0CE6600814F26 /* Fp8.c */,
+				EF1FA3321EB0CE6600814F26 /* Fp8.h */,
 			);
 			path = KSS16;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1FA3331EB0CE6600814F26 /* Fp8.c in Sources */,
 				EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */,
 				EFA241FB1EB077F300036D7D /* Settings.c in Sources */,
 				EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */,
