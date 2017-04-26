@@ -12,6 +12,7 @@
 #include "Fp2.h"
 #include "Fp4.h"
 #include "Fp8.h"
+#include "Fp16.h"
 
 int main(int argc, const char * argv[]) {
 
@@ -37,10 +38,10 @@ int main(int argc, const char * argv[]) {
 //    Fp4_random(&F4);
 //    Fp4_printf(&F4);
 
-    struct Fp8 F4;
-    Fp8_init(&F4);
-    Fp8_random(&F4);
-    Fp8_printf(&F4);
+    struct Fp16 F4;
+    Fp16_init(&F4);
+    Fp16_random(&F4);
+    Fp16_printf(&F4);
     
     pre_calculate();
     
