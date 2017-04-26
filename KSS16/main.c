@@ -13,7 +13,7 @@
 #include "Fp4.h"
 #include "Fp8.h"
 #include "Fp16.h"
-#include "EFp.h"
+#include "EFp2.h"
 
 int main(int argc, const char * argv[]) {
 
@@ -41,14 +41,15 @@ int main(int argc, const char * argv[]) {
 //    Fp4_random(&F4);
 //    Fp4_printf(&F4);
 
-    struct EFp F4,ANS;
-    EFp_init(&F4);
-    EFp_init(&ANS);
-    EFp_random_set(&F4);
-    rational_point_check(&F4);
-    EFp_SCM_BIN(&ANS, &F4, params.order_EFp);
-    EFp_printf(&ANS);
-    rational_point_check(&ANS);
+    struct EFp2 F4,ANS;
+    EFp2_init(&F4);
+    EFp2_init(&ANS);
+    EFp2_random_set(&F4);
+     EFp2_printf(&F4);
+    EFp2_rational_point_check(&F4);
+    EFp2_SCM_BIN(&ANS, &F4, params.order_r);
+    EFp2_printf(&ANS);
+    EFp2_rational_point_check(&ANS);
     pre_calculate();
     
     dealloc_constants();
