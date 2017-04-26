@@ -35,4 +35,6 @@ void set_kss16_curve_const()
     mpz_init(kss_curve_const.a);
     mpz_init(kss_curve_const.tmp_a);
     
+    mpz_set_ui(kss_curve_const.a,1);
+    mpz_set_ui(kss_curve_const.tmp_a,1);
 }

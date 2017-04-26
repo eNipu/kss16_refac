@@ -10,25 +10,31 @@
 #include "Settings.h"
 #include "Fp.h"
 #include "Fp2.h"
+#include "Fp4.h"
 
 int main(int argc, const char * argv[]) {
 
     gmp_printf("print %Zd\n",params.prime);
     
-    struct Fp A, B;
-    Fp_init(&A);
-    Fp_init(&B);
-    
-    Fp_random(&A);
-    Fp_random(&B);
-    
-    Fp_add(&A, &A, &B);
-    Fp_printf(&A);
-    
+//    struct Fp A, B;
+//    Fp_init(&A);
+//    Fp_init(&B);
+//    
+//    Fp_random(&A);
+//    Fp_random(&B);
+//    
+//    Fp_add(&A, &A, &B);
+//    Fp_printf(&A);
+//    
     struct Fp2 AA;
     Fp2_init(&AA);
     Fp2_random(&AA);
     Fp2_printf(&AA);
+    
+    struct Fp4 F4;
+    Fp4_init(&F4);
+    Fp4_random(&F4);
+    Fp4_printf(&F4);
 
     return 0;
 }

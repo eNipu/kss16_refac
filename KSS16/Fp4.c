@@ -31,7 +31,7 @@ void Fp4_clear(struct Fp4 *A){
     Fp2_clear(&A->x1);
 }
 void Fp4_printf(struct Fp4 *A){
-    gmp_printf("(%Zd,%Zd,%Zd,%Zd\n",A->x0.x0.x0,A->x0.x1.x0,A->x1.x0.x0,A->x1.x1.x0);
+    gmp_printf("(%Zd,\n%Zd,\n%Zd,\n%Zd)\n",A->x0.x0.x0,A->x0.x1.x0,A->x1.x0.x0,A->x1.x1.x0);
 }
 void Fp4_add(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B){
     struct Fp4 tmp;
@@ -330,26 +330,27 @@ void Fp4_neg(struct Fp4 *ans,struct Fp4 *a){
     Fp4_clear(&tmp);
 }
 
-//void Fp4_mul_betainv(struct Fp4 *ANS)
-//{
-//    struct Fp4 tmp;
-//    Fp4_init(&tmp);
-//    Fp4_set_ui(&tmp, 0);
-//    mpz_set(tmp.x1.x1.x0,a_x);
-//    
-//    mpz_t c_inv,c;
-//    mpz_init(c_inv);
-//    mpz_init(c);
-//    mpz_set_ui(c,c1);
-//    mpz_invert(c_inv,c,params.prime);
-//    mpz_mul(tmp.x1.x1.x0,tmp.x1.x1.x0,c_inv);
-//    
-//    Fp4_set(ANS, &tmp);
-//    
-//    mpz_clear(c);
-//    mpz_clear(c_inv);
-//    Fp4_clear(&tmp);
-//}
+void Fp4_mul_betainv(struct Fp4 *ANS)
+{
+    struct Fp4 tmp;
+    Fp4_init(&tmp);
+    Fp4_set_ui(&tmp, 0);
+    
+    mpz_set(tmp.x1.x1.x0,kss_curve_const.a);
+    
+    mpz_t c_inv,c;
+    mpz_init(c_inv);
+    mpz_init(c);
+    mpz_set_ui(c,c1);
+    mpz_invert(c_inv,c,params.prime);
+    mpz_mul(tmp.x1.x1.x0,tmp.x1.x1.x0,c_inv);
+    
+    Fp4_set(ANS, &tmp);
+    
+    mpz_clear(c);
+    mpz_clear(c_inv);
+    Fp4_clear(&tmp);
+}
 //
 //void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A){
 //    struct Fp4 t_ans;

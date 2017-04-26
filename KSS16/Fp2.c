@@ -31,7 +31,7 @@ void Fp2_clear(struct Fp2 *A){
     Fp_clear(&A->x1);
 }
 void Fp2_printf(struct Fp2 *A){
-    gmp_printf("%Zd,%Zd\n",A->x0.x0,A->x1.x0);
+    gmp_printf("(%Zd,\n%Zd)\n",A->x0.x0,A->x1.x0);
 }
 void Fp2_add(struct Fp2 *ANS,struct Fp2 *A,struct Fp2 *B){
     struct Fp2 tmp;
