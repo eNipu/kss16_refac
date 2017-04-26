@@ -26,15 +26,19 @@ int main(int argc, const char * argv[]) {
 //    Fp_add(&A, &A, &B);
 //    Fp_printf(&A);
 //    
-    struct Fp2 AA;
-    Fp2_init(&AA);
-    Fp2_random(&AA);
-    Fp2_printf(&AA);
-    
-    struct Fp4 F4;
-    Fp4_init(&F4);
-    Fp4_random(&F4);
-    Fp4_printf(&F4);
+//    struct Fp2 AA;
+//    Fp2_init(&AA);
+//    Fp2_random(&AA);
+//    Fp2_printf(&AA);
+//    
+//    struct Fp4 F4;
+//    Fp4_init(&F4);
+//    Fp4_random(&F4);
+//    Fp4_printf(&F4);
 
+    pre_calculate();
+    
+    dealloc_constants();
+    
     return 0;
 }

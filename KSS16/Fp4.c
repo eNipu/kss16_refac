@@ -351,16 +351,16 @@ void Fp4_mul_betainv(struct Fp4 *ANS)
     mpz_clear(c_inv);
     Fp4_clear(&tmp);
 }
-//
-//void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A){
-//    struct Fp4 t_ans;
-//    Fp4_init(&t_ans);
-//    
-//    Fp2_frobenius_map(&t_ans.x0,&A->x0);
-//    Fp2_frobenius_map(&t_ans.x1,&A->x1);
-//    Fp2_mul_Fp(&t_ans.x1,&t_ans.x1,&pm1d4);
-//    
-//    Fp4_set(ANS,&t_ans);
-//    
-//    Fp4_clear(&t_ans);
-//}
+
+void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A){
+    struct Fp4 t_ans;
+    Fp4_init(&t_ans);
+    
+    Fp2_frobenius_map(&t_ans.x0,&A->x0);
+    Fp2_frobenius_map(&t_ans.x1,&A->x1);
+    Fp2_mul_Fp(&t_ans.x1,&t_ans.x1,&pm1d4);
+    
+    Fp4_set(ANS,&t_ans);
+    
+    Fp4_clear(&t_ans);
+}

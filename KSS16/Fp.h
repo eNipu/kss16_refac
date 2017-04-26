@@ -15,6 +15,11 @@ struct Fp{
     mpz_t x0;
 };
 
+extern struct Fp qnr_c1,c_inv,pm1d4,pm5d8,pm13d16;
+extern struct Fp m_pm1d4,m_cpm13d16;
+extern struct Fp m_cpm5d8,m_cpm1d4pm5d8,pm1d4pm5d8,cpm1d4pm5d8,pm5d8pm13d16,m_cpm5d8pm13d16,cpm5d8pm13d16,ccpm5d8pm13d16,m_ccpm1d4pm5d8p13d16,cpm1d4pm5d6pm13d16,ccpm1d4pm5d8pm13d16;
+extern mpz_t p8p1dr;
+
 
 extern void Fp_init(struct Fp *A);
 extern void Fp_set(struct Fp *ANS,struct Fp *A);
@@ -36,4 +41,9 @@ extern int  Fp_cmp_mpz(struct Fp *A,mpz_t B);
 extern void Fp_mul_mpz(struct Fp *ANS,struct Fp *A,mpz_t B);
 extern void Fp_neg(struct Fp *ANS,struct Fp *A);
 extern int Fp_cmp(struct Fp *A,struct Fp *B);
+
+#pragma mark util methods declaration
+extern void dealloc_constants();
+extern void pre_calculate();
+
 #endif /* Fp_h */

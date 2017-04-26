@@ -8,7 +8,10 @@
 
 #include "Fp.h"
 
-
+struct Fp qnr_c1,c_inv,pm1d4,pm5d8,pm13d16;
+struct Fp m_pm1d4,m_cpm13d16;
+struct Fp m_cpm5d8,m_cpm1d4pm5d8,pm1d4pm5d8,cpm1d4pm5d8,pm5d8pm13d16,m_cpm5d8pm13d16,cpm5d8pm13d16,ccpm5d8pm13d16,m_ccpm1d4pm5d8p13d16,cpm1d4pm5d6pm13d16,ccpm1d4pm5d8pm13d16;
+mpz_t p8p1dr;
 
 #pragma mark Fp method
 void Fp_init(struct Fp *A){
@@ -275,4 +278,89 @@ int Fp_cmp_mpz(struct Fp *A,mpz_t B){
         return 0;
     }
     return 1;
+}
+
+
+void dealloc_constants()
+{
+    mpz_clear(p8p1dr);
+    Fp_clear(&qnr_c1);
+    Fp_clear(&pm13d16);
+    Fp_clear(&pm5d8);
+    Fp_clear(&pm1d4);
+    Fp_clear(&m_pm1d4);
+    Fp_clear(&m_cpm5d8);
+    Fp_clear(&m_cpm13d16);
+    Fp_clear(&pm5d8pm13d16);
+    Fp_clear(&cpm5d8pm13d16);
+    Fp_clear(&m_cpm5d8pm13d16);
+    Fp_clear(&pm1d4pm5d8);
+    Fp_clear(&cpm1d4pm5d8);
+    Fp_clear(&m_cpm1d4pm5d8);
+    Fp_clear(&ccpm5d8pm13d16);
+    Fp_clear(&cpm1d4pm5d6pm13d16);
+    Fp_clear(&m_ccpm1d4pm5d8p13d16);
+    Fp_clear(&ccpm1d4pm5d8pm13d16);
+}
+
+void pre_calculate()
+{
+    mpz_init(p8p1dr);
+    Fp_init(&qnr_c1);
+    Fp_init(&pm13d16);
+    Fp_init(&pm5d8);
+    Fp_init(&pm1d4);
+    Fp_init(&m_pm1d4);
+    Fp_init(&m_cpm5d8);
+    Fp_init(&m_cpm13d16);
+    Fp_init(&pm5d8pm13d16);
+    Fp_init(&cpm5d8pm13d16);
+    Fp_init(&m_cpm5d8pm13d16);
+    Fp_init(&pm1d4pm5d8);
+    Fp_init(&cpm1d4pm5d8);
+    Fp_init(&m_cpm1d4pm5d8);
+    Fp_init(&ccpm5d8pm13d16);
+    Fp_init(&cpm1d4pm5d6pm13d16);
+    Fp_init(&m_ccpm1d4pm5d8p13d16);
+    Fp_init(&ccpm1d4pm5d8pm13d16);
+    Fp_set_ui(&qnr_c1,c1);
+    
+    mpz_pow_ui(p8p1dr,params.prime,8);
+    mpz_add_ui(p8p1dr,p8p1dr,1);
+    //    printf(" div ====%d\n\n",(int)mpz_divisible_p(p8p1dr,order_r));
+    mpz_tdiv_q(p8p1dr,p8p1dr,params.order_r);
+    
+    mpz_invert(c_inv.x0,qnr_c1.x0,params.prime);
+    
+    mpz_sub_ui(pm13d16.x0,params.prime,13);
+    mpz_tdiv_q_ui(pm13d16.x0,pm13d16.x0,16);
+    Fp_pow(&pm13d16,&qnr_c1,pm13d16.x0);
+    
+    mpz_sub_ui(pm5d8.x0,params.prime,5);
+    mpz_tdiv_q_ui(pm5d8.x0,pm5d8.x0,8);
+    Fp_pow(&pm5d8,&qnr_c1,pm5d8.x0);
+    
+    mpz_sub_ui(pm1d4.x0,params.prime,1);
+    mpz_tdiv_q_ui(pm1d4.x0,pm1d4.x0,4);
+    Fp_pow(&pm1d4,&qnr_c1,pm1d4.x0);
+    Fp_neg(&m_pm1d4, &pm1d4);
+    
+    mpz_sub(m_cpm5d8.x0,params.prime,qnr_c1.x0);
+    Fp_mul(&m_cpm5d8, &pm5d8, &m_cpm5d8);
+    
+    Fp_mul(&m_cpm13d16, &pm13d16, &qnr_c1);
+    Fp_neg(&m_cpm13d16, &m_cpm13d16);
+    
+    Fp_mul(&pm1d4pm5d8, &pm1d4, &pm5d8);
+    Fp_mul(&cpm1d4pm5d8, &pm1d4pm5d8, &qnr_c1); // c.c^(p-1)/4.c^(p-5)/8
+    mpz_sub(m_cpm1d4pm5d8.x0,params.prime,cpm1d4pm5d8.x0);
+    
+    Fp_mul(&pm5d8pm13d16,&pm13d16,&pm5d8);// c^(p-13)/16.c^(p-5)/8
+    Fp_mul(&cpm5d8pm13d16,&pm5d8pm13d16,&qnr_c1);// c.c^(p-13)/16.c^(p-5)/8
+    mpz_sub(m_cpm5d8pm13d16.x0,params.prime,cpm5d8pm13d16.x0);
+    
+    Fp_mul(&cpm1d4pm5d6pm13d16, &cpm5d8pm13d16, &pm1d4); // c.c^(p-1)/4.c^(p-13)/16.c^(p-5)/8
+    
+    Fp_mul(&ccpm1d4pm5d8pm13d16, &cpm1d4pm5d6pm13d16, &qnr_c1); // c.c.c^(p-13)/16.c^(p-5)/8
+    mpz_sub(m_ccpm1d4pm5d8p13d16.x0,params.prime,ccpm1d4pm5d8pm13d16.x0);
 }

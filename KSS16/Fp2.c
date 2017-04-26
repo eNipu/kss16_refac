@@ -344,3 +344,21 @@ void Fp2_neg(struct Fp2 *ans,struct Fp2 *a){
     
     Fp2_clear(&tmp);
 }
+
+void Fp2_frobenius_map(struct Fp2 *ANS, struct Fp2 *A){
+    struct Fp2 t_ans;
+    Fp2_init(&t_ans);
+    
+    Fp_set(&t_ans.x0,&A->x0);
+    if (mpz_cmp_ui(A->x1.x0,0)==0) {
+        Fp_set(&t_ans.x1,&A->x1);
+    }
+    else{
+        mpz_sub(t_ans.x1.x0,params.prime,A->x1.x0);
+    }
+    
+    
+    Fp2_set(ANS,&t_ans);
+    
+    Fp2_clear(&t_ans);
+}
