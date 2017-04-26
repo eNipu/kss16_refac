@@ -10,6 +10,9 @@
 
 int c1 = 2; //Quardratic not residue over Prime field Fp
 int isParamsSet = 0;
+int TRUE = TRUE_1;
+int FALSE = FALSE_0;
+
 struct KSS16_params params;
 struct KSS16_constants kss_curve_const;
 

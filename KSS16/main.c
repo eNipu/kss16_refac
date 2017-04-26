@@ -13,10 +13,13 @@
 #include "Fp4.h"
 #include "Fp8.h"
 #include "Fp16.h"
+#include "EFp.h"
 
 int main(int argc, const char * argv[]) {
 
     gmp_printf("print %Zd\n",params.prime);
+    set_kss16_params();
+    set_kss16_curve_const();
     
 //    struct Fp A, B;
 //    Fp_init(&A);
@@ -38,11 +41,14 @@ int main(int argc, const char * argv[]) {
 //    Fp4_random(&F4);
 //    Fp4_printf(&F4);
 
-    struct Fp16 F4;
-    Fp16_init(&F4);
-    Fp16_random(&F4);
-    Fp16_printf(&F4);
-    
+    struct EFp F4,ANS;
+    EFp_init(&F4);
+    EFp_init(&ANS);
+    EFp_random_set(&F4);
+    rational_point_check(&F4);
+    EFp_SCM_BIN(&ANS, &F4, params.order_EFp);
+    EFp_printf(&ANS);
+    rational_point_check(&ANS);
     pre_calculate();
     
     dealloc_constants();

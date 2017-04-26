@@ -11,6 +11,9 @@
 
 #include "config.h"
 
+#define TRUE_1 1
+#define FALSE_0 0
+
 #define PRIME "615623382030675150502066218751443438064107566348210118507940234835256709422634902533028653925239565581"
 #define ORDER_R "10897499371578763791778093615151768824360936005521891580808300080405508061745073"
 
@@ -37,6 +40,8 @@ extern struct KSS16_constants kss_curve_const;
 
 extern int c1;
 extern int isParamsSet;
+extern int TRUE;
+extern int FALSE;
 
 extern void set_kss16_params();
 extern void set_kss16_curve_const();
