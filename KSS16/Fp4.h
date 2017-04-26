@@ -16,29 +16,29 @@ struct Fp4{
 };
 
 #pragma mark Fp4 methods
-void Fp4_init(struct Fp4 *A);
-void Fp4_set(struct Fp4 *ANS,struct Fp4 *A);
-void Fp4_set_ui(struct Fp4 *A,signed long int B);
-void Fp4_random(struct Fp4 *A);
-void Fp4_clear(struct Fp4 *A);
-void Fp4_printf(struct Fp4 *A);
-void Fp4_add(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
-void Fp4_add_ui(struct Fp4 *ANS,struct Fp4 *A,unsigned long int B);
-void Fp4_sub(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
-void Fp4_mul(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
-void Fp4_mul_v(struct Fp4 *ANS,struct Fp4 *A);
-void Fp4_mul_ui(struct Fp4 *ANS,struct Fp4 *A,unsigned long int B);
-void Fp4_mul_mpz(struct Fp4 *ANS,struct Fp4 *A,mpz_t B);
-void Fp4_mul_Fp(struct Fp4 *ANS,struct Fp4 *A,struct Fp *B);
-void Fp4_neg(struct Fp4 *ANS,struct Fp4 *A);
-void Fp4_invert(struct Fp4 *ANS,struct Fp4 *A);
-void Fp4_div(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
-void Fp4_pow(struct Fp4 *ANS,struct Fp4 *A,mpz_t B);
-void Fp4_sqrt(struct Fp4 *ANS,struct Fp4 *A);//x^2=a mod p
-int  Fp4_legendre(struct Fp4 *A);
-int  Fp4_cmp(struct Fp4 *A,struct Fp4 *B);
-int  Fp4_cmp_mpz(struct Fp4 *A,mpz_t B);
-void Fp4_neg(struct Fp4 *ANS,struct Fp4 *A);
-void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A);
-
+extern void Fp4_init(struct Fp4 *A);
+extern void Fp4_set(struct Fp4 *ANS,struct Fp4 *A);
+extern void Fp4_set_ui(struct Fp4 *A,signed long int B);
+extern void Fp4_random(struct Fp4 *A);
+extern void Fp4_clear(struct Fp4 *A);
+extern void Fp4_printf(struct Fp4 *A);
+extern void Fp4_add(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
+extern void Fp4_add_ui(struct Fp4 *ANS,struct Fp4 *A,unsigned long int B);
+extern void Fp4_sub(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
+extern void Fp4_mul(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
+extern void Fp4_mul_v(struct Fp4 *ANS,struct Fp4 *A);
+extern void Fp4_mul_ui(struct Fp4 *ANS,struct Fp4 *A,unsigned long int B);
+extern void Fp4_mul_mpz(struct Fp4 *ANS,struct Fp4 *A,mpz_t B);
+extern void Fp4_mul_Fp(struct Fp4 *ANS,struct Fp4 *A,struct Fp *B);
+extern void Fp4_neg(struct Fp4 *ANS,struct Fp4 *A);
+extern void Fp4_invert(struct Fp4 *ANS,struct Fp4 *A);
+extern void Fp4_div(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B);
+extern void Fp4_pow(struct Fp4 *ANS,struct Fp4 *A,mpz_t B);
+extern void Fp4_sqrt(struct Fp4 *ANS,struct Fp4 *A);//x^2=a mod p
+extern int  Fp4_legendre(struct Fp4 *A);
+extern int  Fp4_cmp(struct Fp4 *A,struct Fp4 *B);
+extern int  Fp4_cmp_mpz(struct Fp4 *A,mpz_t B);
+extern void Fp4_neg(struct Fp4 *ANS,struct Fp4 *A);
+extern void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A);
+extern void Fp4_mul_betainv(struct Fp4 *ANS);
 #endif /* Fp4_h */
