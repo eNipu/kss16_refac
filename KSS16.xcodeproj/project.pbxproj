@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8CE1EB03A9B00F008F0 /* main.c */; };
+		EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF90C8D51EB03C2100F008F0 /* libgmp.a */; };
+		EF90C8DA1EB03D3F00F008F0 /* Fp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8D81EB03D3F00F008F0 /* Fp.c */; };
+		EF90C8DD1EB0412900F008F0 /* Parameters.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8DB1EB0412900F008F0 /* Parameters.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF90C8C91EB03A9B00F008F0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF90C8CB1EB03A9B00F008F0 /* KSS16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KSS16; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EF90C8D51EB03C2100F008F0 /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
+		EF90C8D71EB03CB800F008F0 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		EF90C8D81EB03D3F00F008F0 /* Fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp.c; sourceTree = "<group>"; };
+		EF90C8D91EB03D3F00F008F0 /* Fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp.h; sourceTree = "<group>"; };
+		EF90C8DB1EB0412900F008F0 /* Parameters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Parameters.c; sourceTree = "<group>"; };
+		EF90C8DC1EB0412900F008F0 /* Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF90C8C81EB03A9B00F008F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF90C8C21EB03A9B00F008F0 = {
+			isa = PBXGroup;
+			children = (
+				EF90C8CD1EB03A9B00F008F0 /* KSS16 */,
+				EF90C8CC1EB03A9B00F008F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF90C8CC1EB03A9B00F008F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF90C8CB1EB03A9B00F008F0 /* KSS16 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF90C8CD1EB03A9B00F008F0 /* KSS16 */ = {
+			isa = PBXGroup;
+			children = (
+				EF90C8CE1EB03A9B00F008F0 /* main.c */,
+				EF90C8D51EB03C2100F008F0 /* libgmp.a */,
+				EF90C8D71EB03CB800F008F0 /* config.h */,
+				EF90C8DB1EB0412900F008F0 /* Parameters.c */,
+				EF90C8DC1EB0412900F008F0 /* Parameters.h */,
+				EF90C8D81EB03D3F00F008F0 /* Fp.c */,
+				EF90C8D91EB03D3F00F008F0 /* Fp.h */,
+			);
+			path = KSS16;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF90C8CA1EB03A9B00F008F0 /* KSS16 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF90C8D21EB03A9B00F008F0 /* Build configuration list for PBXNativeTarget "KSS16" */;
+			buildPhases = (
+				EF90C8C71EB03A9B00F008F0 /* Sources */,
+				EF90C8C81EB03A9B00F008F0 /* Frameworks */,
+				EF90C8C91EB03A9B00F008F0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSS16;
+			productName = KSS16;
+			productReference = EF90C8CB1EB03A9B00F008F0 /* KSS16 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF90C8C31EB03A9B00F008F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Khandaker Md. Al-Amin";
+				TargetAttributes = {
+					EF90C8CA1EB03A9B00F008F0 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 83XHM8TH3F;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF90C8C61EB03A9B00F008F0 /* Build configuration list for PBXProject "KSS16" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF90C8C21EB03A9B00F008F0;
+			productRefGroup = EF90C8CC1EB03A9B00F008F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF90C8CA1EB03A9B00F008F0 /* KSS16 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF90C8C71EB03A9B00F008F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF90C8DD1EB0412900F008F0 /* Parameters.c in Sources */,
+				EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */,
+				EF90C8DA1EB03D3F00F008F0 /* Fp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EF90C8D01EB03A9B00F008F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF90C8D11EB03A9B00F008F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EF90C8D31EB03A9B00F008F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 83XHM8TH3F;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KSS16",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF90C8D41EB03A9B00F008F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 83XHM8TH3F;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KSS16",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF90C8C61EB03A9B00F008F0 /* Build configuration list for PBXProject "KSS16" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF90C8D01EB03A9B00F008F0 /* Debug */,
+				EF90C8D11EB03A9B00F008F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF90C8D21EB03A9B00F008F0 /* Build configuration list for PBXNativeTarget "KSS16" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF90C8D31EB03A9B00F008F0 /* Debug */,
+				EF90C8D41EB03A9B00F008F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF90C8C31EB03A9B00F008F0 /* Project object */;
+}
