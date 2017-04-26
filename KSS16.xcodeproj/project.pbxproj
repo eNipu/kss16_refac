@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8CE1EB03A9B00F008F0 /* main.c */; };
 		EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF90C8D51EB03C2100F008F0 /* libgmp.a */; };
-		EF90C8DA1EB03D3F00F008F0 /* Fp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8D81EB03D3F00F008F0 /* Fp.c */; };
-		EF90C8DD1EB0412900F008F0 /* Parameters.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8DB1EB0412900F008F0 /* Parameters.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,9 +28,6 @@
 		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EF90C8D51EB03C2100F008F0 /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
 		EF90C8D71EB03CB800F008F0 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		EF90C8D81EB03D3F00F008F0 /* Fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp.c; sourceTree = "<group>"; };
-		EF90C8D91EB03D3F00F008F0 /* Fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp.h; sourceTree = "<group>"; };
-		EF90C8DB1EB0412900F008F0 /* Parameters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Parameters.c; sourceTree = "<group>"; };
 		EF90C8DC1EB0412900F008F0 /* Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,10 +65,7 @@
 				EF90C8CE1EB03A9B00F008F0 /* main.c */,
 				EF90C8D51EB03C2100F008F0 /* libgmp.a */,
 				EF90C8D71EB03CB800F008F0 /* config.h */,
-				EF90C8DB1EB0412900F008F0 /* Parameters.c */,
 				EF90C8DC1EB0412900F008F0 /* Parameters.h */,
-				EF90C8D81EB03D3F00F008F0 /* Fp.c */,
-				EF90C8D91EB03D3F00F008F0 /* Fp.h */,
 			);
 			path = KSS16;
 			sourceTree = "<group>";
@@ -136,9 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF90C8DD1EB0412900F008F0 /* Parameters.c in Sources */,
 				EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */,
-				EF90C8DA1EB03D3F00F008F0 /* Fp.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
