@@ -15,6 +15,7 @@
 		EF1FA3391EB0D22F00814F26 /* EFp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3371EB0D22F00814F26 /* EFp.c */; };
 		EF1FA33C1EB0ED7400814F26 /* EFp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA33A1EB0ED7400814F26 /* EFp2.c */; };
 		EF1FA33F1EB0F7BD00814F26 /* EFp4.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA33D1EB0F7BD00814F26 /* EFp4.c */; };
+		EF1FA3441EB108B000814F26 /* EFp8.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3421EB108B000814F26 /* EFp8.c */; };
 		EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8CE1EB03A9B00F008F0 /* main.c */; };
 		EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF90C8D51EB03C2100F008F0 /* libgmp.a */; };
 		EFA241FB1EB077F300036D7D /* Settings.c in Sources */ = {isa = PBXBuildFile; fileRef = EFA241F91EB077F300036D7D /* Settings.c */; };
@@ -49,6 +50,8 @@
 		EF1FA33B1EB0ED7400814F26 /* EFp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFp2.h; sourceTree = "<group>"; };
 		EF1FA33D1EB0F7BD00814F26 /* EFp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EFp4.c; sourceTree = "<group>"; };
 		EF1FA33E1EB0F7BD00814F26 /* EFp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFp4.h; sourceTree = "<group>"; };
+		EF1FA3421EB108B000814F26 /* EFp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EFp8.c; sourceTree = "<group>"; };
+		EF1FA3431EB108B000814F26 /* EFp8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFp8.h; sourceTree = "<group>"; };
 		EF90C8CB1EB03A9B00F008F0 /* KSS16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KSS16; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EF90C8D51EB03C2100F008F0 /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				EF1FA3381EB0D22F00814F26 /* EFp.h */,
 				EF1FA33B1EB0ED7400814F26 /* EFp2.h */,
 				EF1FA33E1EB0F7BD00814F26 /* EFp4.h */,
+				EF1FA3421EB108B000814F26 /* EFp8.c */,
+				EF1FA3431EB108B000814F26 /* EFp8.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				EF1FA3331EB0CE6600814F26 /* Fp8.c in Sources */,
 				EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */,
 				EFA241FB1EB077F300036D7D /* Settings.c in Sources */,
+				EF1FA3441EB108B000814F26 /* EFp8.c in Sources */,
 				EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */,
 				EF1FA32F1EB0C12800814F26 /* Fp2.c in Sources */,
 				EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */,
