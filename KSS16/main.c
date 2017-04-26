@@ -7,9 +7,31 @@
 //
 
 #include "config.h"
+#include "Settings.h"
+#include "Fp.h"
+#include "Fp2.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+
+    mpz_t prime;
+    mpz_init(prime);
+    get_prime(&prime);
+    gmp_printf("print %Zd\n",&prime);
+    
+    struct Fp A, B;
+    Fp_init(&A);
+    Fp_init(&B);
+    
+    Fp_random(&A);
+    Fp_random(&B);
+    
+    Fp_add(&A, &A, &B);
+    Fp_printf(&A);
+    
+    struct Fp2 AA;
+    Fp2_init(&AA);
+    Fp2_random(&AA);
+    Fp2_printf(&AA);
+    
     return 0;
 }
