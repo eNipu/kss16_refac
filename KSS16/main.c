@@ -13,10 +13,7 @@
 
 int main(int argc, const char * argv[]) {
 
-    mpz_t prime;
-    mpz_init(prime);
-    get_prime(&prime);
-    gmp_printf("print %Zd\n",&prime);
+    gmp_printf("print %Zd\n",params.prime);
     
     struct Fp A, B;
     Fp_init(&A);
@@ -32,6 +29,6 @@ int main(int argc, const char * argv[]) {
     Fp2_init(&AA);
     Fp2_random(&AA);
     Fp2_printf(&AA);
-    
+
     return 0;
 }

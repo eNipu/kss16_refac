@@ -9,12 +9,30 @@
 #include "Settings.h"
 
 int c1 = 2; //Quardratic not residue over Prime field Fp
-int isPrimeSet = 0;
+int isParamsSet = 0;
+struct KSS16_params params;
+struct KSS16_constants kss_curve_const;
 
-void get_prime(mpz_t *p){
-    mpz_set_str(*p,PRIME,10);
+void set_kss16_params(){
+    
+    if (!isParamsSet) {
+        mpz_init(params.prime);
+        mpz_init(params.order_r);
+        mpz_init(params.trace_t);
+        mpz_init(params.order_EFp);
+        
+        mpz_set_str(params.prime,PRIME,10);
+        mpz_set_str(params.order_r,ORDER_R,10);
+        mpz_set_str(params.trace_t,TRACE_T,10);
+        mpz_set_str(params.order_EFp,ORDER_EFp,10);
+        
+        isParamsSet = 1;
+    }
 }
 
-void get_order_r(mpz_t *r){
-    mpz_set_str(*r,ORDER_R,10);
+void set_kss16_curve_const()
+{
+    mpz_init(kss_curve_const.a);
+    mpz_init(kss_curve_const.tmp_a);
+    
 }

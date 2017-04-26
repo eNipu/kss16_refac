@@ -14,7 +14,6 @@
 struct Fp2{
     struct Fp x0,x1;
 };
-extern int c1;
 
 #pragma mark Fp2 method delaration
 void Fp2_init(struct Fp2 *A);

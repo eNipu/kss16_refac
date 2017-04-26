@@ -226,7 +226,7 @@ void Fp4_sqrt(struct Fp4 *ANS,struct Fp4 *A){
     while(Fp4_legendre(&n)!=-1){
         Fp4_random(&n);
     }
-    mpz_pow_ui(q,prime,12);
+    mpz_pow_ui(q,params.prime,12);
     mpz_sub_ui(q,q,1);
     mpz_set_ui(e,0);
     while(mpz_odd_p(q)==0){
@@ -257,7 +257,7 @@ void Fp4_sqrt(struct Fp4 *ANS,struct Fp4 *A){
         }
         mpz_sub_ui(tmp_mpz,r,m);
         mpz_sub_ui(tmp_mpz,tmp_mpz,1);
-        mpz_powm(tmp_mpz,set_2,tmp_mpz,prime);
+        mpz_powm(tmp_mpz,set_2,tmp_mpz,params.prime);
         // gmp_printf("%Zd,%Zd,%d\n",tmp_mpz,r,m);
         Fp4_pow(&t,&y,tmp_mpz);
         Fp4_pow(&y,&t,set_2);
@@ -288,7 +288,7 @@ int Fp4_legendre(struct Fp4 *a){
     mpz_init(i);
     mpz_init(cmp);
     mpz_set_ui(cmp,1);
-    mpz_pow_ui(i,prime,4);
+    mpz_pow_ui(i,params.prime,4);
     mpz_sub_ui(i,i,1);
     mpz_tdiv_q_ui(i,i,2);
     Fp4_pow(&tmp,a,i);
@@ -330,36 +330,36 @@ void Fp4_neg(struct Fp4 *ans,struct Fp4 *a){
     Fp4_clear(&tmp);
 }
 
-void Fp4_mul_betainv(struct Fp4 *ANS)
-{
-    struct Fp4 tmp;
-    Fp4_init(&tmp);
-    Fp4_set_ui(&tmp, 0);
-    mpz_set(tmp.x1.x1.x0,a_x);
-    
-    mpz_t c_inv,c;
-    mpz_init(c_inv);
-    mpz_init(c);
-    mpz_set_ui(c,c1);
-    mpz_invert(c_inv,c,prime);
-    mpz_mul(tmp.x1.x1.x0,tmp.x1.x1.x0,c_inv);
-    
-    Fp4_set(ANS, &tmp);
-    
-    mpz_clear(c);
-    mpz_clear(c_inv);
-    Fp4_clear(&tmp);
-}
-
-void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A){
-    struct Fp4 t_ans;
-    Fp4_init(&t_ans);
-    
-    Fp2_frobenius_map(&t_ans.x0,&A->x0);
-    Fp2_frobenius_map(&t_ans.x1,&A->x1);
-    Fp2_mul_Fp(&t_ans.x1,&t_ans.x1,&pm1d4);
-    
-    Fp4_set(ANS,&t_ans);
-    
-    Fp4_clear(&t_ans);
-}
+//void Fp4_mul_betainv(struct Fp4 *ANS)
+//{
+//    struct Fp4 tmp;
+//    Fp4_init(&tmp);
+//    Fp4_set_ui(&tmp, 0);
+//    mpz_set(tmp.x1.x1.x0,a_x);
+//    
+//    mpz_t c_inv,c;
+//    mpz_init(c_inv);
+//    mpz_init(c);
+//    mpz_set_ui(c,c1);
+//    mpz_invert(c_inv,c,params.prime);
+//    mpz_mul(tmp.x1.x1.x0,tmp.x1.x1.x0,c_inv);
+//    
+//    Fp4_set(ANS, &tmp);
+//    
+//    mpz_clear(c);
+//    mpz_clear(c_inv);
+//    Fp4_clear(&tmp);
+//}
+//
+//void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A){
+//    struct Fp4 t_ans;
+//    Fp4_init(&t_ans);
+//    
+//    Fp2_frobenius_map(&t_ans.x0,&A->x0);
+//    Fp2_frobenius_map(&t_ans.x1,&A->x1);
+//    Fp2_mul_Fp(&t_ans.x1,&t_ans.x1,&pm1d4);
+//    
+//    Fp4_set(ANS,&t_ans);
+//    
+//    Fp4_clear(&t_ans);
+//}

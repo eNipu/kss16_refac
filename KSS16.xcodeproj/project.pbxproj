@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF1027E21EB08F5E002DFB94 /* Fp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1027E01EB08F5E002DFB94 /* Fp.c */; };
-		EF1027E51EB09137002DFB94 /* Fp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1027E31EB09137002DFB94 /* Fp2.c */; };
+		EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3281EB0C12800814F26 /* Fp.c */; };
+		EF1FA32F1EB0C12800814F26 /* Fp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32A1EB0C12800814F26 /* Fp2.c */; };
+		EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32C1EB0C12800814F26 /* Fp4.c */; };
 		EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8CE1EB03A9B00F008F0 /* main.c */; };
 		EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF90C8D51EB03C2100F008F0 /* libgmp.a */; };
 		EFA241FB1EB077F300036D7D /* Settings.c in Sources */ = {isa = PBXBuildFile; fileRef = EFA241F91EB077F300036D7D /* Settings.c */; };
-		EFAD86121EB0ABA900829293 /* Fp4.c in Sources */ = {isa = PBXBuildFile; fileRef = EFAD86101EB0ABA900829293 /* Fp4.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,18 +28,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EF1027E01EB08F5E002DFB94 /* Fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp.c; sourceTree = "<group>"; };
-		EF1027E11EB08F5E002DFB94 /* Fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp.h; sourceTree = "<group>"; };
-		EF1027E31EB09137002DFB94 /* Fp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp2.c; sourceTree = "<group>"; };
-		EF1027E41EB09137002DFB94 /* Fp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp2.h; sourceTree = "<group>"; };
+		EF1FA3281EB0C12800814F26 /* Fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp.c; sourceTree = "<group>"; };
+		EF1FA3291EB0C12800814F26 /* Fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp.h; sourceTree = "<group>"; };
+		EF1FA32A1EB0C12800814F26 /* Fp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp2.c; sourceTree = "<group>"; };
+		EF1FA32B1EB0C12800814F26 /* Fp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp2.h; sourceTree = "<group>"; };
+		EF1FA32C1EB0C12800814F26 /* Fp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp4.c; sourceTree = "<group>"; };
+		EF1FA32D1EB0C12800814F26 /* Fp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp4.h; sourceTree = "<group>"; };
 		EF90C8CB1EB03A9B00F008F0 /* KSS16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KSS16; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EF90C8D51EB03C2100F008F0 /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
 		EF90C8D71EB03CB800F008F0 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		EFA241F91EB077F300036D7D /* Settings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Settings.c; sourceTree = "<group>"; };
 		EFA241FA1EB077F300036D7D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		EFAD86101EB0ABA900829293 /* Fp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp4.c; sourceTree = "<group>"; };
-		EFAD86111EB0ABA900829293 /* Fp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,14 +76,14 @@
 				EF90C8D71EB03CB800F008F0 /* config.h */,
 				EFA241F91EB077F300036D7D /* Settings.c */,
 				EFA241FA1EB077F300036D7D /* Settings.h */,
-				EF1027E11EB08F5E002DFB94 /* Fp.h */,
-				EF1027E01EB08F5E002DFB94 /* Fp.c */,
-				EF1027E41EB09137002DFB94 /* Fp2.h */,
-				EF1027E31EB09137002DFB94 /* Fp2.c */,
 				EF90C8D51EB03C2100F008F0 /* libgmp.a */,
 				EF90C8CE1EB03A9B00F008F0 /* main.c */,
-				EFAD86101EB0ABA900829293 /* Fp4.c */,
-				EFAD86111EB0ABA900829293 /* Fp4.h */,
+				EF1FA3281EB0C12800814F26 /* Fp.c */,
+				EF1FA3291EB0C12800814F26 /* Fp.h */,
+				EF1FA32A1EB0C12800814F26 /* Fp2.c */,
+				EF1FA32B1EB0C12800814F26 /* Fp2.h */,
+				EF1FA32C1EB0C12800814F26 /* Fp4.c */,
+				EF1FA32D1EB0C12800814F26 /* Fp4.h */,
 			);
 			path = KSS16;
 			sourceTree = "<group>";
@@ -146,10 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFAD86121EB0ABA900829293 /* Fp4.c in Sources */,
+				EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */,
 				EFA241FB1EB077F300036D7D /* Settings.c in Sources */,
-				EF1027E21EB08F5E002DFB94 /* Fp.c in Sources */,
-				EF1027E51EB09137002DFB94 /* Fp2.c in Sources */,
+				EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */,
+				EF1FA32F1EB0C12800814F26 /* Fp2.c in Sources */,
 				EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

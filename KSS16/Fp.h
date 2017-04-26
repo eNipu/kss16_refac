@@ -15,6 +15,7 @@ struct Fp{
     mpz_t x0;
 };
 
+
 extern void Fp_init(struct Fp *A);
 extern void Fp_set(struct Fp *ANS,struct Fp *A);
 extern void Fp_set_ui(struct Fp *A,signed long int B);

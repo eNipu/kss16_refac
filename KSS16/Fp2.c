@@ -8,18 +8,8 @@
 
 #include "Fp2.h"
 
-static mpz_t prime;
-
 #pragma mark Fp2 Methods
 void Fp2_init(struct Fp2 *A){
-    
-    if (!isPrimeSet) {
-        printf("prime is set in Fp2\n");
-        mpz_init(prime);
-        get_prime(&prime);
-        isPrimeSet = 1;
-    }
-    
     Fp_init(&A->x0);
     Fp_init(&A->x1);
 }
@@ -168,7 +158,7 @@ void Fp2_invert(struct Fp2 *ANS,struct Fp2 *A){
     Fp_mul_ui(&b,&b,c1); // b=x1^2*v
     Fp_sub(&c,&a,&b); // c=x0^2-x1^2*v mod q
     
-    mpz_invert(c.x0,c.x0,prime);
+    mpz_invert(c.x0,c.x0,params.prime);
     
     // ANS=A^{-1}=(c)^{-1}*A^(p^6) A which c is Fp2-element and tmp is a vector A Fp2
     Fp_mul(&tmp.x0,&tmp.x0,&c);
@@ -247,7 +237,7 @@ void Fp2_sqrt(struct Fp2 *ANS,struct Fp2 *A){
         Fp2_random(&n);
     }
     
-    mpz_pow_ui(q,prime,2);
+    mpz_pow_ui(q,params.prime,2);
     mpz_sub_ui(q,q,1);
     mpz_set_ui(e,0);
     
@@ -277,7 +267,7 @@ void Fp2_sqrt(struct Fp2 *ANS,struct Fp2 *A){
         }
         mpz_sub_ui(tmp_mpz,r,m);
         mpz_sub_ui(tmp_mpz,tmp_mpz,1);
-        mpz_powm(tmp_mpz,set_2,tmp_mpz,prime);
+        mpz_powm(tmp_mpz,set_2,tmp_mpz,params.prime);
         Fp2_pow(&t,&y,tmp_mpz);
         Fp2_pow(&y,&t,set_2);
         mpz_set_ui(r,m);
@@ -321,7 +311,7 @@ int Fp2_legendre(struct Fp2 *a){
     Fp2_init(&tmp);
     mpz_init(i);
     
-    mpz_pow_ui(i,prime,2);
+    mpz_pow_ui(i,params.prime,2);
     mpz_sub_ui(i,i,1);
     mpz_div_ui(i,i,2);
     

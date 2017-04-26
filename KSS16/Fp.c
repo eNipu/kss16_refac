@@ -8,17 +8,14 @@
 
 #include "Fp.h"
 
-static mpz_t prime;
+
 
 #pragma mark Fp method
 void Fp_init(struct Fp *A){
-    if (!isPrimeSet) {
-        printf("is set prime\n");
-        mpz_init(prime);
-        get_prime(&prime);
-        isPrimeSet = 1;
+    if (!isParamsSet) {
+        set_kss16_params();
+//        set_kss16_curve_const();
     }
-    
     mpz_init(A->x0);
 }
 
@@ -30,7 +27,7 @@ void Fp_set_ui(struct Fp *A,signed long int B){
 }
 void Fp_random(struct Fp *A){
     mpz_random(A->x0,10);
-    mpz_mod(A->x0,A->x0,prime);
+    mpz_mod(A->x0,A->x0,params.prime);
 }
 void Fp_clear(struct Fp *A){
     mpz_clear(A->x0);
@@ -43,7 +40,7 @@ void Fp_add(struct Fp *ANS,struct Fp *A,struct Fp *B){
     Fp_init(&tmp);
     
     mpz_add(tmp.x0,A->x0,B->x0);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     
@@ -54,7 +51,7 @@ void Fp_add_ui(struct Fp *ANS,struct Fp *A,unsigned long int B){
     Fp_init(&tmp);
     
     mpz_add_ui(tmp.x0,A->x0,B);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     Fp_clear(&tmp);
@@ -64,7 +61,7 @@ void Fp_add_mpz(struct Fp *ANS,struct Fp *A,mpz_t B){
     Fp_init(&tmp);
     
     mpz_add(tmp.x0,A->x0,B);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     Fp_clear(&tmp);
@@ -74,7 +71,7 @@ void Fp_sub(struct Fp *ANS,struct Fp *A,struct Fp *B){
     Fp_init(&tmp);
     
     mpz_sub(tmp.x0,A->x0,B->x0);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     
@@ -85,7 +82,7 @@ void Fp_sub_ui(struct Fp *ANS,struct Fp *A,unsigned long int B){
     Fp_init(&tmp);
     
     mpz_sub_ui(tmp.x0,A->x0,B);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     
@@ -102,7 +99,7 @@ void Fp_mul(struct Fp *ANS,struct Fp *A,struct Fp *B){
         mpz_mul(tmp.x0,A->x0,B->x0);
     }
     
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     
@@ -113,7 +110,7 @@ void Fp_mul_mpz(struct Fp *ANS,struct Fp *A,mpz_t B){
     Fp_init(&tmp);
     
     mpz_mul(tmp.x0,A->x0,B);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     
@@ -124,7 +121,7 @@ void Fp_mul_ui(struct Fp *ANS,struct Fp *A,unsigned long int B){
     Fp_init(&tmp);
     
     mpz_mul_ui(tmp.x0,A->x0,B);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     
@@ -134,9 +131,9 @@ void Fp_div(struct Fp *ANS,struct Fp *A,struct Fp *B){
     struct Fp tmp;
     Fp_init(&tmp);
     
-    mpz_invert(tmp.x0,B->x0,prime);
+    mpz_invert(tmp.x0,B->x0,params.prime);
     mpz_mul(tmp.x0,A->x0,tmp.x0);
-    mpz_mod(tmp.x0,tmp.x0,prime);
+    mpz_mod(tmp.x0,tmp.x0,params.prime);
     
     Fp_set(ANS,&tmp);
     
@@ -192,11 +189,11 @@ void Fp_sqrt(struct Fp *ANS,struct Fp *A){
     mpz_set_ui(set_1,1);
     mpz_set_ui(set_2,2);
     
-    while(mpz_legendre(n_tmp.x0,prime)!=-1){
+    while(mpz_legendre(n_tmp.x0,params.prime)!=-1){
         Fp_add_ui(&n_tmp,&n_tmp,1);
     }
     
-    mpz_set(q_tmp,prime);
+    mpz_set(q_tmp,params.prime);
     mpz_sub_ui(q_tmp,q_tmp,1);
     mpz_set_ui(e_tmp,0);
     
@@ -228,7 +225,7 @@ void Fp_sqrt(struct Fp *ANS,struct Fp *A){
         //        gmp_printf("%Zd\n",tmp_Fp.x0);
         mpz_sub_ui(tmp_mpz,r_tmp,m);
         mpz_sub_ui(tmp_mpz,tmp_mpz,1);
-        mpz_powm(tmp_mpz,set_2,tmp_mpz,prime);
+        mpz_powm(tmp_mpz,set_2,tmp_mpz,params.prime);
         Fp_pow(&t_tmp,&y_tmp,tmp_mpz);
         Fp_pow(&y_tmp,&t_tmp,set_2);
         mpz_set_ui(r_tmp,m);
@@ -258,7 +255,7 @@ void Fp_neg(struct Fp *ANS,struct Fp *A){
     Fp_init(&tmp);
     
     if (mpz_cmp_ui(A->x0, 0) != 0) {
-        mpz_sub(tmp.x0,prime,A->x0);
+        mpz_sub(tmp.x0,params.prime,A->x0);
         Fp_set(ANS,&tmp);
     }
     else{
