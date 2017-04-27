@@ -11,4 +11,6 @@
 
 #include "Line_evaluation.h"
 
+extern void Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp16 *G1,struct EFp16 *G2);
+
 #endif /* KSS16_Opt_Ate_h */
