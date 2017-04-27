@@ -6,24 +6,15 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "config.h"
-#include "Settings.h"
-#include "Fp.h"
-#include "Fp2.h"
-#include "Fp4.h"
-#include "Fp8.h"
-#include "Fp16.h"
-#include "EFp2.h"
+
+
+#include "KSS16_init.h"
 #include "KSS16_Find_Params.h"
 #include "Test_Pairings.h"
-
 int main(int argc, const char * argv[]) {
 
-    set_kss16_params();
-    set_kss16_curve_const();
-    generate_X();
+    KSS16_init();
     KSS_16_parameters();
-    pre_calculate();
     
     check_Pairing();
     
