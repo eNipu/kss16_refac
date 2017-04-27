@@ -9,6 +9,8 @@
 #include "Test_Pairings.h"
 
 #include "Tate_Pairing.h"
+#include "Ate_Pairing.h"
+#include "KSS16_Opt_Ate.h"
 
 void check_Pairing(void){
     struct EFp P_EFp, R_EFp;
@@ -47,48 +49,48 @@ void check_Pairing(void){
     EFp16_set_EFp(&P_Fp16,&P_EFp);
     
     //---------------------------------------------------
-        EFp16_random_set(&Q_Fp16);
-        printf("\nTate Pairing\n");
-    
-        printf("G1=");
-        EFp16_printf(&P_Fp16);
-        printf("G2=");
-        EFp16_printf(&Q_Fp16);
-    
-        Tate_Pairing(&tmp1_Fp16,&P_Fp16,&Q_Fp16);
-    
-        Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
-        printf("\nf^ab=");
-        Fp16_printf(&tmp1_Fp16);
-    
-        EFp16_SCM_BIN(&R_Fp16,&P_Fp16,a);
-        EFp16_SCM_BIN(&S_Fp16,&Q_Fp16,b);
-    
-        Tate_Pairing(&tmp2_Fp16,&R_Fp16,&S_Fp16);
-    
-        printf("\nf'  =");
-        Fp16_printf(&tmp2_Fp16);
-    //----------------------------------------------------
-    //    printf("\nAte Pairing\n");
-    //    EFp16_random_set_G2(&Q_Fp16);
-    ////    printf("G1=");
-    ////    EFp16_printf(&P_Fp16);
-    ////    printf("\nG2=");
-    ////    EFp16_printf(&Q_Fp16);
-    //
-    //    Ate_Pairing(&tmp1_Fp16,&P_Fp16,&Q_Fp16);
-    //
-    //    Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
-    //    printf("\nf^ab=");
-    //    Fp16_printf(&tmp1_Fp16);
-    //
-    //    EFp16_SCM_BIN(&R_Fp16,&P_Fp16,a);
-    //    EFp16_SCM_BIN(&S_Fp16,&Q_Fp16,b);
-    //
-    //    Ate_Pairing(&tmp2_Fp16,&R_Fp16,&S_Fp16);
-    //
-    //    printf("\nf'  =");
-    //    Fp16_printf(&tmp2_Fp16);
+//        EFp16_random_set(&Q_Fp16);
+//        printf("\nTate Pairing\n");
+//    
+//        printf("G1=");
+//        EFp16_printf(&P_Fp16);
+//        printf("G2=");
+//        EFp16_printf(&Q_Fp16);
+//    
+//        Tate_Pairing(&tmp1_Fp16,&P_Fp16,&Q_Fp16);
+//    
+//        Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
+//        printf("\nf^ab=");
+//        Fp16_printf(&tmp1_Fp16);
+//    
+//        EFp16_SCM_BIN(&R_Fp16,&P_Fp16,a);
+//        EFp16_SCM_BIN(&S_Fp16,&Q_Fp16,b);
+//    
+//        Tate_Pairing(&tmp2_Fp16,&R_Fp16,&S_Fp16);
+//    
+//        printf("\nf'  =");
+//        Fp16_printf(&tmp2_Fp16);
+//    //----------------------------------------------------
+//        printf("\nAte Pairing\n");
+//        EFp16_random_set_G2(&Q_Fp16);
+//    //    printf("G1=");
+//    //    EFp16_printf(&P_Fp16);
+//    //    printf("\nG2=");
+//    //    EFp16_printf(&Q_Fp16);
+//    
+//        Ate_Pairing(&tmp1_Fp16,&P_Fp16,&Q_Fp16);
+//    
+//        Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
+//        printf("\nf^ab=");
+//        Fp16_printf(&tmp1_Fp16);
+//    
+//        EFp16_SCM_BIN(&R_Fp16,&P_Fp16,a);
+//        EFp16_SCM_BIN(&S_Fp16,&Q_Fp16,b);
+//    
+//        Ate_Pairing(&tmp2_Fp16,&R_Fp16,&S_Fp16);
+//    
+//        printf("\nf'  =");
+//        Fp16_printf(&tmp2_Fp16);
     //----------------------------------------------------
     //    printf("\nAte Pairing Sparse\n");
     //
@@ -135,25 +137,25 @@ void check_Pairing(void){
 //    printf("\nf'  =");
 //    Fp16_printf(&tmp2_Fp16);
     // ----------------------------------------------------
-    //        printf("\n\nOptimal Ate Pairing\n");
-    //        EFp16_random_set_G2(&Q_Fp16);
-    //        printf("G1=");
-    //        EFp_printf(&P_EFp);
-    //        printf("G2=");
-    //        EFp16_printf(&Q_Fp16);
-    //
-    //        Optimal_Ate_Pairing(&tmp1_Fp16,&P_Fp16,&Q_Fp16);
-    //        Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
-    //        printf("\nf^ab=");
-    //        Fp16_printf(&tmp1_Fp16);
-    //
-    //        EFp16_SCM_BIN(&R_Fp16,&P_Fp16,a);
-    //        EFp16_SCM_BIN(&S_Fp16,&Q_Fp16,b);
-    //
-    //        Optimal_Ate_Pairing(&tmp2_Fp16,&R_Fp16,&S_Fp16);
-    //
-    //        printf("\nf'  =");
-    //        Fp16_printf(&tmp2_Fp16);
+            printf("\n\nOptimal Ate Pairing\n");
+            EFp16_random_set_G2(&Q_Fp16);
+            printf("G1=");
+            EFp_printf(&P_EFp);
+            printf("G2=");
+            EFp16_printf(&Q_Fp16);
+    
+            Optimal_Ate_Pairing(&tmp1_Fp16,&P_Fp16,&Q_Fp16);
+            Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
+            printf("\nf^ab=");
+            Fp16_printf(&tmp1_Fp16);
+    
+            EFp16_SCM_BIN(&R_Fp16,&P_Fp16,a);
+            EFp16_SCM_BIN(&S_Fp16,&Q_Fp16,b);
+    
+            Optimal_Ate_Pairing(&tmp2_Fp16,&R_Fp16,&S_Fp16);
+    
+            printf("\nf'  =");
+            Fp16_printf(&tmp2_Fp16);
     //----------------------------------------------------
 //    printf("\n\n Optimal Ate Pairing Sparse\n");
 //    printf("G1=");

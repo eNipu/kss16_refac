@@ -24,6 +24,8 @@
 		EF1FA3561EB1847100814F26 /* KSS16_Final_Exp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3541EB1847100814F26 /* KSS16_Final_Exp.c */; };
 		EF1FA3591EB1855C00814F26 /* Tate_Pairing.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3571EB1855C00814F26 /* Tate_Pairing.c */; };
 		EF1FA35C1EB185ED00814F26 /* Test_Pairings.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA35A1EB185ED00814F26 /* Test_Pairings.c */; };
+		EF1FA35F1EB18B9000814F26 /* Ate_Pairing.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA35D1EB18B9000814F26 /* Ate_Pairing.c */; };
+		EF1FA3621EB18C6C00814F26 /* KSS16_Opt_Ate.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3601EB18C6C00814F26 /* KSS16_Opt_Ate.c */; };
 		EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8CE1EB03A9B00F008F0 /* main.c */; };
 		EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF90C8D51EB03C2100F008F0 /* libgmp.a */; };
 		EFA241FB1EB077F300036D7D /* Settings.c in Sources */ = {isa = PBXBuildFile; fileRef = EFA241F91EB077F300036D7D /* Settings.c */; };
@@ -76,6 +78,10 @@
 		EF1FA3581EB1855C00814F26 /* Tate_Pairing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tate_Pairing.h; sourceTree = "<group>"; };
 		EF1FA35A1EB185ED00814F26 /* Test_Pairings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Test_Pairings.c; sourceTree = "<group>"; };
 		EF1FA35B1EB185ED00814F26 /* Test_Pairings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Pairings.h; sourceTree = "<group>"; };
+		EF1FA35D1EB18B9000814F26 /* Ate_Pairing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ate_Pairing.c; sourceTree = "<group>"; };
+		EF1FA35E1EB18B9000814F26 /* Ate_Pairing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ate_Pairing.h; sourceTree = "<group>"; };
+		EF1FA3601EB18C6C00814F26 /* KSS16_Opt_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSS16_Opt_Ate.c; sourceTree = "<group>"; };
+		EF1FA3611EB18C6C00814F26 /* KSS16_Opt_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSS16_Opt_Ate.h; sourceTree = "<group>"; };
 		EF90C8CB1EB03A9B00F008F0 /* KSS16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KSS16; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EF90C8D51EB03C2100F008F0 /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
@@ -126,6 +132,10 @@
 				EF1FA3581EB1855C00814F26 /* Tate_Pairing.h */,
 				EF1FA35A1EB185ED00814F26 /* Test_Pairings.c */,
 				EF1FA35B1EB185ED00814F26 /* Test_Pairings.h */,
+				EF1FA35D1EB18B9000814F26 /* Ate_Pairing.c */,
+				EF1FA35E1EB18B9000814F26 /* Ate_Pairing.h */,
+				EF1FA3601EB18C6C00814F26 /* KSS16_Opt_Ate.c */,
+				EF1FA3611EB18C6C00814F26 /* KSS16_Opt_Ate.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -241,12 +251,14 @@
 				EF1FA35C1EB185ED00814F26 /* Test_Pairings.c in Sources */,
 				EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */,
 				EF1FA3531EB182C300814F26 /* KSS16_Optimal_Millers_Algo.c in Sources */,
+				EF1FA35F1EB18B9000814F26 /* Ate_Pairing.c in Sources */,
 				EFA241FB1EB077F300036D7D /* Settings.c in Sources */,
 				EF1FA3471EB12E8100814F26 /* EFp16.c in Sources */,
 				EF1FA3441EB108B000814F26 /* EFp8.c in Sources */,
 				EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */,
 				EF1FA32F1EB0C12800814F26 /* Fp2.c in Sources */,
 				EF1FA34A1EB136A500814F26 /* KSS16_Find_Params.c in Sources */,
+				EF1FA3621EB18C6C00814F26 /* KSS16_Opt_Ate.c in Sources */,
 				EF1FA3561EB1847100814F26 /* KSS16_Final_Exp.c in Sources */,
 				EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */,
 				EF1FA33C1EB0ED7400814F26 /* EFp2.c in Sources */,
