@@ -33,6 +33,7 @@ extern void EFp4_SCM_ML(struct EFp4 *RES, struct EFp4 *P,mpz_t scalar);
 extern void EFp4_neg(struct EFp4 *ANS, struct EFp4 *A);
 extern void EFp4_SCM_BIN_Sparse(struct EFp4 *ANS,struct EFp4 *P,mpz_t j);
 extern void EFp4_ECD_Sparse(struct EFp4 *ANS, struct EFp4 *P);
+extern void Skew_Frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt);
 
 //extern void EFp4_random_set(struct EFp4 *ANS);
 //extern void EFp4_SCM_BIN_Pseudo_Sparse(struct EFp4 *ANS,struct EFp4 *P,mpz_t j);

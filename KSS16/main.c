@@ -14,12 +14,14 @@
 #include "Fp8.h"
 #include "Fp16.h"
 #include "EFp2.h"
+#include "KSS16_Find_Params.h"
 
 int main(int argc, const char * argv[]) {
 
-    gmp_printf("print %Zd\n",params.prime);
     set_kss16_params();
     set_kss16_curve_const();
+    generate_X();
+    KSS_16_parameters();
     
 //    struct Fp A, B;
 //    Fp_init(&A);

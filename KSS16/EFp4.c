@@ -384,6 +384,38 @@ void EFp4_SCM_BIN_Sparse(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
     return;
 }
 
+void Skew_Frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt)
+{
+    struct EFp4 tmp_ans;
+    EFp4_init(&tmp_ans);
+    
+    struct Fp4 Qt_x, Qt_y;
+    Fp4_init(&Qt_x);
+    Fp4_init(&Qt_y);
+    Fp4_set(&tmp_ans.x, &Qt->x);
+    Fp4_set(&tmp_ans.y, &Qt->y);
+    
+    
+    Fp_mul(&Qt_x.x0.x0, &tmp_ans.x.x0.x1,&m_cpm5d8);
+    Fp_mul(&Qt_x.x0.x1,&tmp_ans.x.x0.x0,&pm5d8);
+    Fp_mul(&Qt_x.x1.x0, &tmp_ans.x.x1.x1, &m_cpm1d4pm5d8);
+    Fp_mul(&Qt_x.x1.x1, &tmp_ans.x.x1.x0, &pm1d4pm5d8);
+    
+    Fp_mul(&Qt_y.x0.x0, &tmp_ans.y.x1.x1,&m_ccpm1d4pm5d8p13d16);
+    Fp_mul(&Qt_y.x0.x1,&tmp_ans.y.x1.x0,&cpm1d4pm5d6pm13d16);
+    Fp_mul(&Qt_y.x1.x0, &tmp_ans.y.x0.x0, &cpm5d8pm13d16);
+    Fp_mul(&Qt_y.x1.x1, &tmp_ans.y.x0.x1, &m_cpm5d8pm13d16);
+    
+    Fp4_set(&tmp_ans.x, &Qt_x);
+    Fp4_set(&tmp_ans.y, &Qt_y);
+    
+    EFp4_set(ANS,&tmp_ans);
+    EFp4_clear(&tmp_ans);
+    Fp4_clear(&Qt_x);
+    Fp4_clear(&Qt_y);
+}
+
+
 //void EFp4_ECD_Pseudo_Sparse(struct EFp4 *ANS, struct EFp4 *P){
 //    if(P->infity==TRUE){
 //        EFp4_set(ANS,P);
