@@ -282,3 +282,19 @@ void EFp16_random_set_G2(struct EFp16 *ANS){
     EFp16_clear(&tmp_EFp16);
 }
 
+
+void EFp16_to_EFp4_map(struct EFp4 *ANS,struct EFp16 *A){
+    Fp4_set_ui(&ANS->x,0);
+    Fp4_set_ui(&ANS->y,0);
+    Fp4_set(&ANS->x,&A->x.x0.x1);
+    Fp4_set(&ANS->y,&A->y.x1.x1);
+    ANS->infity=A->infity;
+}
+
+void EFp4_to_EFp16_map(struct EFp16 *ANS,struct EFp4 *A){
+    Fp16_set_ui(&ANS->x,0);
+    Fp16_set_ui(&ANS->y,0);
+    Fp4_set(&ANS->x.x0.x1,&A->x);
+    Fp4_set(&ANS->y.x1.x1,&A->y);
+    ANS->infity=A->infity;
+}

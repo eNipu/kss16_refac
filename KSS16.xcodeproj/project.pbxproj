@@ -18,6 +18,7 @@
 		EF1FA3441EB108B000814F26 /* EFp8.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3421EB108B000814F26 /* EFp8.c */; };
 		EF1FA3471EB12E8100814F26 /* EFp16.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3451EB12E8100814F26 /* EFp16.c */; };
 		EF1FA34A1EB136A500814F26 /* KSS16_Find_Params.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3481EB136A500814F26 /* KSS16_Find_Params.c */; };
+		EF1FA34D1EB1809B00814F26 /* Line_evaluation.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA34B1EB1809B00814F26 /* Line_evaluation.c */; };
 		EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EF90C8CE1EB03A9B00F008F0 /* main.c */; };
 		EF90C8D61EB03C2100F008F0 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF90C8D51EB03C2100F008F0 /* libgmp.a */; };
 		EFA241FB1EB077F300036D7D /* Settings.c in Sources */ = {isa = PBXBuildFile; fileRef = EFA241F91EB077F300036D7D /* Settings.c */; };
@@ -58,6 +59,8 @@
 		EF1FA3461EB12E8100814F26 /* EFp16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFp16.h; sourceTree = "<group>"; };
 		EF1FA3481EB136A500814F26 /* KSS16_Find_Params.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSS16_Find_Params.c; sourceTree = "<group>"; };
 		EF1FA3491EB136A500814F26 /* KSS16_Find_Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSS16_Find_Params.h; sourceTree = "<group>"; };
+		EF1FA34B1EB1809B00814F26 /* Line_evaluation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Line_evaluation.c; sourceTree = "<group>"; };
+		EF1FA34C1EB1809B00814F26 /* Line_evaluation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line_evaluation.h; sourceTree = "<group>"; };
 		EF90C8CB1EB03A9B00F008F0 /* KSS16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KSS16; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EF90C8D51EB03C2100F008F0 /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				EF1FA3461EB12E8100814F26 /* EFp16.h */,
 				EF1FA3481EB136A500814F26 /* KSS16_Find_Params.c */,
 				EF1FA3491EB136A500814F26 /* KSS16_Find_Params.h */,
+				EF1FA34B1EB1809B00814F26 /* Line_evaluation.c */,
+				EF1FA34C1EB1809B00814F26 /* Line_evaluation.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				EF1FA34A1EB136A500814F26 /* KSS16_Find_Params.c in Sources */,
 				EF90C8CF1EB03A9B00F008F0 /* main.c in Sources */,
 				EF1FA33C1EB0ED7400814F26 /* EFp2.c in Sources */,
+				EF1FA34D1EB1809B00814F26 /* Line_evaluation.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

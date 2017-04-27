@@ -10,6 +10,7 @@
 #define Settings_h
 
 #include "config.h"
+#include <sys/time.h>
 
 #define TRUE_1 1
 #define FALSE_0 0
@@ -47,4 +48,5 @@ extern char X_bit_binary[x_bit+1];
 extern void set_kss16_params();
 extern void set_kss16_curve_const();
 extern void generate_X();
+extern float timedifference_msec(struct timeval t0, struct timeval t1);
 #endif /* Settings_h */

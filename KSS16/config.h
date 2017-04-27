@@ -13,5 +13,4 @@
 #include <gmp.h>
 
 
-
 #endif /* config_h */

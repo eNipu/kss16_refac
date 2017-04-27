@@ -11,6 +11,7 @@
 
 #include "Fp16.h"
 #include "EFp.h"
+#include "EFp4.h"
 
 struct EFp16{
     struct Fp16 x,y;
@@ -31,4 +32,7 @@ extern void EFp16_SCM_WIN(struct EFp16 *ANS, struct EFp16 *P, mpz_t scalar);
 extern void EFp16_frobenius_map(struct EFp16 *ANS,struct EFp16 *A);
 extern void EFp16_random_set(struct EFp16 *ANS);
 extern void EFp16_random_set_G2(struct EFp16 *ANS);
+
+extern void EFp16_to_EFp4_map(struct EFp4 *ANS,struct EFp16 *A);
+extern void EFp4_to_EFp16_map(struct EFp16 *ANS,struct EFp4 *A);
 #endif /* EFp16_h */
