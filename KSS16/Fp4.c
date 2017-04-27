@@ -8,6 +8,8 @@
 
 #include "Fp4.h"
 
+struct Fp4 z_inv2;
+
 #pragma mark Fp4 methods
 
 void Fp4_init(struct Fp4 *A){

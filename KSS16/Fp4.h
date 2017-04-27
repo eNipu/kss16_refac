@@ -14,6 +14,7 @@
 struct Fp4{
     struct Fp2 x0,x1;
 };
+extern struct Fp4 z_inv2;
 
 #pragma mark Fp4 methods
 extern void Fp4_init(struct Fp4 *A);
