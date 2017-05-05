@@ -134,7 +134,7 @@ void DBL_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp1
     Fp16_set(l_ANS,&l_tmp);
     EFp16_set(T_ANS,&x3_tmp);
     
-    if(T->infity==TRUE){
+    if(T->PoI==TRUE){
         EFp16_set(T_ANS,T);
         return;
     }
@@ -142,7 +142,7 @@ void DBL_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp1
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp16_cmp_mpz(&T->y,cmp)==0){//P.y==0
-        EFp16_set_infity(T_ANS);
+        EFp16_set_PoI(T_ANS);
         return;
     }
     Fp16_clear(&tmp1);
@@ -241,7 +241,7 @@ void ltp_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *P,struct EFp16 *Q){
 void vtp_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
     struct Fp16 vtp;
     Fp16_init(&vtp);
-    if(T->infity==1){//if T is infity
+    if(T->PoI==1){//if T is PoI
         Fp16_set_ui(ANS,0);
         Fp_set_ui(&ANS->x0.x0.x0.x0,1);
         return;

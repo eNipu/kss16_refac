@@ -10,17 +10,17 @@
 void EFp8_init(struct EFp8 *A){
     Fp8_init(&A->x);
     Fp8_init(&A->y);
-    A->infity=FALSE;
+    A->PoI=FALSE;
 }
 void EFp8_set(struct EFp8 *A,struct EFp8 *B){
     Fp8_set(&A->x,&B->x);
     Fp8_set(&A->y,&B->y);
-    A->infity=B->infity;
+    A->PoI=B->PoI;
 }
-void EFp8_set_infity(struct EFp8 *A){
+void EFp8_set_PoI(struct EFp8 *A){
     Fp8_set_ui(&A->x,0);
     Fp8_set_ui(&A->y,0);
-    A->infity=TRUE;
+    A->PoI=TRUE;
 }
 void EFp8_clear(struct EFp8 *A){
     Fp8_clear(&A->x);
@@ -56,7 +56,7 @@ void EFp8_SCM_BIN(struct EFp8 *ANS,struct EFp8 *P,mpz_t j){
     return;
 }
 void EFp8_ECD(struct EFp8 *ANS, struct EFp8 *P){
-    if(P->infity==TRUE){
+    if(P->PoI==TRUE){
         EFp8_set(ANS,P);
         return;
     }
@@ -64,7 +64,7 @@ void EFp8_ECD(struct EFp8 *ANS, struct EFp8 *P){
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp8_cmp_mpz(&P->y,cmp)==0){//P.y==0
-        EFp8_set_infity(ANS);
+        EFp8_set_PoI(ANS);
         return;
     }
     
@@ -98,16 +98,16 @@ void EFp8_ECD(struct EFp8 *ANS, struct EFp8 *P){
     EFp8_clear(&t_ans);
 }
 void EFp8_ECA(struct EFp8 *ANS, struct EFp8 *P1, struct EFp8 *P2){
-    if(P2->infity==TRUE){//if P2==inf
+    if(P2->PoI==TRUE){//if P2==inf
         EFp8_set(ANS,P1);
         return;
     }
-    else if(P1->infity==TRUE){//if P1==inf
+    else if(P1->PoI==TRUE){//if P1==inf
         EFp8_set(ANS,P2);
         return;
     }
     else if(Fp8_cmp(&P1->x,&P2->x)==0&&Fp8_cmp(&P1->y,&P2->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-        EFp8_set_infity(ANS);
+        EFp8_set_PoI(ANS);
         return;
     }
     else if(EFp8_cmp(P1,P2)==0){ // P=Q

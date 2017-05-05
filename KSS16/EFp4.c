@@ -13,17 +13,17 @@
 void EFp4_init(struct EFp4 *A){
     Fp4_init(&A->x);
     Fp4_init(&A->y);
-    A->infity=FALSE;
+    A->PoI=FALSE;
 }
 void EFp4_set(struct EFp4 *A,struct EFp4 *B){
     Fp4_set(&A->x,&B->x);
     Fp4_set(&A->y,&B->y);
-    A->infity=B->infity;
+    A->PoI=B->PoI;
 }
-void EFp4_set_infity(struct EFp4 *A){
+void EFp4_set_PoI(struct EFp4 *A){
     Fp4_set_ui(&A->x,0);
     Fp4_set_ui(&A->y,0);
-    A->infity=TRUE;
+    A->PoI=TRUE;
 }
 void EFp4_set_EFp(struct EFp4 *ANS,struct EFp *A){
     Fp4_set_ui(&ANS->x,0);
@@ -31,7 +31,7 @@ void EFp4_set_EFp(struct EFp4 *ANS,struct EFp *A){
     
     Fp_set(&ANS->x.x0.x0,&A->x);
     Fp_set(&ANS->y.x0.x0,&A->y);
-    ANS->infity=A->infity;
+    ANS->PoI=A->PoI;
 }
 void EFp4_clear(struct EFp4 *A){
     Fp4_clear(&A->x);
@@ -42,16 +42,16 @@ void EFp4_printf(struct EFp4 *A){
     gmp_printf("(%Zd,%Zd,%Zd,%Zd)\n",A->y.x0.x0.x0,A->y.x0.x1.x0,A->y.x1.x0.x0, A->y.x1.x1.x0);
 }
 void EFp4_ECA(struct EFp4 *ANS, struct EFp4 *P1, struct EFp4 *P2){
-    if(P2->infity==TRUE){//if P2==inf
+    if(P2->PoI==TRUE){//if P2==inf
         EFp4_set(ANS,P1);
         return;
     }
-    else if(P1->infity==TRUE){//if P1==inf
+    else if(P1->PoI==TRUE){//if P1==inf
         EFp4_set(ANS,P2);
         return;
     }
     else if(Fp4_cmp(&P1->x,&P2->x)==0&&Fp4_cmp(&P1->y,&P2->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-        EFp4_set_infity(ANS);
+        EFp4_set_PoI(ANS);
         return;
     }
     else if(EFp4_cmp(P1,P2)==0){ // P=Q
@@ -88,7 +88,7 @@ void EFp4_ECA(struct EFp4 *ANS, struct EFp4 *P1, struct EFp4 *P2){
     EFp4_clear(&t_ans);
 }
 void EFp4_ECD(struct EFp4 *ANS, struct EFp4 *P){
-    if(P->infity==TRUE){
+    if(P->PoI==TRUE){
         EFp4_set(ANS,P);
         return;
     }
@@ -96,7 +96,7 @@ void EFp4_ECD(struct EFp4 *ANS, struct EFp4 *P){
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp4_cmp_mpz(&P->y,cmp)==0){//P.y==0
-        EFp4_set_infity(ANS);
+        EFp4_set_PoI(ANS);
         return;
     }
     
@@ -135,7 +135,7 @@ void EFp4_ECD(struct EFp4 *ANS, struct EFp4 *P){
     EFp4_clear(&t_ans);
 }
 void EFp4_ECD_Sparse(struct EFp4 *ANS, struct EFp4 *P){
-    if(P->infity==TRUE){
+    if(P->PoI==TRUE){
         EFp4_set(ANS,P);
         return;
     }
@@ -143,7 +143,7 @@ void EFp4_ECD_Sparse(struct EFp4 *ANS, struct EFp4 *P){
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp4_cmp_mpz(&P->y,cmp)==0){//P.y==0
-        EFp4_set_infity(ANS);
+        EFp4_set_PoI(ANS);
         return;
     }
     
@@ -241,7 +241,7 @@ void EFp4_SCM_WIN(struct EFp4 *ANS, struct EFp4 *P, mpz_t scalar){
     EFp4_init(&R15);
     EFp4_init(&ANS_temp);
     
-    EFp4_set_infity(&ANS_temp);
+    EFp4_set_PoI(&ANS_temp);
     EFp4_set(&R, P);
     EFp4_ECA(&R2, &R, &R);
     EFp4_ECA(&R3, &R2, &R);
@@ -342,7 +342,7 @@ void EFp4_SCM_ML(struct EFp4 *RES, struct EFp4 *P,mpz_t scalar){
     struct EFp4 T0,T1;
     EFp4_init(&T0);
     
-    EFp4_set_infity(&T0);
+    EFp4_set_PoI(&T0);
     EFp4_init(&T1);
     EFp4_set(&T1, P);
     //    EFp_ECD(&T1,&T1);
@@ -417,7 +417,7 @@ void Skew_Frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt)
 
 
 //void EFp4_ECD_Pseudo_Sparse(struct EFp4 *ANS, struct EFp4 *P){
-//    if(P->infity==TRUE){
+//    if(P->PoI==TRUE){
 //        EFp4_set(ANS,P);
 //        return;
 //    }
@@ -425,7 +425,7 @@ void Skew_Frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt)
 //    mpz_init(cmp);
 //    mpz_set_ui(cmp,0);
 //    if(Fp4_cmp_mpz(&P->y,cmp)==0){//P.y==0
-//        EFp4_set_infity(ANS);
+//        EFp4_set_PoI(ANS);
 //        return;
 //    }
 //    

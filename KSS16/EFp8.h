@@ -13,13 +13,13 @@
 
 struct EFp8{
     struct Fp8 x,y;
-    int infity;
+    int PoI;
 };
 
 #pragma mark EFp8 methods
 extern void EFp8_init(struct EFp8 *A);
 extern void EFp8_set(struct EFp8 *A,struct EFp8 *B);
-extern void EFp8_set_infity(struct EFp8 *A);
+extern void EFp8_set_PoI(struct EFp8 *A);
 extern void EFp8_clear(struct EFp8 *A);
 extern void EFp8_printf(struct EFp8 *A);
 extern void EFp8_ECD(struct EFp8 *ANS, struct EFp8 *P);//ANS=2*P

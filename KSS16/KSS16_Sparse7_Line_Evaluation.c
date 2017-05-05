@@ -136,7 +136,7 @@ void Sparse_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     Fp16_set(l_ANS,&l_tmp);
     EFp4_set(T_ANS,&x3_tmp);
     
-    if(T->infity==TRUE){
+    if(T->PoI==TRUE){
         EFp4_set(T_ANS,T);
         return;
     }
@@ -144,7 +144,7 @@ void Sparse_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp4_cmp_mpz(&T->y,cmp)==0){//P.y==0
-        EFp4_set_infity(T_ANS);
+        EFp4_set_PoI(T_ANS);
         return;
     }
     Fp4_clear(&tmp1);

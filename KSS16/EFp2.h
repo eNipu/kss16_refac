@@ -14,14 +14,14 @@
 
 struct EFp2{
     struct Fp2 x,y;
-    int infity;
+    int PoI;
 };
 
 
 // #pragma mark EFp2 methods
 extern void EFp2_init(struct EFp2 *A);
 extern void EFp2_set(struct EFp2 *A,struct EFp2 *B);
-extern void EFp2_set_infity(struct EFp2 *A);
+extern void EFp2_set_PoI(struct EFp2 *A);
 extern void EFp2_clear(struct EFp2 *A);
 extern void EFp2_printf(struct EFp2 *A);
 extern void EFp2_ECD(struct EFp2 *ANS, struct EFp2 *P);//ANS=2*P

@@ -61,16 +61,16 @@ void Pseudo_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     // 	Fp4_sub(&ltp,&P->x,&T->x);
     // 	Fp4_set(&l_ANS->x0.x0,&ltp);
     // }
-    // if(T->infity==TRUE){//if P2==inf
+    // if(T->PoI==TRUE){//if P2==inf
     // 	EFp4_set(T_ANS,P);
     // 	return;
     // }
-    // else if(P->infity==TRUE){//if P1==inf
+    // else if(P->PoI==TRUE){//if P1==inf
     // 	EFp4_set(T_ANS,T);
     // 	return;
     // }
     // else if(Fp4_cmp(&T->x,&P->x)==0&&Fp4_cmp(&T->y,&P->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-    // 	EFp4_set_infity(T_ANS);
+    // 	EFp4_set_PoI(T_ANS);
     // 	return;
     // }
     // else if(EFp4_cmp(T,P)==0){ // P=P
@@ -153,7 +153,7 @@ void Pseudo_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     
     EFp4_set(T_ANS,&x3_tmp);
     
-    // if(T->infity==TRUE){
+    // if(T->PoI==TRUE){
     // 	EFp4_set(T_ANS,T);
     // 	return;
     // }
@@ -161,7 +161,7 @@ void Pseudo_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     // mpz_init(cmp);
     // mpz_set_ui(cmp,0);
     // if(Fp4_cmp_mpz(&T->y,cmp)==0){//P.y==0
-    // 	EFp4_set_infity(T_ANS);
+    // 	EFp4_set_PoI(T_ANS);
     // 	return;
     // }
     

@@ -145,7 +145,7 @@ void KSS_16_parameters(void){
                 EFp_SCM_BIN(&ANS,&P,params.order_EFp);
 //                printf("SCM\n");
 //                EFp_printf(&ANS);
-                if(ANS.infity == TRUE){
+                if(ANS.PoI == TRUE){
                     mpz_set(kss_curve_const.a,kss_curve_const.tmp_a);
                     // mpz_clear(tmp_a);
                     Fp_clear(&rhs);

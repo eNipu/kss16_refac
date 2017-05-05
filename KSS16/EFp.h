@@ -13,13 +13,13 @@
 
 struct EFp{
     struct Fp x,y;
-    int infity;
+    int PoI;
 };
 
 #pragma mark EFp methods
 extern void EFp_init(struct EFp *A);
 extern void EFp_set(struct EFp *A,struct EFp *B);
-extern void EFp_set_infity(struct EFp *A);
+extern void EFp_set_PoI(struct EFp *A);
 extern void EFp_clear(struct EFp *A);
 extern void EFp_printf(struct EFp *A);
 extern void EFp_SCM_BIN(struct EFp *ANS, struct EFp *P,mpz_t j);

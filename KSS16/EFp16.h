@@ -15,12 +15,12 @@
 
 struct EFp16{
     struct Fp16 x,y;
-    int infity;
+    int PoI;
 };
 
 extern void EFp16_init(struct EFp16 *A);
 extern void EFp16_set(struct EFp16 *A,struct EFp16 *B);
-extern void EFp16_set_infity(struct EFp16 *A);
+extern void EFp16_set_PoI(struct EFp16 *A);
 extern void EFp16_set_EFp(struct EFp16 *A,struct EFp *B);
 extern void EFp16_clear(struct EFp16 *A);
 extern void EFp16_printf(struct EFp16 *A);

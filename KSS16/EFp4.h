@@ -14,13 +14,13 @@
 
 struct EFp4{
     struct Fp4 x,y;
-    int infity;
+    int PoI;
 };
 
 #pragma mark EFp4 methods declarations
 extern void EFp4_init(struct EFp4 *A);
 extern void EFp4_set(struct EFp4 *A,struct EFp4 *B);
-extern void EFp4_set_infity(struct EFp4 *A);
+extern void EFp4_set_PoI(struct EFp4 *A);
 extern void EFp4_set_EFp(struct EFp4 *ANS,struct EFp *A);
 extern void EFp4_clear(struct EFp4 *A);
 extern void EFp4_printf(struct EFp4 *A);

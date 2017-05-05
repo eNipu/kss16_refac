@@ -13,17 +13,17 @@
 void EFp16_init(struct EFp16 *A){
     Fp16_init(&A->x);
     Fp16_init(&A->y);
-    A->infity=FALSE;
+    A->PoI=FALSE;
 }
 void EFp16_set(struct EFp16 *A,struct EFp16 *B){
     Fp16_set(&A->x,&B->x);
     Fp16_set(&A->y,&B->y);
-    A->infity=B->infity;
+    A->PoI=B->PoI;
 }
-void EFp16_set_infity(struct EFp16 *A){
+void EFp16_set_PoI(struct EFp16 *A){
     Fp16_set_ui(&A->x,0);
     Fp16_set_ui(&A->y,0);
-    A->infity=TRUE;
+    A->PoI=TRUE;
 }
 void EFp16_set_EFp(struct EFp16 *A,struct EFp *B){
     Fp16_set_ui(&A->x,0);
@@ -31,7 +31,7 @@ void EFp16_set_EFp(struct EFp16 *A,struct EFp *B){
     
     Fp_set(&A->x.x0.x0.x0.x0,&B->x);
     Fp_set(&A->y.x0.x0.x0.x0,&B->y);
-    A->infity=B->infity;
+    A->PoI=B->PoI;
 }
 void EFp16_clear(struct EFp16 *A){
     Fp16_clear(&A->x);
@@ -70,7 +70,7 @@ void EFp16_SCM_BIN(struct EFp16 *ANS,struct EFp16 *P,mpz_t j){
     return;
 }
 void EFp16_ECD(struct EFp16 *ANS, struct EFp16 *P){
-    if(P->infity==TRUE){
+    if(P->PoI==TRUE){
         EFp16_set(ANS,P);
         return;
     }
@@ -78,7 +78,7 @@ void EFp16_ECD(struct EFp16 *ANS, struct EFp16 *P){
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp16_cmp_mpz(&P->y,cmp)==0){//P.y==0
-        EFp16_set_infity(ANS);
+        EFp16_set_PoI(ANS);
         return;
     }
     
@@ -113,16 +113,16 @@ void EFp16_ECD(struct EFp16 *ANS, struct EFp16 *P){
     EFp16_clear(&t_ans);
 }
 void EFp16_ECA(struct EFp16 *ANS, struct EFp16 *P1, struct EFp16 *P2){
-    if(P2->infity==TRUE){//if P2==inf
+    if(P2->PoI==TRUE){//if P2==inf
         EFp16_set(ANS,P1);
         return;
     }
-    else if(P1->infity==TRUE){//if P1==inf
+    else if(P1->PoI==TRUE){//if P1==inf
         EFp16_set(ANS,P2);
         return;
     }
     else if(Fp16_cmp(&P1->x,&P2->x)==0&&Fp16_cmp(&P1->y,&P2->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-        EFp16_set_infity(ANS);
+        EFp16_set_PoI(ANS);
         return;
     }
     else if(EFp16_cmp(P1,P2)==0){ // P=Q
@@ -231,7 +231,7 @@ void EFp16_random_set(struct EFp16 *ANS){
     
     
     EFp16_SCM_BIN(&ans_temp, ANS, params.order_r);//T
-    if (ans_temp.infity == TRUE)
+    if (ans_temp.PoI == TRUE)
     {
         printf("Check Successful \n");
     }
@@ -288,7 +288,7 @@ void EFp16_to_EFp4_map(struct EFp4 *ANS,struct EFp16 *A){
     Fp4_set_ui(&ANS->y,0);
     Fp4_set(&ANS->x,&A->x.x0.x1);
     Fp4_set(&ANS->y,&A->y.x1.x1);
-    ANS->infity=A->infity;
+    ANS->PoI=A->PoI;
 }
 
 void EFp4_to_EFp16_map(struct EFp16 *ANS,struct EFp4 *A){
@@ -296,5 +296,5 @@ void EFp4_to_EFp16_map(struct EFp16 *ANS,struct EFp4 *A){
     Fp16_set_ui(&ANS->y,0);
     Fp4_set(&ANS->x.x0.x1,&A->x);
     Fp4_set(&ANS->y.x1.x1,&A->y);
-    ANS->infity=A->infity;
+    ANS->PoI=A->PoI;
 }

@@ -12,17 +12,17 @@
 void EFp2_init(struct EFp2 *A){
     Fp2_init(&A->x);
     Fp2_init(&A->y);
-    A->infity=FALSE;
+    A->PoI=FALSE;
 }
 void EFp2_set(struct EFp2 *A,struct EFp2 *B){
     Fp2_set(&A->x,&B->x);
     Fp2_set(&A->y,&B->y);
-    A->infity=B->infity;
+    A->PoI=B->PoI;
 }
-void EFp2_set_infity(struct EFp2 *A){
+void EFp2_set_PoI(struct EFp2 *A){
     Fp2_set_ui(&A->x,0);
     Fp2_set_ui(&A->y,0);
-    A->infity=TRUE;
+    A->PoI=TRUE;
 }
 void EFp2_clear(struct EFp2 *A){
     Fp2_clear(&A->x);
@@ -53,7 +53,7 @@ void EFp2_SCM_BIN(struct EFp2 *ANS,struct EFp2 *P,mpz_t j){
     return;
 }
 void EFp2_ECD(struct EFp2 *ANS, struct EFp2 *P){
-    if(P->infity==TRUE){
+    if(P->PoI==TRUE){
         EFp2_set(ANS,P);
         return;
     }
@@ -61,7 +61,7 @@ void EFp2_ECD(struct EFp2 *ANS, struct EFp2 *P){
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp2_cmp_mpz(&P->y,cmp)==0){//P.y==0
-        EFp2_set_infity(ANS);
+        EFp2_set_PoI(ANS);
         return;
     }
     
@@ -96,16 +96,16 @@ void EFp2_ECD(struct EFp2 *ANS, struct EFp2 *P){
     EFp2_clear(&t_ans);
 }
 void EFp2_ECA(struct EFp2 *ANS, struct EFp2 *P1, struct EFp2 *P2){
-    if(P2->infity==TRUE){//if P2==inf
+    if(P2->PoI==TRUE){//if P2==inf
         EFp2_set(ANS,P1);
         return;
     }
-    else if(P1->infity==TRUE){//if P1==inf
+    else if(P1->PoI==TRUE){//if P1==inf
         EFp2_set(ANS,P2);
         return;
     }
     else if(Fp2_cmp(&P1->x,&P2->x)==0&&Fp2_cmp(&P1->y,&P2->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-        EFp2_set_infity(ANS);
+        EFp2_set_PoI(ANS);
         return;
     }
     else if(EFp2_cmp(P1,P2)==0){ // P=Q

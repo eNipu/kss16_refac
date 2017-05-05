@@ -13,17 +13,17 @@
 void EFp_init(struct EFp *A){
     Fp_init(&A->x);
     Fp_init(&A->y);
-    A->infity=FALSE;
+    A->PoI=FALSE;
 }
 void EFp_set(struct EFp *A,struct EFp *B){
     Fp_set(&A->x,&B->x);
     Fp_set(&A->y,&B->y);
-    A->infity=B->infity;
+    A->PoI=B->PoI;
 }
-void EFp_set_infity(struct EFp *A){
+void EFp_set_PoI(struct EFp *A){
     Fp_set_ui(&A->x,0);
     Fp_set_ui(&A->y,0);
-    A->infity=TRUE;
+    A->PoI=TRUE;
 }
 void EFp_clear(struct EFp *A){
     Fp_clear(&A->x);
@@ -56,12 +56,12 @@ void EFp_SCM_BIN(struct EFp *ANS, struct EFp *P,mpz_t j){
 }
 
 void EFp_ECD(struct EFp *ANS, struct EFp *P){
-    if(P->infity==TRUE){
+    if(P->PoI==TRUE){
         EFp_set(ANS,P);
         return;
     }
     if(mpz_sgn(P->y.x0)==0){//P.y==0
-        EFp_set_infity(ANS);
+        EFp_set_PoI(ANS);
         return;
     }
     
@@ -100,16 +100,16 @@ void EFp_ECD(struct EFp *ANS, struct EFp *P){
     EFp_clear(&t_ans);
 }
 void EFp_ECA(struct EFp *ANS, struct EFp *P1, struct EFp *P2){
-    if(P2->infity==TRUE){//if P2==inf
+    if(P2->PoI==TRUE){//if P2==inf
         EFp_set(ANS,P1);
         return;
     }
-    else if(P1->infity==TRUE){//if P1==inf
+    else if(P1->PoI==TRUE){//if P1==inf
         EFp_set(ANS,P2);
         return;
     }
     else if(Fp_cmp(&P1->x,&P2->x)==0&&Fp_cmp(&P1->y,&P2->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-        EFp_set_infity(ANS);
+        EFp_set_PoI(ANS);
         return;
     }
     else if(EFp_cmp(P1,P2)==0){ // P=Q
@@ -177,7 +177,7 @@ void EFp_random_set(struct EFp *ANS){
         Fp_mul_mpz(&tmp, &x, kss_curve_const.a);
         Fp_add(&a, &a, &tmp);
     }while(mpz_legendre(a.x0,params.prime)!=1);
-    Q.infity=0;
+    Q.PoI=0;
     Fp_sqrt(&P.y,&a);
     Fp_set(&P.x,&x);
     EFp_set(ANS,&P);
