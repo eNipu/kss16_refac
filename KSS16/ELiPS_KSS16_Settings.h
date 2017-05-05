@@ -34,8 +34,8 @@
  *  @bug No know bug yet
  */
 
-#ifndef Settings_h
-#define Settings_h
+#ifndef ELiPS_KSS16_Settings_h
+#define ELiPS_KSS16_Settings_h
 
 /* -- Includes -- */
 /* inlcudes 1st level header of project configuration*/
@@ -168,4 +168,4 @@ extern void generate_X(void);
  *
  */
 extern float timedifference_msec(struct timeval t0, struct timeval t1);
-#endif /* Settings_h */
+#endif /* ELiPS_KSS16_Settings_h */

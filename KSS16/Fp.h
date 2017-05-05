@@ -9,7 +9,7 @@
 #ifndef Fp_h
 #define Fp_h
 
-#include "Settings.h"
+#include "ELiPS_KSS16_Settings.h"
 
 struct Fp{
     mpz_t x0;
@@ -40,7 +40,7 @@ extern void Fp_sqrt(struct Fp *ans,struct Fp *a);//x^2=a mod p
 extern int  Fp_cmp_mpz(struct Fp *A,mpz_t B);
 extern void Fp_mul_mpz(struct Fp *ANS,struct Fp *A,mpz_t B);
 extern void Fp_neg(struct Fp *ANS,struct Fp *A);
-extern int Fp_cmp(struct Fp *A,struct Fp *B);
+extern int  Fp_cmp(struct Fp *A,struct Fp *B);
 
 #pragma mark util methods declaration
 extern void dealloc_constants();

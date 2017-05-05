@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Settings.h"
+#include "ELiPS_KSS16_Settings.h"
 
 int c1 = 2; //Quardratic not residue over Prime field Fp
 int isParamsSet = 0;
