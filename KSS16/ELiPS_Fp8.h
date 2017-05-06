@@ -6,10 +6,10 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Fp8_h
-#define Fp8_h
+#ifndef ELiPS_Fp8_h
+#define ELiPS_Fp8_h
 
-#include "Fp4.h"
+#include "ELiPS_Fp4.h"
 
 struct Fp8{
     struct Fp4 x0,x1;
@@ -39,4 +39,4 @@ extern int  Fp8_legendre(struct Fp8 *A);
 extern int  Fp8_cmp(struct Fp8 *A,struct Fp8 *B);
 extern int  Fp8_cmp_mpz(struct Fp8 *A,mpz_t B);
 extern void Fp8_frobenius_map(struct Fp8 *ANS, struct Fp8 *A);
-#endif /* Fp8_h */
+#endif /* ELiPS_Fp8_h */

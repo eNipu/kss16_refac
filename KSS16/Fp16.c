@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Fp16.h"
+#include "ELiPS_Fp16.h"
 
 // #pragma mark Fp8 methods
 void Fp16_init(struct Fp16 *A){

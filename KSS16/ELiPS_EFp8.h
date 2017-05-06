@@ -6,10 +6,10 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef EFp8_h
-#define EFp8_h
+#ifndef ELiPS_EFp8_h
+#define ELiPS_EFp8_h
 
-#include "Fp8.h"
+#include "ELiPS_Fp8.h"
 
 struct EFp8{
     struct Fp8 x,y;
@@ -28,4 +28,4 @@ extern int  EFp8_cmp(struct EFp8 *A,struct EFp8 *B);
 //void EFp8_random_set(struct EFp8 *ANS);
 extern void EFp8_SCM_BIN(struct EFp8 *ANS, struct EFp8 *P, mpz_t j);
 
-#endif /* EFp8_h */
+#endif /* ELiPS_EFp8_h */

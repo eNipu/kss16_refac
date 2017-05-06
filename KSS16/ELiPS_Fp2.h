@@ -6,8 +6,8 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Fp2_h
-#define Fp2_h
+#ifndef ELiPS_Fp2
+#define ELiPS_Fp2
 
 #include "ELiPS_Fp.h"
 
@@ -41,4 +41,4 @@ extern int  Fp2_cmp_mpz(struct Fp2 *A,mpz_t B);
 extern void Fp2_neg(struct Fp2 *ANS,struct Fp2 *A);
 extern void Fp2_frobenius_map(struct Fp2 *ANS, struct Fp2 *A);
 
-#endif /* Fp2_h */
+#endif /* ELiPS_Fp2 */

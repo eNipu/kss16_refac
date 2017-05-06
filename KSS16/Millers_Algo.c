@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Millers_Algo.h"
+#include "ELiPS_KSS16_Millers_Algo.h"
 
 void Miller_algo(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q, mpz_t loop){
     struct Fp16 l_sum,v_sum;

@@ -9,7 +9,7 @@
 
 
 #include "KSS16_init.h"
-#include "KSS16_Find_Params.h"
+#include "ELiPS_KSS16_Params.h"
 #include "Test_Pairings.h"
 int main(int argc, const char * argv[]) {
 

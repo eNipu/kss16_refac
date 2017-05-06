@@ -6,10 +6,10 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Fp16_h
-#define Fp16_h
+#ifndef ELiPS_Fp16_h
+#define ELiPS_Fp16_h
 
-#include "Fp8.h"
+#include "ELiPS_Fp8.h"
 
 struct Fp16{
     struct Fp8 x0,x1;
@@ -41,4 +41,4 @@ extern int  Fp16_cmp_mpz(struct Fp16 *A,mpz_t B);
 extern void Fp16_neg(struct Fp16 *ANS,struct Fp16 *A);
 extern void Fp16_frobenius_map(struct Fp16 *ANS, struct Fp16 *A);
 
-#endif /* Fp16_h */
+#endif /* ELiPS_Fp16_h */

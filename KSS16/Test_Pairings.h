@@ -9,7 +9,7 @@
 #ifndef Test_Pairings_h
 #define Test_Pairings_h
 
-#include "Line_evaluation.h"
+#include "ELiPS_KSS16_Line_Evaluation.h"
 
 extern void check_Pairing(void);
 #endif /* Test_Pairings_h */

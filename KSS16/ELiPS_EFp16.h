@@ -6,12 +6,12 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef EFp16_h
-#define EFp16_h
+#ifndef ELiPS_EFp16_h
+#define ELiPS_EFp16_h
 
-#include "Fp16.h"
-#include "EFp.h"
-#include "EFp4.h"
+#include "ELiPS_Fp16.h"
+#include "ELiPS_EFp.h"
+#include "ELiPS_EFp4.h"
 
 struct EFp16{
     struct Fp16 x,y;
@@ -35,4 +35,4 @@ extern void EFp16_random_set_G2(struct EFp16 *ANS);
 
 extern void EFp16_to_EFp4_map(struct EFp4 *ANS,struct EFp16 *A);
 extern void EFp4_to_EFp16_map(struct EFp16 *ANS,struct EFp4 *A);
-#endif /* EFp16_h */
+#endif /* ELiPS_EFp16_h */

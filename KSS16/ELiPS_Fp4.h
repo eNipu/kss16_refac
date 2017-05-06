@@ -6,10 +6,10 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Fp4_h
-#define Fp4_h
+#ifndef ELiPS_Fp4_h
+#define ELiPS_Fp4_h
 
-#include "Fp2.h"
+#include "ELiPS_Fp2.h"
 
 struct Fp4{
     struct Fp2 x0,x1;
@@ -42,4 +42,4 @@ extern int  Fp4_cmp_mpz(struct Fp4 *A,mpz_t B);
 extern void Fp4_neg(struct Fp4 *ANS,struct Fp4 *A);
 extern void Fp4_frobenius_map(struct Fp4 *ANS, struct Fp4 *A);
 extern void Fp4_mul_betainv(struct Fp4 *ANS);
-#endif /* Fp4_h */
+#endif /* ELiPS_Fp4_h */

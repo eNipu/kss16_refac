@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "EFp.h"
+#include "ELiPS_EFp.h"
 
 //--------------------------
 // #pragma mark EFp methods

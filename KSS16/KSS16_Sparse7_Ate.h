@@ -9,7 +9,7 @@
 #ifndef KSS16_Sparse7_Ate_h
 #define KSS16_Sparse7_Ate_h
 
-#include "EFp16.h"
+#include "ELiPS_EFp16.h"
 
 extern void Sparse_Ate_Pairing(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q);
 

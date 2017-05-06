@@ -6,12 +6,12 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef KSS16_Find_Params_h
-#define KSS16_Find_Params_h
+#ifndef ELiPS_KSS16_Params_h
+#define ELiPS_KSS16_Params_h
 
 #include "ELiPS_Fp.h"
-#include "EFp.h"
+#include "ELiPS_EFp.h"
 
 extern void KSS_16_parameters(void);
 
-#endif /* KSS16_Find_Params_h */
+#endif /* ELiPS_KSS16_Params_h */

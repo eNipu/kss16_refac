@@ -6,10 +6,10 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Millers_Algo_h
-#define Millers_Algo_h
+#ifndef ELiPS_KSS16_Millers_Algo_h
+#define ELiPS_KSS16_Millers_Algo_h
 
-#include "Line_evaluation.h"
+#include "ELiPS_KSS16_Line_Evaluation.h"
 
 extern void Miller_algo(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q,mpz_t roop);
-#endif /* Millers_Algo_h */
+#endif /* ELiPS_KSS16_Millers_Algo_h */

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Fp4.h"
+#include "ELiPS_Fp4.h"
 
 struct Fp4 z_inv2;
 

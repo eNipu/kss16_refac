@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Fp2.h"
+#include "ELiPS_Fp2.h"
 
 #pragma mark Fp2 Methods
 void Fp2_init(struct Fp2 *A){

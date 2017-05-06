@@ -6,7 +6,8 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "EFp8.h"
+#include "ELiPS_EFp8.h"
+
 void EFp8_init(struct EFp8 *A){
     Fp8_init(&A->x);
     Fp8_init(&A->y);

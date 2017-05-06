@@ -9,7 +9,7 @@
 #ifndef KSS16_PS_Ate_h
 #define KSS16_PS_Ate_h
 
-#include "EFp16.h"
+#include "ELiPS_EFp16.h"
 
 void Pseudo_Sparse_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2);
 

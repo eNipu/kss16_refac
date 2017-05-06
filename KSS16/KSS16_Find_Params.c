@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_Find_Params.h"
+#include "ELiPS_KSS16_Params.h"
 #include <stdlib.h>
 
 void KSS_16_parameters(void){

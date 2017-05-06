@@ -6,8 +6,8 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef EFp_h
-#define EFp_h
+#ifndef ELiPS_EFp_h
+#define ELiPS_EFp_h
 
 #include "ELiPS_Fp.h"
 
@@ -29,4 +29,4 @@ extern int  EFp_cmp(struct EFp *A,struct EFp *B);
 extern void EFp_random_set(struct EFp *ANS);//random set EFp on curve
 extern void EFp_neg(struct EFp *ANS, struct EFp *A);
 extern void rational_point_check(struct EFp *A);
-#endif /* EFp_h */
+#endif /* ELiPS_EFp_h */

@@ -7,7 +7,7 @@
 //
 
 #include "Tate_Pairing.h"
-#include "Millers_Algo.h"
+#include "ELiPS_KSS16_Millers_Algo.h"
 #include "KSS16_Final_Exp.h"
 
 void Tate_Pairing(struct Fp16 *ANS,struct EFp16 *G1,struct EFp16 *G2){

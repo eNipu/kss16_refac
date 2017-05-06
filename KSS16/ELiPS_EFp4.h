@@ -9,8 +9,8 @@
 #ifndef EFp4_h
 #define EFp4_h
 
-#include "Fp4.h"
-#include "EFp.h"
+#include "ELiPS_Fp4.h"
+#include "ELiPS_EFp.h"
 
 struct EFp4{
     struct Fp4 x,y;

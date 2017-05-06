@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "EFp16.h"
+#include "ELiPS_EFp16.h"
 
 #pragma mark EFp16 methods
 

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "EFp4.h"
+#include "ELiPS_EFp4.h"
 
 #pragma mark EFp4 method implementations
 

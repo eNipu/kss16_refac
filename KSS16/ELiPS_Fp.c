@@ -15,7 +15,7 @@ mpz_t p8p1dr;
 
 #pragma mark Fp method
 void Fp_init(struct Fp *A){
-    if (!isParamsSet) {
+    if (!is_params_set) {
         set_kss16_params();
 //        set_kss16_curve_const();
     }

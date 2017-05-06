@@ -9,7 +9,7 @@
 #ifndef Ate_Pairing_h
 #define Ate_Pairing_h
 
-#include "Line_evaluation.h"
+#include "ELiPS_KSS16_Line_Evaluation.h"
 
 extern void Ate_Pairing(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q);
 

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Line_evaluation.h"
+#include "ELiPS_KSS16_Line_Evaluation.h"
 
 void ADD_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp16 *P,struct EFp16 *Q,struct Fp16 *Qx_neg){
     struct Fp16 tmp1,tmp2,tmp3,tmp4,lambda,ltp;

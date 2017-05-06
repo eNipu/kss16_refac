@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "EFp2.h"
+#include "ELiPS_EFp2.h"
 // #pragma mark EFp2 methods
 
 void EFp2_init(struct EFp2 *A){

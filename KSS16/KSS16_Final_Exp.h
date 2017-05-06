@@ -9,7 +9,7 @@
 #ifndef KSS16_Final_Exp_h
 #define KSS16_Final_Exp_h
 
-#include "Fp16.h"
+#include "ELiPS_Fp16.h"
 
 void Final_Exp(struct Fp16 *ANS,struct Fp16 *A);
 

@@ -129,7 +129,7 @@ extern int c1;
  * @brief Checks if all the parameters of KSS16 curve is initialize.
  *
  */
-extern int is_set_params;
+extern int is_params_set;
 
 extern int TRUE;
 extern int FALSE;

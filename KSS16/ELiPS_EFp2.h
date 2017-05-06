@@ -6,11 +6,11 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef EFp2_h
-#define EFp2_h
+#ifndef ELiPS_EFp2_h
+#define ELiPS_EFp2_h
 
-#include "EFp.h"
-#include "Fp2.h"
+#include "ELiPS_EFp.h"
+#include "ELiPS_Fp2.h"
 
 struct EFp2{
     struct Fp2 x,y;
@@ -34,4 +34,4 @@ extern void EFp2_SCM_NAF(struct EFp2 *ANS, struct EFp2 *P, mpz_t scalar);
 extern void EFp2_SCM_WIN(struct EFp2 *ANS, struct EFp2 *P, mpz_t scalar);
 extern void EFp2_neg(struct EFp2 *ANS, struct EFp2 *A);
 extern void EFp2_rational_point_check(struct EFp2 *A);
-#endif /* EFp2_h */
+#endif /* ELiPS_EFp2_h */

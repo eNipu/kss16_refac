@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Fp8.h"
+#include "ELiPS_Fp8.h"
 
 
 #pragma mark Fp8 methods definitions

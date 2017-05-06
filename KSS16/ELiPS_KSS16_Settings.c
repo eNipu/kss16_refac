@@ -9,7 +9,7 @@
 #include "ELiPS_KSS16_Settings.h"
 
 int c1 = 2; //Quardratic not residue over Prime field Fp
-int isParamsSet = 0;
+int is_params_set = 0;
 int TRUE = TRUE_1;
 int FALSE = FALSE_0;
 char X_bit_binary[x_bit+1];
@@ -19,7 +19,7 @@ struct KSS16_constants kss_curve_const;
 
 void set_kss16_params(){
     
-    if (!isParamsSet) {
+    if (!is_params_set) {
         mpz_init(params.prime);
         mpz_init(params.order_r);
         mpz_init(params.trace_t);
@@ -31,7 +31,7 @@ void set_kss16_params(){
         mpz_set_str(params.trace_t,TRACE_T,10);
         mpz_set_str(params.order_EFp,ORDER_EFp,10);
         
-        isParamsSet = 1;
+        is_params_set = 1;
     }
 }
 

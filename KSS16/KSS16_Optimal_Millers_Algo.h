@@ -9,6 +9,7 @@
 #ifndef Optimal_Millers_Algo_h
 #define Optimal_Millers_Algo_h
 
-#include "Line_evaluation.h"
+#include "ELiPS_KSS16_Line_Evaluation.h"
+
 extern void Optimal_Miller(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q,mpz_t roop);
 #endif /* Optimal_Millers_Algo_h */
