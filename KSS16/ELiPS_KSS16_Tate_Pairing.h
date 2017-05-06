@@ -6,10 +6,10 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Tate_Pairing_h
-#define Tate_Pairing_h
+#ifndef ELiPS_KSS16_Tate_Pairing_h
+#define ELiPS_KSS16_Tate_Pairing_h
 
 #include "ELiPS_KSS16_Line_Evaluation.h"
 
 extern void Tate_Pairing(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q);
-#endif /* Tate_Pairing_h */
+#endif /* ELiPS_KSS16_Tate_Pairing_h */

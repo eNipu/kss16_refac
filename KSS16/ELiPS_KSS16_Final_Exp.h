@@ -6,11 +6,11 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef KSS16_Final_Exp_h
-#define KSS16_Final_Exp_h
+#ifndef ELiPS_KSS16_Final_Exp_h
+#define ELiPS_KSS16_Final_Exp_h
 
 #include "ELiPS_Fp16.h"
 
 void Final_Exp(struct Fp16 *ANS,struct Fp16 *A);
 
-#endif /* KSS16_Final_Exp_h */
+#endif /* ELiPS_KSS16_Final_Exp_h */

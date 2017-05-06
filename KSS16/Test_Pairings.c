@@ -6,9 +6,9 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Test_Pairings.h"
+#include "ELiPS_KSS16_Pairings_Test.h"
 
-#include "Tate_Pairing.h"
+#include "ELiPS_KSS16_Tate_Pairing.h"
 #include "Ate_Pairing.h"
 #include "KSS16_Opt_Ate.h"
 #include "KSS16_Sparse7_Ate.h"

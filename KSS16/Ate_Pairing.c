@@ -8,7 +8,7 @@
 
 #include "Ate_Pairing.h"
 #include "ELiPS_KSS16_Millers_Algo.h"
-#include "KSS16_Final_Exp.h"
+#include "ELiPS_KSS16_Final_Exp.h"
 
 void Ate_Pairing(struct Fp16 *ANS,struct EFp16 *G1,struct EFp16 *G2){
     struct Fp16 t_ans;

@@ -8,7 +8,7 @@
 
 #include "KSS16_Sparse7_Opt_Ate.h"
 #include "KSS16_Sparse7_Opt_Miller.h"
-#include "KSS16_Final_Exp.h"
+#include "ELiPS_KSS16_Final_Exp.h"
 
 void Sparse_Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2){
     struct EFp4 G1_EFp4,G2_EFp4;

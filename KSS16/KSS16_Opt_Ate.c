@@ -7,8 +7,8 @@
 //
 
 #include "KSS16_Opt_Ate.h"
-#include "KSS16_Optimal_Millers_Algo.h"
-#include "KSS16_Final_Exp.h"
+#include "ELiPS_KSS16_Optimal_Millers_Algo.h"
+#include "ELiPS_KSS16_Final_Exp.h"
 
 void Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp16 *G1,struct EFp16 *G2){
     struct Fp16 Miller_X, t_ans;

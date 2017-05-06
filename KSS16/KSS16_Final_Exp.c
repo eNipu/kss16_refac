@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_Final_Exp.h"
+#include "ELiPS_KSS16_Final_Exp.h"
 
 void Final_Exp(struct Fp16 *ANS,struct Fp16 *A){
     struct Fp16 temp_Fp16,temp_A;

@@ -82,13 +82,13 @@
 		EF1FA34E1EB1823B00814F26 /* Millers_Algo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Millers_Algo.c; sourceTree = "<group>"; };
 		EF1FA34F1EB1823B00814F26 /* ELiPS_KSS16_Millers_Algo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Millers_Algo.h; sourceTree = "<group>"; };
 		EF1FA3511EB182C300814F26 /* KSS16_Optimal_Millers_Algo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSS16_Optimal_Millers_Algo.c; sourceTree = "<group>"; };
-		EF1FA3521EB182C300814F26 /* KSS16_Optimal_Millers_Algo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSS16_Optimal_Millers_Algo.h; sourceTree = "<group>"; };
+		EF1FA3521EB182C300814F26 /* ELiPS_KSS16_Optimal_Millers_Algo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Optimal_Millers_Algo.h; sourceTree = "<group>"; };
 		EF1FA3541EB1847100814F26 /* KSS16_Final_Exp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSS16_Final_Exp.c; sourceTree = "<group>"; };
-		EF1FA3551EB1847100814F26 /* KSS16_Final_Exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSS16_Final_Exp.h; sourceTree = "<group>"; };
+		EF1FA3551EB1847100814F26 /* ELiPS_KSS16_Final_Exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Final_Exp.h; sourceTree = "<group>"; };
 		EF1FA3571EB1855C00814F26 /* Tate_Pairing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Tate_Pairing.c; sourceTree = "<group>"; };
-		EF1FA3581EB1855C00814F26 /* Tate_Pairing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tate_Pairing.h; sourceTree = "<group>"; };
+		EF1FA3581EB1855C00814F26 /* ELiPS_KSS16_Tate_Pairing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Tate_Pairing.h; sourceTree = "<group>"; };
 		EF1FA35A1EB185ED00814F26 /* Test_Pairings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Test_Pairings.c; sourceTree = "<group>"; };
-		EF1FA35B1EB185ED00814F26 /* Test_Pairings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Pairings.h; sourceTree = "<group>"; };
+		EF1FA35B1EB185ED00814F26 /* ELiPS_KSS16_Pairings_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Pairings_Test.h; sourceTree = "<group>"; };
 		EF1FA35D1EB18B9000814F26 /* Ate_Pairing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ate_Pairing.c; sourceTree = "<group>"; };
 		EF1FA35E1EB18B9000814F26 /* Ate_Pairing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ate_Pairing.h; sourceTree = "<group>"; };
 		EF1FA3601EB18C6C00814F26 /* KSS16_Opt_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSS16_Opt_Ate.c; sourceTree = "<group>"; };
@@ -153,10 +153,10 @@
 				EF1FA3491EB136A500814F26 /* ELiPS_KSS16_Params.h */,
 				EF1FA34C1EB1809B00814F26 /* ELiPS_KSS16_Line_Evaluation.h */,
 				EF1FA34F1EB1823B00814F26 /* ELiPS_KSS16_Millers_Algo.h */,
-				EF1FA3521EB182C300814F26 /* KSS16_Optimal_Millers_Algo.h */,
-				EF1FA3551EB1847100814F26 /* KSS16_Final_Exp.h */,
-				EF1FA3581EB1855C00814F26 /* Tate_Pairing.h */,
-				EF1FA35B1EB185ED00814F26 /* Test_Pairings.h */,
+				EF1FA3521EB182C300814F26 /* ELiPS_KSS16_Optimal_Millers_Algo.h */,
+				EF1FA3551EB1847100814F26 /* ELiPS_KSS16_Final_Exp.h */,
+				EF1FA3581EB1855C00814F26 /* ELiPS_KSS16_Tate_Pairing.h */,
+				EF1FA35B1EB185ED00814F26 /* ELiPS_KSS16_Pairings_Test.h */,
 				EF1FA35E1EB18B9000814F26 /* Ate_Pairing.h */,
 				EF1FA3611EB18C6C00814F26 /* KSS16_Opt_Ate.h */,
 				EF1FA3641EB1959700814F26 /* KSS16_Sparse7_Line_Evaluation.h */,
