@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "Fp.h"
+#include "ELiPS_Fp.h"
 
 struct Fp qnr_c1,c_inv,pm1d4,pm5d8,pm13d16;
 struct Fp m_pm1d4,m_cpm13d16;

@@ -9,7 +9,7 @@
 #ifndef KSS16_Find_Params_h
 #define KSS16_Find_Params_h
 
-#include "Fp.h"
+#include "ELiPS_Fp.h"
 #include "EFp.h"
 
 extern void KSS_16_parameters(void);

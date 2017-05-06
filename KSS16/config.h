@@ -25,7 +25,7 @@
  *  @brief Brief description about the source file/header file.
  *
  *  Then here write about the small details what this source file is intended for.
- *  If it calculated prime field arithmetic then write what are the major funcion
+ *  If it calculated prime field arithmetic then write what are the major funcion-
  *  ality it provides though the public functions.  For example what type of
  *  public funtions it will give or global variables you will need.
  *

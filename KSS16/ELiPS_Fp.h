@@ -1,13 +1,13 @@
 //
-//  Fp.h
+//  ELiPS_Fp.h
 //  KSS16
 //
 //  Created by Khandaker Md. Al-Amin on 4/26/17.
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Fp_h
-#define Fp_h
+#ifndef ELiPS_Fp
+#define ELiPS_Fp
 
 #include "ELiPS_KSS16_Settings.h"
 
@@ -46,4 +46,4 @@ extern int  Fp_cmp(struct Fp *A,struct Fp *B);
 extern void dealloc_constants();
 extern void pre_calculate();
 
-#endif /* Fp_h */
+#endif /* ELiPS_Fp */

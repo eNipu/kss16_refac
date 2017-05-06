@@ -9,7 +9,7 @@
 #ifndef EFp_h
 #define EFp_h
 
-#include "Fp.h"
+#include "ELiPS_Fp.h"
 
 struct EFp{
     struct Fp x,y;

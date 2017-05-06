@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3281EB0C12800814F26 /* Fp.c */; };
-		EF1FA32F1EB0C12800814F26 /* Fp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32A1EB0C12800814F26 /* Fp2.c */; };
-		EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32C1EB0C12800814F26 /* Fp4.c */; };
-		EF1FA3331EB0CE6600814F26 /* Fp8.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3311EB0CE6600814F26 /* Fp8.c */; };
+		EF1FA32E1EB0C12800814F26 /* ELiPS_Fp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3281EB0C12800814F26 /* ELiPS_Fp.c */; };
+		EF1FA32F1EB0C12800814F26 /* ELiPS_Fp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32A1EB0C12800814F26 /* ELiPS_Fp2.c */; };
+		EF1FA3301EB0C12800814F26 /* ELiPS_Fp4.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA32C1EB0C12800814F26 /* ELiPS_Fp4.c */; };
+		EF1FA3331EB0CE6600814F26 /* ELiPS_Fp8.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3311EB0CE6600814F26 /* ELiPS_Fp8.c */; };
 		EF1FA3361EB0CFC300814F26 /* Fp16.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3341EB0CFC300814F26 /* Fp16.c */; };
 		EF1FA3391EB0D22F00814F26 /* EFp.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA3371EB0D22F00814F26 /* EFp.c */; };
 		EF1FA33C1EB0ED7400814F26 /* EFp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF1FA33A1EB0ED7400814F26 /* EFp2.c */; };
@@ -55,13 +55,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EF1FA3281EB0C12800814F26 /* Fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp.c; sourceTree = "<group>"; };
-		EF1FA3291EB0C12800814F26 /* Fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp.h; sourceTree = "<group>"; };
-		EF1FA32A1EB0C12800814F26 /* Fp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp2.c; sourceTree = "<group>"; };
+		EF1FA3281EB0C12800814F26 /* ELiPS_Fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp.c; sourceTree = "<group>"; };
+		EF1FA3291EB0C12800814F26 /* ELiPS_Fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_Fp.h; sourceTree = "<group>"; };
+		EF1FA32A1EB0C12800814F26 /* ELiPS_Fp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp2.c; sourceTree = "<group>"; };
 		EF1FA32B1EB0C12800814F26 /* Fp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp2.h; sourceTree = "<group>"; };
-		EF1FA32C1EB0C12800814F26 /* Fp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp4.c; sourceTree = "<group>"; };
+		EF1FA32C1EB0C12800814F26 /* ELiPS_Fp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp4.c; sourceTree = "<group>"; };
 		EF1FA32D1EB0C12800814F26 /* Fp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp4.h; sourceTree = "<group>"; };
-		EF1FA3311EB0CE6600814F26 /* Fp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp8.c; sourceTree = "<group>"; };
+		EF1FA3311EB0CE6600814F26 /* ELiPS_Fp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp8.c; sourceTree = "<group>"; };
 		EF1FA3321EB0CE6600814F26 /* Fp8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp8.h; sourceTree = "<group>"; };
 		EF1FA3341EB0CFC300814F26 /* Fp16.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fp16.c; sourceTree = "<group>"; };
 		EF1FA3351EB0CFC300814F26 /* Fp16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fp16.h; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 			children = (
 				EF90C8D71EB03CB800F008F0 /* config.h */,
 				EFA241FA1EB077F300036D7D /* ELiPS_KSS16_Settings.h */,
-				EF1FA3291EB0C12800814F26 /* Fp.h */,
+				EF1FA3291EB0C12800814F26 /* ELiPS_Fp.h */,
 				EF1FA32B1EB0C12800814F26 /* Fp2.h */,
 				EF1FA32D1EB0C12800814F26 /* Fp4.h */,
 				EF1FA3321EB0CE6600814F26 /* Fp8.h */,
@@ -185,10 +185,10 @@
 			children = (
 				EF1FA3811EB1F8F800814F26 /* KSS16_init.c */,
 				EFA241F91EB077F300036D7D /* ELiPS_KSS16_Settings.c */,
-				EF1FA3281EB0C12800814F26 /* Fp.c */,
-				EF1FA32A1EB0C12800814F26 /* Fp2.c */,
-				EF1FA32C1EB0C12800814F26 /* Fp4.c */,
-				EF1FA3311EB0CE6600814F26 /* Fp8.c */,
+				EF1FA3281EB0C12800814F26 /* ELiPS_Fp.c */,
+				EF1FA32A1EB0C12800814F26 /* ELiPS_Fp2.c */,
+				EF1FA32C1EB0C12800814F26 /* ELiPS_Fp4.c */,
+				EF1FA3311EB0CE6600814F26 /* ELiPS_Fp8.c */,
 				EF1FA3341EB0CFC300814F26 /* Fp16.c */,
 				EF1FA3371EB0D22F00814F26 /* EFp.c */,
 				EF1FA33A1EB0ED7400814F26 /* EFp2.c */,
@@ -303,10 +303,10 @@
 				EF1FA3361EB0CFC300814F26 /* Fp16.c in Sources */,
 				EF1FA3501EB1823B00814F26 /* Millers_Algo.c in Sources */,
 				EF1FA3391EB0D22F00814F26 /* EFp.c in Sources */,
-				EF1FA3331EB0CE6600814F26 /* Fp8.c in Sources */,
+				EF1FA3331EB0CE6600814F26 /* ELiPS_Fp8.c in Sources */,
 				EF1FA35C1EB185ED00814F26 /* Test_Pairings.c in Sources */,
 				EF1FA3831EB1F8F800814F26 /* KSS16_init.c in Sources */,
-				EF1FA3301EB0C12800814F26 /* Fp4.c in Sources */,
+				EF1FA3301EB0C12800814F26 /* ELiPS_Fp4.c in Sources */,
 				EF1FA3531EB182C300814F26 /* KSS16_Optimal_Millers_Algo.c in Sources */,
 				EF1FA37D1EB1A68A00814F26 /* KSS16_PS_Ate.c in Sources */,
 				EF1FA35F1EB18B9000814F26 /* Ate_Pairing.c in Sources */,
@@ -319,8 +319,8 @@
 				EF1FA3471EB12E8100814F26 /* EFp16.c in Sources */,
 				EF1FA3441EB108B000814F26 /* EFp8.c in Sources */,
 				EF1FA3741EB1A23A00814F26 /* KSS16_PS_Line_Evaluation.c in Sources */,
-				EF1FA32E1EB0C12800814F26 /* Fp.c in Sources */,
-				EF1FA32F1EB0C12800814F26 /* Fp2.c in Sources */,
+				EF1FA32E1EB0C12800814F26 /* ELiPS_Fp.c in Sources */,
+				EF1FA32F1EB0C12800814F26 /* ELiPS_Fp2.c in Sources */,
 				EF1FA34A1EB136A500814F26 /* KSS16_Find_Params.c in Sources */,
 				EF1FA3621EB18C6C00814F26 /* KSS16_Opt_Ate.c in Sources */,
 				EF1FA3801EB1A6A900814F26 /* KSS16_PS_Opt_Ate.c in Sources */,

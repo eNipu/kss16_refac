@@ -9,7 +9,7 @@
 #ifndef KSS16_init_h
 #define KSS16_init_h
 
-#include "Fp.h"
+#include "ELiPS_Fp.h"
 
 extern void KSS16_init();
 
