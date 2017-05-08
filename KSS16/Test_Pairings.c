@@ -11,7 +11,7 @@
 #include "ELiPS_KSS16_Tate_Pairing.h"
 #include "ELiPS_KSS16_Ate_Pairing.h"
 #include "ELiPS_KSS16_Opt_Ate.h"
-#include "KSS16_Sparse7_Ate.h"
+#include "ELiPS_KSS16_Sparse_Ate.h"
 #include "ELiPS_KSS16_Sparse_Opt_Ate.h"
 #include "ELiPS_KSS16_PS_Opt_Ate.h"
 
