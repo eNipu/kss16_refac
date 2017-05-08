@@ -112,7 +112,7 @@ void sparse_dbl_line_kss16(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     Fp4_mul_ui(&B,&B,3);
     struct Fp4 ac_inv;
     Fp4_init(&ac_inv);
-    Fp4_mul_betainv(&ac_inv);
+    Fp4_mul_beta_inv(&ac_inv);
     Fp4_add(&B,&B,&ac_inv);
     Fp4_div(&C,&B,&A);//lambda=(yt-tp)/(xt-xp)
     

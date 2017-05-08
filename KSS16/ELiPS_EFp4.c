@@ -162,7 +162,7 @@ void EFp4_ecd_sparse(struct EFp4 *ANS, struct EFp4 *P){
     Fp4_add(&tmp,&x,&x);
     Fp4_add(&x,&tmp,&x);
     
-    Fp4_mul_betainv(&a_betainv);
+    Fp4_mul_beta_inv(&a_betainv);
     Fp4_add(&x, &x, &a_betainv);
     
     // Fp_add_mpz(&x.x0.x0,&x.x0.x0,a_x);
@@ -444,7 +444,7 @@ void kss16_skew_frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt)
 //    Fp4_add(&tmp,&x,&x);
 //    Fp4_add(&x,&tmp,&x);
 //    
-//    Fp4_mul_betainv(&a_betainv);
+//    Fp4_mul_beta_inv(&a_betainv);
 //    Fp4_mul(&a_betainv, &a_betainv, &z_inv2);
 //    Fp4_add(&x, &x, &a_betainv);
 //    

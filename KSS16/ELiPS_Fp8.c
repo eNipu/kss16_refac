@@ -341,8 +341,8 @@ void Fp8_frobenius_map(struct Fp8 *ANS, struct Fp8 *A){
     Fp4_frobenius_map(&tmp_ans.x1,&A->x1);
     Fp4_mul_Fp(&tmp_ans.x1,&tmp_ans.x1,&pm5d8);
     
-    Fp2_mul_i(&tmp_ans.x1.x0, &tmp_ans.x1.x0);
-    Fp2_mul_i(&tmp_ans.x1.x1, &tmp_ans.x1.x1);
+    Fp4_mul_basis(&tmp_ans.x1.x0, &tmp_ans.x1.x0);
+    Fp4_mul_basis(&tmp_ans.x1.x1, &tmp_ans.x1.x1);
     
     Fp8_set(ANS,&tmp_ans);
     

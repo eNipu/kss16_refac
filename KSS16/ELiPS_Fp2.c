@@ -99,7 +99,7 @@ void Fp2_mul(struct Fp2 *ANS,struct Fp2 *A,struct Fp2 *B){
     Fp2_clear(&t_ans);
     
 }
-void Fp2_mul_i(struct Fp2 *ANS,struct Fp2 *A){
+void Fp4_mul_basis(struct Fp2 *ANS,struct Fp2 *A){
     //(a,b)(1,1)=(a-b,a+b)
     struct Fp2 tmp;
     Fp2_init(&tmp);

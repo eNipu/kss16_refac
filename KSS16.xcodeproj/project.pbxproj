@@ -57,11 +57,11 @@
 /* Begin PBXFileReference section */
 		EF1FA3281EB0C12800814F26 /* ELiPS_Fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp.c; sourceTree = "<group>"; };
 		EF1FA3291EB0C12800814F26 /* ELiPS_Fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_Fp.h; sourceTree = "<group>"; };
-		EF1FA32A1EB0C12800814F26 /* ELiPS_Fp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp2.c; sourceTree = "<group>"; };
-		EF1FA32B1EB0C12800814F26 /* ELiPS_Fp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_Fp2.h; sourceTree = "<group>"; };
-		EF1FA32C1EB0C12800814F26 /* ELiPS_Fp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp4.c; sourceTree = "<group>"; };
-		EF1FA32D1EB0C12800814F26 /* ELiPS_Fp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_Fp4.h; sourceTree = "<group>"; };
-		EF1FA3311EB0CE6600814F26 /* ELiPS_Fp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp8.c; sourceTree = "<group>"; };
+		EF1FA32A1EB0C12800814F26 /* ELiPS_Fp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_Fp2.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		EF1FA32B1EB0C12800814F26 /* ELiPS_Fp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_Fp2.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		EF1FA32C1EB0C12800814F26 /* ELiPS_Fp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_Fp4.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		EF1FA32D1EB0C12800814F26 /* ELiPS_Fp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_Fp4.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		EF1FA3311EB0CE6600814F26 /* ELiPS_Fp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_Fp8.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		EF1FA3321EB0CE6600814F26 /* ELiPS_Fp8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_Fp8.h; sourceTree = "<group>"; };
 		EF1FA3341EB0CFC300814F26 /* ELiPS_Fp16.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_Fp16.c; sourceTree = "<group>"; };
 		EF1FA3351EB0CFC300814F26 /* ELiPS_Fp16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_Fp16.h; sourceTree = "<group>"; };

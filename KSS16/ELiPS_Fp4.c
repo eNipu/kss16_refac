@@ -83,7 +83,7 @@ void Fp4_mul(struct Fp4 *ANS,struct Fp4 *A,struct Fp4 *B){
     
     Fp2_mul(&tmp1,&A->x0,&B->x0);//a*c
     Fp2_mul(&tmp2,&A->x1,&B->x1);//b*d
-    Fp2_mul_i(&tmp3,&tmp2);//b*d*v
+    Fp4_mul_basis(&tmp3,&tmp2);//b*d*v
     Fp2_add(&t_ans.x0,&tmp1,&tmp3);//a*c+b*d*v
     Fp2_add(&tmp4,&A->x0,&A->x1);//a+b
     Fp2_add(&tmp5,&B->x0,&B->x1);//c+d
@@ -105,7 +105,7 @@ void Fp4_mul_v(struct Fp4 *ANS,struct Fp4 *A){
     struct Fp4 tmp;
     Fp4_init(&tmp);
     
-    Fp2_mul_i(&tmp.x0,&A->x1);
+    Fp4_mul_basis(&tmp.x0,&A->x1);
     Fp2_set(&tmp.x1,&A->x0);
     
     Fp4_set(ANS,&tmp);
@@ -159,7 +159,7 @@ void Fp4_invert(struct Fp4 *ANS,struct Fp4 *A){
     
     Fp2_mul(&a,&A->x0,&A->x0); // a=x0^2
     Fp2_mul(&b,&A->x1,&A->x1); // b=x1^2
-    Fp2_mul_i(&b,&b); // b=x1^2*v
+    Fp4_mul_basis(&b,&b); // b=x1^2*v
     Fp2_sub(&c,&a,&b); // c=x0^2-x1^2*v mod q
     
     Fp2_invert(&c,&c);
@@ -332,7 +332,7 @@ void Fp4_neg(struct Fp4 *ans,struct Fp4 *a){
     Fp4_clear(&tmp);
 }
 
-void Fp4_mul_betainv(struct Fp4 *ANS)
+void Fp4_mul_beta_inv(struct Fp4 *ANS)
 {
     struct Fp4 tmp;
     Fp4_init(&tmp);

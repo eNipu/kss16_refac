@@ -128,7 +128,7 @@ void ps_dbl_line_kss16(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,stru
     Fp4_add(&A,&T->y,&T->y);//2yt
     Fp4_mul(&B,&T->x,&T->x);//xt^2
     Fp4_mul_ui(&B,&B,3);//3xt^2
-    Fp4_mul_betainv(&tmp);
+    Fp4_mul_beta_inv(&tmp);
     Fp4_mul(&tmp, &tmp, &z_inv2);
     Fp4_add(&B, &B, &tmp);
     
