@@ -96,9 +96,9 @@
 		EF1FA3631EB1959700814F26 /* KSS16_Sparse7_Line_Evaluation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSS16_Sparse7_Line_Evaluation.c; sourceTree = "<group>"; };
 		EF1FA3641EB1959700814F26 /* ELiPS_KSS16_Sparse_Line_Calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Sparse_Line_Calc.h; sourceTree = "<group>"; };
 		EF1FA3661EB19A9E00814F26 /* KSS16_Sparse7_Miller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSS16_Sparse7_Miller.c; sourceTree = "<group>"; };
-		EF1FA3671EB19A9E00814F26 /* KSS16_Sparse7_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSS16_Sparse7_Miller.h; sourceTree = "<group>"; };
+		EF1FA3671EB19A9E00814F26 /* ELiPS_KSS16_Sparse_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Sparse_Miller.h; sourceTree = "<group>"; };
 		EF1FA3691EB19B3700814F26 /* KSS16_Sparse7_Opt_Miller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = KSS16_Sparse7_Opt_Miller.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		EF1FA36A1EB19B3700814F26 /* KSS16_Sparse7_Opt_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSS16_Sparse7_Opt_Miller.h; sourceTree = "<group>"; };
+		EF1FA36A1EB19B3700814F26 /* ELiPS_KSS16_Sparse_Opt_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Sparse_Opt_Miller.h; sourceTree = "<group>"; };
 		EF1FA36C1EB19CCC00814F26 /* KSS16_Sparse7_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = KSS16_Sparse7_Ate.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		EF1FA36F1EB1A04700814F26 /* KSS16_Sparse7_Opt_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = KSS16_Sparse7_Opt_Ate.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		EF1FA3701EB1A04700814F26 /* ELiPS_KSS16_Sparse_Opt_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Sparse_Opt_Ate.h; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 				EF1FA3641EB1959700814F26 /* ELiPS_KSS16_Sparse_Line_Calc.h */,
 				EF1FA3701EB1A04700814F26 /* ELiPS_KSS16_Sparse_Opt_Ate.h */,
 				EF1FA3581EB1855C00814F26 /* ELiPS_KSS16_Tate_Pairing.h */,
-				EF1FA3671EB19A9E00814F26 /* KSS16_Sparse7_Miller.h */,
-				EF1FA36A1EB19B3700814F26 /* KSS16_Sparse7_Opt_Miller.h */,
+				EF1FA3671EB19A9E00814F26 /* ELiPS_KSS16_Sparse_Miller.h */,
+				EF1FA36A1EB19B3700814F26 /* ELiPS_KSS16_Sparse_Opt_Miller.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";

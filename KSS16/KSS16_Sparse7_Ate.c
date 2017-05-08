@@ -7,7 +7,7 @@
 //
 
 #include "ELiPS_KSS16_Sparse_Ate.h"
-#include "KSS16_Sparse7_Miller.h"
+#include "ELiPS_KSS16_Sparse_Miller.h"
 #include "ELiPS_KSS16_Final_Exp.h"
 
 void Sparse_Ate_Pairing(struct Fp16 *ANS,struct EFp4 *G1,struct EFp4 *G2){

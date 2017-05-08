@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_Sparse7_Opt_Miller.h"
+#include "ELiPS_KSS16_Sparse_Opt_Miller.h"
 
 void Sparse_type1_Optimal_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop){
     struct Fp16 l_sum;

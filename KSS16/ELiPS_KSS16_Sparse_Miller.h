@@ -6,11 +6,11 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef KSS16_Sparse7_Miller_h
-#define KSS16_Sparse7_Miller_h
+#ifndef ELiPS_KSS16_Sparse_Miller_h
+#define ELiPS_KSS16_Sparse_Miller_h
 
 #include "ELiPS_KSS16_Sparse_Line_Calc.h"
 
 extern void Sparse_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop);
 
-#endif /* KSS16_Sparse7_Miller_h */
+#endif /* ELiPS_KSS16_Sparse_Miller_h */

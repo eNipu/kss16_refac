@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_Sparse7_Miller.h"
+#include "ELiPS_KSS16_Sparse_Miller.h"
 
 void Sparse_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop){
     struct Fp16 l_sum;
