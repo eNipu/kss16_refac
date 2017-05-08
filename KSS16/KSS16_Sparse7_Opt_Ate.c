@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_Sparse7_Opt_Ate.h"
+#include "ELiPS_KSS16_Sparse_Opt_Ate.h"
 #include "KSS16_Sparse7_Opt_Miller.h"
 #include "ELiPS_KSS16_Final_Exp.h"
 
