@@ -8,7 +8,7 @@
 
 
 
-#include "KSS16_init.h"
+#include "ELiPS_KSS16_init.h"
 #include "ELiPS_KSS16_Params.h"
 #include "ELiPS_KSS16_Pairings_Test.h"
 int main(int argc, const char * argv[]) {

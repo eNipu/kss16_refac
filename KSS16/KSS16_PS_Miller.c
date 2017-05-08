@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_PS_Miller.h"
+#include "ELiPS_KSS16_PS_Miller.h"
 
 void Pseudo_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop){//Q:G2,P:G1
     struct Fp16 l_sum;

@@ -9,7 +9,7 @@
 #ifndef KSS16_PS_Opt_Ate_h
 #define KSS16_PS_Opt_Ate_h
 
-#include "KSS16_PS_Line_Evaluation.h"
+#include "ELiPS_KSS16_PS_Line_Calc.h"
 
 extern void Pseudo_Sparse_Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2);
 

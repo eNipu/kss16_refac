@@ -13,7 +13,7 @@
 #include "ELiPS_KSS16_Opt_Ate.h"
 #include "KSS16_Sparse7_Ate.h"
 #include "KSS16_Sparse7_Opt_Ate.h"
-#include "KSS16_PS_Opt_Ate.h"
+#include "ELiPS_KSS16_PS_Opt_Ate.h"
 
 
 void check_pairing_correctness(void){

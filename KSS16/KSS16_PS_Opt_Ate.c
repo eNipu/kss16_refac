@@ -6,8 +6,8 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_PS_Opt_Ate.h"
-#include "KSS16_PS_Opt_Miller.h"
+#include "ELiPS_KSS16_PS_Opt_Ate.h"
+#include "ELiPS_KSS16_PS_Opt_Miller.h"
 #include "ELiPS_KSS16_Final_Exp.h"
 
 void Pseudo_Sparse_Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2){
