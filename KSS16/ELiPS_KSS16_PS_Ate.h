@@ -11,6 +11,8 @@
 
 #include "ELiPS_EFp16.h"
 
-void Pseudo_Sparse_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2);
+void ps_ate_kss16(struct Fp16 *ANS,
+                  struct EFp *G1,
+                  struct EFp16 *G2);
 
 #endif /* KSS16_PS_Ate_h */

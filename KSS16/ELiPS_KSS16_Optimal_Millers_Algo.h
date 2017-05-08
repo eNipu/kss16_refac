@@ -11,5 +11,9 @@
 
 #include "ELiPS_KSS16_Line_Evaluation.h"
 
-extern void optimal_miller_algo_kss16(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q,mpz_t roop);
+extern void optimal_miller_algo_kss16(struct Fp16 *ANS,
+                                      struct EFp16 *P,
+                                      struct EFp16 *Q,
+                                      mpz_t roop);
+
 #endif /* ELiPS_KSS16_Optimal_Millers_Algo_h */

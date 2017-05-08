@@ -11,6 +11,9 @@
 
 #include "ELiPS_KSS16_PS_Line_Calc.h"
 
-extern void Pseudo_type1_Optimal_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop);
+extern void ps_opt_miller_kss16(struct Fp16 *ANS,
+                                struct EFp4 *P,
+                                struct EFp4 *Q,
+                                mpz_t loop);
 
 #endif /* ELiPS_KSS16_PS_Opt_Miller_h */

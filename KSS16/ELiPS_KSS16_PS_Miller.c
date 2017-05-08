@@ -8,7 +8,7 @@
 
 #include "ELiPS_KSS16_PS_Miller.h"
 
-void Pseudo_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop){//Q:G2,P:G1
+void ps_miller_kss16(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop){//Q:G2,P:G1
     struct Fp16 l_sum;
     Fp16_init(&l_sum);
     Fp_set_ui(&l_sum.x0.x0.x0.x0,1);
@@ -49,9 +49,9 @@ void Pseudo_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t lo
     
     
     //    rational_point_check(&Q_map);
-    //    Pseudo_type1_DBL_LINE(&ltt,&T,&T,&P_map,&L);
+    //    ps_dbl_line_kss16(&ltt,&T,&T,&P_map,&L);
     //    rational_point_check(&T);
-    //    Pseudo_type1_ADD_LINE(&ltp,&T,&T,&Q_map,&P_map,&L);
+    //    ps_add_line_kss16(&ltp,&T,&T,&Q_map,&P_map,&L);
     //    Fp16_printf(&ltp);
     //    rational_point_check(&T);
     
@@ -63,18 +63,18 @@ void Pseudo_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t lo
         if(mpz_tstbit(loop,i)==1){
             //            printf("\n%d",i);
             Fp16_mul(&l_sum,&l_sum,&l_sum);
-            Pseudo_type1_DBL_LINE(&ltt,&T,&T,&P_map,&L);
-            Pseudo_type1_ADD_LINE(&ltp,&T,&T,&Q_map,&P_map,&L);
+            ps_dbl_line_kss16(&ltt,&T,&T,&P_map,&L);
+            ps_add_line_kss16(&ltp,&T,&T,&Q_map,&P_map,&L);
             //            rational_point_check(&T);
-            Pseudo_type1_mul(&l_sum,&l_sum,&ltt);
-            Pseudo_type1_mul(&l_sum,&l_sum,&ltp);
+            ps_mul_line_kss16(&l_sum,&l_sum,&ltt);
+            ps_mul_line_kss16(&l_sum,&l_sum,&ltp);
             //            Fp16_mul(&l_sum,&l_sum,&ltt);
             //            Fp16_mul(&l_sum,&l_sum,&ltp);
         }else{
             Fp16_mul(&l_sum,&l_sum,&l_sum);
-            Pseudo_type1_DBL_LINE(&ltt,&T,&T,&P_map,&L);
+            ps_dbl_line_kss16(&ltt,&T,&T,&P_map,&L);
             //            rational_point_check(&T);
-            Pseudo_type1_mul(&l_sum,&l_sum,&ltt);
+            ps_mul_line_kss16(&l_sum,&l_sum,&ltt);
             //            Fp16_mul(&l_sum,&l_sum,&ltt);
         }
     }

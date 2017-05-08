@@ -11,6 +11,8 @@
 
 #include "ELiPS_EFp16.h"
 
-extern void sparse_ate_kss16(struct Fp16 *ANS, struct EFp4 *P, struct EFp4 *Q);
+extern void sparse_ate_kss16(struct Fp16 *ANS,
+                             struct EFp4 *P,
+                             struct EFp4 *Q);
 
 #endif /* KSS16_Sparse7_Ate_h */

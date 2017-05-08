@@ -92,7 +92,7 @@
 		EF1FA35D1EB18B9000814F26 /* ELiPS_KSS16_Ate_Pairing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_Ate_Pairing.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		EF1FA35E1EB18B9000814F26 /* ELiPS_KSS16_Ate_Pairing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_Ate_Pairing.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA3601EB18C6C00814F26 /* ELiPS_KSS16_Opt_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_Opt_Ate.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		EF1FA3611EB18C6C00814F26 /* ELiPS_KSS16_Opt_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_Opt_Ate.h; sourceTree = "<group>"; };
+		EF1FA3611EB18C6C00814F26 /* ELiPS_KSS16_Opt_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_Opt_Ate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA3631EB1959700814F26 /* ELiPS_KSS16_Sparse_Line_Calc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_Sparse_Line_Calc.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		EF1FA3641EB1959700814F26 /* ELiPS_KSS16_Sparse_Line_Calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_Sparse_Line_Calc.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA3661EB19A9E00814F26 /* ELiPS_KSS16_Sparse_Miller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_Sparse_Miller.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
@@ -103,17 +103,17 @@
 		EF1FA36F1EB1A04700814F26 /* ELiPS_KSS16_Sparse_Opt_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_Sparse_Opt_Ate.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		EF1FA3701EB1A04700814F26 /* ELiPS_KSS16_Sparse_Opt_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_Sparse_Opt_Ate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA3721EB1A23A00814F26 /* ELiPS_KSS16_PS_Line_Calc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_PS_Line_Calc.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		EF1FA3731EB1A23A00814F26 /* ELiPS_KSS16_PS_Line_Calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_PS_Line_Calc.h; sourceTree = "<group>"; };
-		EF1FA3751EB1A63800814F26 /* ELiPS_KSS16_PS_Miller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ELiPS_KSS16_PS_Miller.c; sourceTree = "<group>"; };
-		EF1FA3761EB1A63800814F26 /* ELiPS_KSS16_PS_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_PS_Miller.h; sourceTree = "<group>"; };
+		EF1FA3731EB1A23A00814F26 /* ELiPS_KSS16_PS_Line_Calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_PS_Line_Calc.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		EF1FA3751EB1A63800814F26 /* ELiPS_KSS16_PS_Miller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_PS_Miller.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		EF1FA3761EB1A63800814F26 /* ELiPS_KSS16_PS_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_PS_Miller.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA3781EB1A65C00814F26 /* ELiPS_KSS16_PS_Opt_Miller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_PS_Opt_Miller.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		EF1FA3791EB1A65C00814F26 /* ELiPS_KSS16_PS_Opt_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_PS_Opt_Miller.h; sourceTree = "<group>"; };
+		EF1FA3791EB1A65C00814F26 /* ELiPS_KSS16_PS_Opt_Miller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_PS_Opt_Miller.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA37B1EB1A68A00814F26 /* ELiPS_KSS16_PS_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_PS_Ate.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		EF1FA37C1EB1A68A00814F26 /* ELiPS_KSS16_PS_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_PS_Ate.h; sourceTree = "<group>"; };
+		EF1FA37C1EB1A68A00814F26 /* ELiPS_KSS16_PS_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_PS_Ate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA37E1EB1A6A900814F26 /* ELiPS_KSS16_PS_Opt_Ate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_PS_Opt_Ate.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		EF1FA37F1EB1A6A900814F26 /* ELiPS_KSS16_PS_Opt_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELiPS_KSS16_PS_Opt_Ate.h; sourceTree = "<group>"; };
+		EF1FA37F1EB1A6A900814F26 /* ELiPS_KSS16_PS_Opt_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_PS_Opt_Ate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF1FA3811EB1F8F800814F26 /* ELiPS_KSS16_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = ELiPS_KSS16_init.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		EF1FA3821EB1F8F800814F26 /* ELiPS_KSS16_init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_init.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		EF1FA3821EB1F8F800814F26 /* ELiPS_KSS16_Init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_Init.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF5A429B1EC0267800A0CF08 /* ELiPS_KSS16_Sparse_Ate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ELiPS_KSS16_Sparse_Ate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		EF90C8CB1EB03A9B00F008F0 /* KSS16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KSS16; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF90C8CE1EB03A9B00F008F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = main.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
@@ -151,7 +151,7 @@
 				EF1FA3351EB0CFC300814F26 /* ELiPS_Fp16.h */,
 				EF1FA35E1EB18B9000814F26 /* ELiPS_KSS16_Ate_Pairing.h */,
 				EF1FA3551EB1847100814F26 /* ELiPS_KSS16_Final_Exp.h */,
-				EF1FA3821EB1F8F800814F26 /* ELiPS_KSS16_init.h */,
+				EF1FA3821EB1F8F800814F26 /* ELiPS_KSS16_Init.h */,
 				EF1FA34C1EB1809B00814F26 /* ELiPS_KSS16_Line_Evaluation.h */,
 				EF1FA34F1EB1823B00814F26 /* ELiPS_KSS16_Millers_Algo.h */,
 				EF1FA3611EB18C6C00814F26 /* ELiPS_KSS16_Opt_Ate.h */,

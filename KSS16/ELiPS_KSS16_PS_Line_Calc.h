@@ -11,8 +11,21 @@
 
 #include "ELiPS_EFp16.h"
 
-extern void Pseudo_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *P,struct EFp4 *Q,struct Fp4 *L);
-extern void Pseudo_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *Q,struct Fp4 *L);
-extern void Pseudo_type1_mul(struct Fp16 *ANS,struct Fp16 *A,struct Fp16 *B);
+extern void ps_add_line_kss16(struct Fp16 *l_ANS,
+                              struct EFp4 *T_ANS,
+                              struct EFp4 *T,
+                              struct EFp4 *P,
+                              struct EFp4 *Q,
+                              struct Fp4 *L);
+
+extern void ps_dbl_line_kss16(struct Fp16 *l_ANS,
+                              struct EFp4 *T_ANS,
+                              struct EFp4 *T,
+                              struct EFp4 *Q,
+                              struct Fp4 *L);
+
+extern void ps_mul_line_kss16(struct Fp16 *ANS,
+                              struct Fp16 *A,
+                              struct Fp16 *B);
 
 #endif /* ELiPS_KSS16_PS_Line_Calc_h */

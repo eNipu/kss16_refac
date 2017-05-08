@@ -8,7 +8,7 @@
 
 #include "ELiPS_KSS16_PS_Line_Calc.h"
 
-void Pseudo_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *P,struct EFp4 *Q,struct Fp4 *L){
+void ps_add_line_kss16(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *P,struct EFp4 *Q,struct Fp4 *L){
     struct Fp4 tmp1,tmp2,tmp3,tmp4,lambda,ltp;
     Fp4_init(&tmp1);
     Fp4_init(&tmp2);
@@ -96,7 +96,7 @@ void Pseudo_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     Fp4_clear(&D);
     Fp4_clear(&E);
 }
-void Pseudo_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *Q,struct Fp4 *L){
+void ps_dbl_line_kss16(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *Q,struct Fp4 *L){
     struct Fp4 tmp1,tmp2,tmp3,tmp4,lambda,ltt;
     Fp4_init(&tmp1);
     Fp4_init(&tmp2);
@@ -182,7 +182,7 @@ void Pseudo_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     Fp4_clear(&D);
     Fp4_clear(&E);
 }
-void Pseudo_type1_mul(struct Fp16 *ANS,struct Fp16 *A,struct Fp16 *B){
+void ps_mul_line_kss16(struct Fp16 *ANS,struct Fp16 *A,struct Fp16 *B){
     
     struct Fp16 a,b;
     Fp16_init(&a);

@@ -11,6 +11,9 @@
 
 #include "ELiPS_KSS16_Sparse_Line_Calc.h"
 
-extern void sparse_opt_miller_kss16(struct Fp16 *ANS, struct EFp4 *P, struct EFp4 *Q, mpz_t loop);
+extern void sparse_opt_miller_kss16(struct Fp16 *ANS,
+                                    struct EFp4 *P,
+                                    struct EFp4 *Q,
+                                    mpz_t loop);
 
 #endif /* ELiPS_KSS16_Sparse_Opt_Miller_h */

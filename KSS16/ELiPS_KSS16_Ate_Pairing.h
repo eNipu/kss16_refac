@@ -11,6 +11,8 @@
 
 #include "ELiPS_KSS16_Line_Evaluation.h"
 
-extern void ate_pairing_kss16(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q);
+extern void ate_pairing_kss16(struct Fp16 *ANS,
+                              struct EFp16 *P,
+                              struct EFp16 *Q);
 
 #endif /* ELiPS_KSS16_Ate_Pairing_h */

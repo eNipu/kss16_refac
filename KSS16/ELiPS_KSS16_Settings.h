@@ -48,7 +48,6 @@
 /* Macro definitions                                                          */
 /*============================================================================*/
 
-
 /**
  * @brief Defines TRUE or FALSE using integer
  *
@@ -84,7 +83,7 @@
  *
  * #KSS16_params hold the KSS16 curves parametets.
  */
-struct KSS16_params {
+struct kss16_params {
     mpz_t prime;        /**< Prime number or Characteristics of KSS16 curve */
     mpz_t order_r;      /**< Group order r of KSS16 curve */
     mpz_t trace_t;      /**< Frobenius trace of KSS16 curve */
@@ -103,13 +102,12 @@ struct KSS16_constants{
     mpz_t tmp_a;        /**< Temoporary variable for constant a*/
 };
 
-
 /**
  * @brief KSS16 curve's systematically obtained parameters.
  *
  * It's a global variable that give access to KSS16 public parameters.
  */
-extern struct KSS16_params params;
+extern struct kss16_params params;
 
 /**
  * @brief KSS16 curve's constants.
@@ -141,6 +139,7 @@ extern int FALSE;
  * binary representation of the mother parameter X.
  */
 extern char x_signed_binary [x_bit+1];
+
 /*============================================================================*/
 /* Function declarations                                                      */
 /*============================================================================*/
@@ -168,4 +167,5 @@ extern void generate_mother_parameter (void);
  *
  */
 extern float timedifference_msec (struct timeval t0, struct timeval t1);
+
 #endif /* ELiPS_KSS16_Settings_h */

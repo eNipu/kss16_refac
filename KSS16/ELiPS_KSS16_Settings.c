@@ -14,7 +14,7 @@ int TRUE = TRUE_1;
 int FALSE = FALSE_0;
 char x_signed_binary[x_bit+1];
 
-struct KSS16_params params;
+struct kss16_params params;
 struct KSS16_constants kss_curve_const;
 
 void set_kss16_params(){
