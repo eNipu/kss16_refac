@@ -24,7 +24,7 @@ void Pseudo_Sparse_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2)
     EFp16_to_EFp4_map(&EFp4_G2,G2); //non isomorphic map of Q to Q'
     Pseudo_type1_Miller(&t_ans,&EFp4_G1,&EFp4_G2,tm1);
     
-    Final_Exp(&t_ans,&t_ans);
+    final_exp_kss16(&t_ans,&t_ans);
     Fp16_set(ANS,&t_ans);
     
     Fp16_clear(&t_ans);

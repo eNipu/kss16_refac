@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "KSS16_Sparse7_Line_Evaluation.h"
+#include "ELiPS_KSS16_Sparse_Line_Calc.h"
 
 void Sparse_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *P,struct EFp4 *Q,struct Fp4 *Qx_neg){
     struct Fp4 tmp1,tmp2,tmp3,tmp4,lambda,ltp;

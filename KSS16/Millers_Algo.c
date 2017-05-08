@@ -1,5 +1,5 @@
 //
-//  Millers_Algo.c
+//  millers_algo_kss16.c
 //  KSS16
 //
 //  Created by Khandaker Md. Al-Amin on 4/27/17.
@@ -8,7 +8,7 @@
 
 #include "ELiPS_KSS16_Millers_Algo.h"
 
-void Miller_algo(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q, mpz_t loop){
+void millers_algo_kss16(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q, mpz_t loop){
     struct Fp16 l_sum,v_sum;
     Fp16_init(&l_sum);
     Fp16_init(&v_sum);
@@ -38,19 +38,19 @@ void Miller_algo(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q, mpz_t loop){
         Fp16_mul(&l_sum,&l_sum,&l_sum);
         Fp16_mul(&v_sum,&v_sum,&v_sum);
         
-        ltt_q(&ltt,&T,Q);
+        ltt_q_kss16(&ltt,&T,Q);
         Fp16_mul(&l_sum,&l_sum,&ltt);
         
-        EFp16_ECD(&T,&T);
-        v2t_q(&v2t,&T,Q);
+        EFp16_ecd(&T,&T);
+        v2t_q_kss16(&v2t,&T,Q);
         Fp16_mul(&v_sum,&v_sum,&v2t);
         
         if(mpz_tstbit(loop,i)==1){
-            ltp_q(&ltp,&T,P,Q);
+            ltp_q_kss16(&ltp,&T,P,Q);
             Fp16_mul(&l_sum,&l_sum,&ltp);
             
-            EFp16_ECA(&T,&T,P);
-            vtp_q(&vtp,&T,Q);
+            EFp16_eca(&T,&T,P);
+            vtp_q_kss16(&vtp,&T,Q);
             Fp16_mul(&v_sum,&v_sum,&vtp);
         }
     }

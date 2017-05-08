@@ -9,7 +9,7 @@
 #ifndef KSS16_Sparse7_Opt_Miller_h
 #define KSS16_Sparse7_Opt_Miller_h
 
-#include "KSS16_Sparse7_Line_Evaluation.h"
+#include "ELiPS_KSS16_Sparse_Line_Calc.h"
 
 extern void Sparse_type1_Optimal_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop);
 

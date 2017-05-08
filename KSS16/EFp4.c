@@ -41,7 +41,7 @@ void EFp4_printf(struct EFp4 *A){
     gmp_printf("(%Zd,%Zd,%Zd,%Zd)\n",A->x.x0.x0.x0,A->x.x0.x1.x0,A->x.x1.x0.x0, A->x.x1.x1.x0);
     gmp_printf("(%Zd,%Zd,%Zd,%Zd)\n",A->y.x0.x0.x0,A->y.x0.x1.x0,A->y.x1.x0.x0, A->y.x1.x1.x0);
 }
-void EFp4_ECA(struct EFp4 *ANS, struct EFp4 *P1, struct EFp4 *P2){
+void EFp4_eca(struct EFp4 *ANS, struct EFp4 *P1, struct EFp4 *P2){
     if(P2->PoI==TRUE){//if P2==inf
         EFp4_set(ANS,P1);
         return;
@@ -55,7 +55,7 @@ void EFp4_ECA(struct EFp4 *ANS, struct EFp4 *P1, struct EFp4 *P2){
         return;
     }
     else if(EFp4_cmp(P1,P2)==0){ // P=Q
-        EFp4_ECD(ANS,P1);
+        EFp4_ecd(ANS,P1);
         return;
     }
     
@@ -87,7 +87,7 @@ void EFp4_ECA(struct EFp4 *ANS, struct EFp4 *P1, struct EFp4 *P2){
     Fp4_clear(&tmp);
     EFp4_clear(&t_ans);
 }
-void EFp4_ECD(struct EFp4 *ANS, struct EFp4 *P){
+void EFp4_ecd(struct EFp4 *ANS, struct EFp4 *P){
     if(P->PoI==TRUE){
         EFp4_set(ANS,P);
         return;
@@ -134,7 +134,7 @@ void EFp4_ECD(struct EFp4 *ANS, struct EFp4 *P){
     Fp4_clear(&tmp);
     EFp4_clear(&t_ans);
 }
-void EFp4_ECD_Sparse(struct EFp4 *ANS, struct EFp4 *P){
+void EFp4_ecd_sparse(struct EFp4 *ANS, struct EFp4 *P){
     if(P->PoI==TRUE){
         EFp4_set(ANS,P);
         return;
@@ -192,7 +192,7 @@ int EFp4_cmp(struct EFp4 *A,struct EFp4 *B){
     return 1;
 }
 
-void EFp4_SCM_BIN(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
+void EFp4_scm_bin(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
     int i,length;
     length= (int)mpz_sizeinbase(j,2);
     char j_binary[length];
@@ -202,9 +202,9 @@ void EFp4_SCM_BIN(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
     EFp4_set(&Q,P);
     EFp4_init(&R);
     for(i=1;j_binary[i]!='\0';i++){
-        EFp4_ECD(&Q,&Q);
+        EFp4_ecd(&Q,&Q);
         if(j_binary[i]=='1'){
-            EFp4_ECA(&Q,&Q,P);
+            EFp4_eca(&Q,&Q,P);
         }
     }
     EFp4_set(ANS,&Q);
@@ -213,7 +213,7 @@ void EFp4_SCM_BIN(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
     EFp4_clear(&R);
     return;
 }
-void EFp4_SCM_WIN(struct EFp4 *ANS, struct EFp4 *P, mpz_t scalar){
+void EFp4_scm_win(struct EFp4 *ANS, struct EFp4 *P, mpz_t scalar){
     int i,length;
     length= (int)mpz_sizeinbase(scalar,2);
     char r_binary[length];
@@ -243,74 +243,74 @@ void EFp4_SCM_WIN(struct EFp4 *ANS, struct EFp4 *P, mpz_t scalar){
     
     EFp4_set_PoI(&ANS_temp);
     EFp4_set(&R, P);
-    EFp4_ECA(&R2, &R, &R);
-    EFp4_ECA(&R3, &R2, &R);
-    EFp4_ECA(&R4, &R3, &R);
-    EFp4_ECA(&R5, &R4, &R);
-    EFp4_ECA(&R6, &R5, &R);
-    EFp4_ECA(&R7, &R6, &R);
-    EFp4_ECA(&R8, &R7, &R);
-    EFp4_ECA(&R9, &R8, &R);
-    EFp4_ECA(&R10, &R9, &R);
-    EFp4_ECA(&R11, &R10, &R);
-    EFp4_ECA(&R12, &R11, &R);
-    EFp4_ECA(&R13, &R12, &R);
-    EFp4_ECA(&R14, &R13, &R);
-    EFp4_ECA(&R15, &R14, &R);
+    EFp4_eca(&R2, &R, &R);
+    EFp4_eca(&R3, &R2, &R);
+    EFp4_eca(&R4, &R3, &R);
+    EFp4_eca(&R5, &R4, &R);
+    EFp4_eca(&R6, &R5, &R);
+    EFp4_eca(&R7, &R6, &R);
+    EFp4_eca(&R8, &R7, &R);
+    EFp4_eca(&R9, &R8, &R);
+    EFp4_eca(&R10, &R9, &R);
+    EFp4_eca(&R11, &R10, &R);
+    EFp4_eca(&R12, &R11, &R);
+    EFp4_eca(&R13, &R12, &R);
+    EFp4_eca(&R14, &R13, &R);
+    EFp4_eca(&R15, &R14, &R);
     
     for(i=0; i< mul3;i=i+4){
         
-        EFp4_ECD(&ANS_temp,&ANS_temp);
-        EFp4_ECD(&ANS_temp,&ANS_temp);
-        EFp4_ECD(&ANS_temp,&ANS_temp);
-        EFp4_ECD(&ANS_temp,&ANS_temp);
+        EFp4_ecd(&ANS_temp,&ANS_temp);
+        EFp4_ecd(&ANS_temp,&ANS_temp);
+        EFp4_ecd(&ANS_temp,&ANS_temp);
+        EFp4_ecd(&ANS_temp,&ANS_temp);
         
         if (i+2 < length)
         {
             if(r_binary[i] =='1' && r_binary[i+1] =='1' && r_binary[i+2] =='1' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R15);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R15);
             }
             else if(r_binary[i] =='1' && r_binary[i+1] =='1' && r_binary[i+2] =='1' && r_binary[i+3] =='0'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R14);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R14);
             }
             else if(r_binary[i] =='1' && r_binary[i+1] =='1' && r_binary[i+2] =='0' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R13);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R13);
             }
             else if(r_binary[i] =='1' && r_binary[i+1] =='1' && r_binary[i+2] =='0' && r_binary[i+3] =='0'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R12);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R12);
             }
             else if(r_binary[i] =='1' && r_binary[i+1] =='0' && r_binary[i+2] =='1' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R11);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R11);
             }
             else if(r_binary[i] =='1' && r_binary[i+1] =='0' && r_binary[i+2] =='1' && r_binary[i+3] =='0'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R10);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R10);
             }
             else if(r_binary[i] =='1' && r_binary[i+1] =='0' && r_binary[i+2] =='0' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R9);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R9);
             }
             else if(r_binary[i] =='1' && r_binary[i+1] =='0' && r_binary[i+2] =='0' && r_binary[i+3] =='0'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R8);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R8);
             }
             else if(r_binary[i] =='0' && r_binary[i+1] =='1' && r_binary[i+2] =='1' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R7);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R7);
             }
             else if(r_binary[i] =='0' && r_binary[i+1] =='1' && r_binary[i+2] =='1' && r_binary[i+3] =='0'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R6);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R6);
             }
             else if(r_binary[i] =='0' && r_binary[i+1] =='1' && r_binary[i+2] =='0' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R5);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R5);
             }
             else if(r_binary[i] =='0' && r_binary[i+1] =='1' && r_binary[i+2] =='0' && r_binary[i+3] =='0'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R4);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R4);
             }
             else if(r_binary[i] =='0' && r_binary[i+1] =='0' && r_binary[i+2] =='1' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R3);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R3);
             }
             else if(r_binary[i] =='0' && r_binary[i+1] =='0' && r_binary[i+2] =='1' && r_binary[i+3] =='0'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R2);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R2);
             }
             else if(r_binary[i] =='0' && r_binary[i+1] =='0' && r_binary[i+2] =='0' && r_binary[i+3] =='1'){
-                EFp4_ECA(&ANS_temp, &ANS_temp, &R);
+                EFp4_eca(&ANS_temp, &ANS_temp, &R);
             }
             else{
             }
@@ -318,9 +318,9 @@ void EFp4_SCM_WIN(struct EFp4 *ANS, struct EFp4 *P, mpz_t scalar){
     }
     
     for(i = mul3;r_binary[i]!='\0';i++){
-        EFp4_ECD(&ANS_temp,&ANS_temp);
+        EFp4_ecd(&ANS_temp,&ANS_temp);
         if(r_binary[i]=='1'){
-            EFp4_ECA(&ANS_temp,&ANS_temp,P);
+            EFp4_eca(&ANS_temp,&ANS_temp,P);
         }
     }
     EFp4_set(ANS,&ANS_temp);
@@ -334,7 +334,7 @@ void EFp4_SCM_WIN(struct EFp4 *ANS, struct EFp4 *P, mpz_t scalar){
     EFp4_clear(&R7);
     return;
 }
-void EFp4_SCM_ML(struct EFp4 *RES, struct EFp4 *P,mpz_t scalar){
+void EFp4_scm_ml(struct EFp4 *RES, struct EFp4 *P,mpz_t scalar){
     int i,length;
     length= (int)mpz_sizeinbase(scalar,2);
     char r_binary[length];
@@ -345,15 +345,15 @@ void EFp4_SCM_ML(struct EFp4 *RES, struct EFp4 *P,mpz_t scalar){
     EFp4_set_PoI(&T0);
     EFp4_init(&T1);
     EFp4_set(&T1, P);
-    //    EFp_ECD(&T1,&T1);
+    //    EFp_ecd(&T1,&T1);
     for(i=0;r_binary[i]!='\0';i++){
         if(r_binary[i]=='1'){
-            EFp4_ECA(&T0,&T0,&T1);
-            EFp4_ECD(&T1,&T1);
+            EFp4_eca(&T0,&T0,&T1);
+            EFp4_ecd(&T1,&T1);
         }
         else if(r_binary[i]=='0'){
-            EFp4_ECA(&T1,&T0,&T1);
-            EFp4_ECD(&T0,&T0);
+            EFp4_eca(&T1,&T0,&T1);
+            EFp4_ecd(&T0,&T0);
         }
     }
     EFp4_set(RES,&T0);
@@ -362,7 +362,7 @@ void EFp4_SCM_ML(struct EFp4 *RES, struct EFp4 *P,mpz_t scalar){
     return;
 }
 
-void EFp4_SCM_BIN_Sparse(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
+void EFp4_scm_bin_sparse(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
     int i,length;
     length= (int)mpz_sizeinbase(j,2);
     char j_binary[length];
@@ -372,9 +372,9 @@ void EFp4_SCM_BIN_Sparse(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
     EFp4_set(&Q,P);
     EFp4_init(&R);
     for(i=1;j_binary[i]!='\0';i++){
-        EFp4_ECD_Sparse(&Q,&Q);
+        EFp4_ecd_sparse(&Q,&Q);
         if(j_binary[i]=='1'){
-            EFp4_ECA(&Q,&Q,P);
+            EFp4_eca(&Q,&Q,P);
         }
     }
     EFp4_set(ANS,&Q);
@@ -384,7 +384,7 @@ void EFp4_SCM_BIN_Sparse(struct EFp4 *ANS,struct EFp4 *P,mpz_t j){
     return;
 }
 
-void Skew_Frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt)
+void kss16_skew_frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt)
 {
     struct EFp4 tmp_ans;
     EFp4_init(&tmp_ans);
@@ -506,7 +506,7 @@ void Skew_Frobenius_map(struct EFp4 *ANS, struct EFp4 *Qt)
 //    mpz_div(r12_div_r2,r2,order_r);
 //    mpz_div(r12_div_r2,r12_div_r2,order_r);
 //    
-//    EFp4_SCM_BIN(ANS,&P,r12_div_r2);
+//    EFp4_scm_bin(ANS,&P,r12_div_r2);
 //    
 //    EFp4_clear(&P);
 //    Fp4_clear(&a);

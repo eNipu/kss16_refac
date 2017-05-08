@@ -9,7 +9,7 @@
 #include "ELiPS_KSS16_Params.h"
 #include <stdlib.h>
 
-void KSS_16_parameters(void){
+void generate_kss16_params(void){
     
     mpz_t tmp1,tmp2,two;
     mpz_init(tmp1);
@@ -142,7 +142,7 @@ void KSS_16_parameters(void){
                 Fp_printf(&rhs);
                 Fp_sqrt(&P.y,&rhs);
                 Fp_set(&P.x,&x);
-                EFp_SCM_BIN(&ANS,&P,params.order_EFp);
+                EFp_scm_bin(&ANS,&P,params.order_EFp);
 //                printf("SCM\n");
 //                EFp_printf(&ANS);
                 if(ANS.PoI == TRUE){

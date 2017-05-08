@@ -8,7 +8,7 @@
 
 #include "ELiPS_KSS16_Line_Evaluation.h"
 
-void ADD_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp16 *P,struct EFp16 *Q,struct Fp16 *Qx_neg){
+void add_line_kss16(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp16 *P,struct EFp16 *Q,struct Fp16 *Qx_neg){
     struct Fp16 tmp1,tmp2,tmp3,tmp4,lambda,ltp;
     Fp16_init(&tmp1);
     Fp16_init(&tmp2);
@@ -79,7 +79,7 @@ void ADD_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp1
     Fp16_clear(&F);
 }
 //TODO *Q = *P, *Qx_neg = * Px_neg
-void DBL_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp16 *P,struct Fp16 *Px_neg){
+void dbl_line_kss16(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp16 *P,struct Fp16 *Px_neg){
     struct Fp16 tmp1,tmp2,tmp3,tmp4,lambda,ltp;
     Fp16_init(&tmp1);
     Fp16_init(&tmp2);
@@ -142,7 +142,7 @@ void DBL_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp1
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp16_cmp_mpz(&T->y,cmp)==0){//P.y==0
-        EFp16_set_PoI(T_ANS);
+        EFp16_set_poi(T_ANS);
         return;
     }
     Fp16_clear(&tmp1);
@@ -165,7 +165,7 @@ void DBL_LINE(struct Fp16 *l_ANS,struct EFp16 *T_ANS,struct EFp16 *T,struct EFp1
     mpz_clear(cmp);
 }
 //-------------------
-void ltt_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
+void ltt_q_kss16(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
     struct Fp16 tmp1,tmp2,tmp3,lambda,ltt;
     Fp16_init(&tmp1);
     Fp16_init(&tmp2);
@@ -194,7 +194,7 @@ void ltt_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
     Fp16_clear(&lambda);
     Fp16_clear(&ltt);
 }
-void v2t_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
+void v2t_q_kss16(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
     struct Fp16 v2t;
     Fp16_init(&v2t);
     
@@ -203,7 +203,7 @@ void v2t_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
     
     Fp16_clear(&v2t);
 }
-void ltp_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *P,struct EFp16 *Q){
+void ltp_q_kss16(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *P,struct EFp16 *Q){
     struct Fp16 tmp1,tmp2,tmp3,tmp4,lambda,ltp;
     Fp16_init(&tmp1);
     Fp16_init(&tmp2);
@@ -238,7 +238,7 @@ void ltp_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *P,struct EFp16 *Q){
     Fp16_clear(&lambda);
     Fp16_clear(&ltp);
 }
-void vtp_q(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
+void vtp_q_kss16(struct Fp16 *ANS,struct EFp16 *T,struct EFp16 *Q){
     struct Fp16 vtp;
     Fp16_init(&vtp);
     if(T->PoI==1){//if T is PoI

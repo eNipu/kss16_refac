@@ -36,13 +36,13 @@ void Sparse_type1_Optimal_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,
     Fp4_neg(&Q_neg.y,&Q->y);
     Fp4_set(&Q_neg.x,&Q->x);
     
-    if(X_bit_binary[x_bit]==-1){
+    if(x_signed_binary[x_bit]==-1){
         EFp4_set(&T,&Q_neg);
     }else{
         EFp4_set(&T,Q);
     }
     for(i=x_bit-1;i>=0;i--){
-        switch (X_bit_binary[i]){
+        switch (x_signed_binary[i]){
             case 0:
                 Fp16_mul(&l_sum,&l_sum,&l_sum);
                 Sparse_type1_DBL_LINE(&ltt,&T,&T,P,&Px_neg);
@@ -70,8 +70,8 @@ void Sparse_type1_Optimal_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,
         }
     }
     
-    Skew_Frobenius_map(&EFp4_tmp,Q);
-    //    EFp4_SCM_BIN(&EFp4_tmp, &Q_map, prime);
+    kss16_skew_frobenius_map(&EFp4_tmp,Q);
+    //    EFp4_scm_bin(&EFp4_tmp, &Q_map, prime);
     
     Sparse_type1_ADD_LINE(&ltp,&T,&T,&EFp4_tmp,P,&Px_neg);
     Fp16_mul(&l_sum,&l_sum,&ltp);
@@ -89,7 +89,7 @@ void Sparse_type1_Optimal_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,
     Fp16_frobenius_map(&tmp_f, &l_sum);
     
     
-    //ltt_q(&ltt,Q,P);
+    //ltt_q_kss16(&ltt,Q,P);
     Sparse_type1_DBL_LINE(&ltt,&T,Q,P,&Px_neg);
     
     Fp16_mul(&l_sum,&tmp_f,&ltt);

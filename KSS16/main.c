@@ -14,9 +14,9 @@
 int main(int argc, const char * argv[]) {
 
     KSS16_init();
-    KSS_16_parameters();
+    generate_kss16_params();
     
-    check_Pairing();
+    check_pairing_correctness();
     
 //    struct Fp A, B;
 //    Fp_init(&A);
@@ -44,7 +44,7 @@ int main(int argc, const char * argv[]) {
 //    EFp2_random_set(&F4);
 //     EFp2_printf(&F4);
 //    EFp2_rational_point_check(&F4);
-//    EFp2_SCM_BIN(&ANS, &F4, params.order_r);
+//    EFp2_scm_bin(&ANS, &F4, params.order_r);
 //    EFp2_printf(&ANS);
 //    EFp2_rational_point_check(&ANS);
     

@@ -10,52 +10,54 @@
 
 //--------------------------
 // #pragma mark EFp methods
-void EFp_init(struct EFp *A){
-    Fp_init(&A->x);
-    Fp_init(&A->y);
-    A->PoI=FALSE;
+void EFp_init(struct EFp *A) {
+    Fp_init (&A->x);
+    Fp_init (&A->y);
+    A->PoI = FALSE;
 }
-void EFp_set(struct EFp *A,struct EFp *B){
-    Fp_set(&A->x,&B->x);
-    Fp_set(&A->y,&B->y);
-    A->PoI=B->PoI;
+void EFp_set(struct EFp *A,struct EFp *B) {
+    Fp_set (&A->x, &B->x);
+    Fp_set (&A->y, &B->y);
+    A->PoI = B->PoI;
 }
-void EFp_set_PoI(struct EFp *A){
+void EFp_set_PoI(struct EFp *A) {
     Fp_set_ui(&A->x,0);
     Fp_set_ui(&A->y,0);
     A->PoI=TRUE;
 }
-void EFp_clear(struct EFp *A){
-    Fp_clear(&A->x);
-    Fp_clear(&A->y);
+void EFp_clear (struct EFp *A) {
+    Fp_clear (&A->x);
+    Fp_clear (&A->y);
 }
-void EFp_printf(struct EFp *A){
-    gmp_printf("(%Zd,%Zd)\n",A->x.x0,A->y.x0);
+void EFp_printf(struct EFp *A) {
+    gmp_printf ("(%Zd, %Zd)\n", A->x.x0, A->y.x0);
 }
-void EFp_SCM_BIN(struct EFp *ANS, struct EFp *P,mpz_t j){
+void EFp_scm_bin(struct EFp *ANS, struct EFp *P,mpz_t j){
     int i;
     int r;//bit数
-    r= (int)mpz_sizeinbase(j,2);
+    r = (int)mpz_sizeinbase (j, 2);
     
     struct EFp Q;
     EFp_init(&Q);
     EFp_set(&Q,P);
     
-    for(i=r-2;i>=0;i--){
-        if(mpz_tstbit(j,i)==1){
-            EFp_ECD(&Q,&Q);
-            EFp_ECA(&Q,&Q,P);
-        }else{
-            EFp_ECD(&Q,&Q);
+    for (i = r-2; i >= 0; i--) {
+        if (mpz_tstbit(j, i) == 1) {
+            EFp_ecd (&Q,&Q);
+            EFp_eca (&Q,&Q,P);
+        }
+        else {
+            EFp_ecd (&Q,&Q);
         }
     }
     
-    EFp_set(ANS,&Q);
-    EFp_clear(&Q);
+    EFp_set (ANS,&Q);
+    EFp_clear (&Q);
     return;
 }
 
-void EFp_ECD(struct EFp *ANS, struct EFp *P){
+
+void EFp_ecd(struct EFp *ANS, struct EFp *P){
     if(P->PoI==TRUE){
         EFp_set(ANS,P);
         return;
@@ -99,7 +101,7 @@ void EFp_ECD(struct EFp *ANS, struct EFp *P){
     Fp_clear(&tmp);
     EFp_clear(&t_ans);
 }
-void EFp_ECA(struct EFp *ANS, struct EFp *P1, struct EFp *P2){
+void EFp_eca(struct EFp *ANS, struct EFp *P1, struct EFp *P2){
     if(P2->PoI==TRUE){//if P2==inf
         EFp_set(ANS,P1);
         return;
@@ -113,7 +115,7 @@ void EFp_ECA(struct EFp *ANS, struct EFp *P1, struct EFp *P2){
         return;
     }
     else if(EFp_cmp(P1,P2)==0){ // P=Q
-        EFp_ECD(ANS,P1);
+        EFp_ecd(ANS,P1);
         return;
     }
     

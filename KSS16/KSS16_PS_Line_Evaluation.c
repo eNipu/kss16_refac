@@ -74,7 +74,7 @@ void Pseudo_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     // 	return;
     // }
     // else if(EFp4_cmp(T,P)==0){ // P=P
-    // 	EFp4_ECD(T_ANS,T);
+    // 	EFp4_ecd(T_ANS,T);
     // 	return;
     // }
     

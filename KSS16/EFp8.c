@@ -18,7 +18,7 @@ void EFp8_set(struct EFp8 *A,struct EFp8 *B){
     Fp8_set(&A->y,&B->y);
     A->PoI=B->PoI;
 }
-void EFp8_set_PoI(struct EFp8 *A){
+void EFp8_set_poi(struct EFp8 *A){
     Fp8_set_ui(&A->x,0);
     Fp8_set_ui(&A->y,0);
     A->PoI=TRUE;
@@ -35,7 +35,7 @@ void EFp8_printf(struct EFp8 *A){
     gmp_printf("%Zd,%Zd,%Zd,%Zd)\n",A->y.x1.x0.x0.x0,A->y.x1.x0.x1.x0,A->y.x1.x1.x0.x0,A->y.x1.x1.x1.x0);
     
 }
-void EFp8_SCM_BIN(struct EFp8 *ANS,struct EFp8 *P,mpz_t j){
+void EFp8_scm_bin(struct EFp8 *ANS,struct EFp8 *P,mpz_t j){
     int i,length;
     length= (int)mpz_sizeinbase(j,2);
     char j_binary[length];
@@ -45,9 +45,9 @@ void EFp8_SCM_BIN(struct EFp8 *ANS,struct EFp8 *P,mpz_t j){
     EFp8_set(&Q,P);
     EFp8_init(&R);
     for(i=1;j_binary[i]!='\0';i++){
-        EFp8_ECD(&Q,&Q);
+        EFp8_ecd(&Q,&Q);
         if(j_binary[i]=='1'){
-            EFp8_ECA(&Q,&Q,P);
+            EFp8_eca(&Q,&Q,P);
         }
     }
     EFp8_set(ANS,&Q);
@@ -56,7 +56,7 @@ void EFp8_SCM_BIN(struct EFp8 *ANS,struct EFp8 *P,mpz_t j){
     EFp8_clear(&R);
     return;
 }
-void EFp8_ECD(struct EFp8 *ANS, struct EFp8 *P){
+void EFp8_ecd(struct EFp8 *ANS, struct EFp8 *P){
     if(P->PoI==TRUE){
         EFp8_set(ANS,P);
         return;
@@ -65,7 +65,7 @@ void EFp8_ECD(struct EFp8 *ANS, struct EFp8 *P){
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp8_cmp_mpz(&P->y,cmp)==0){//P.y==0
-        EFp8_set_PoI(ANS);
+        EFp8_set_poi(ANS);
         return;
     }
     
@@ -98,7 +98,7 @@ void EFp8_ECD(struct EFp8 *ANS, struct EFp8 *P){
     Fp8_clear(&tmp);
     EFp8_clear(&t_ans);
 }
-void EFp8_ECA(struct EFp8 *ANS, struct EFp8 *P1, struct EFp8 *P2){
+void EFp8_eca(struct EFp8 *ANS, struct EFp8 *P1, struct EFp8 *P2){
     if(P2->PoI==TRUE){//if P2==inf
         EFp8_set(ANS,P1);
         return;
@@ -108,11 +108,11 @@ void EFp8_ECA(struct EFp8 *ANS, struct EFp8 *P1, struct EFp8 *P2){
         return;
     }
     else if(Fp8_cmp(&P1->x,&P2->x)==0&&Fp8_cmp(&P1->y,&P2->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-        EFp8_set_PoI(ANS);
+        EFp8_set_poi(ANS);
         return;
     }
     else if(EFp8_cmp(P1,P2)==0){ // P=Q
-        EFp8_ECD(ANS,P1);
+        EFp8_ecd(ANS,P1);
         return;
     }
     

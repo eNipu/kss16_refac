@@ -11,5 +11,5 @@
 
 #include "ELiPS_KSS16_Line_Evaluation.h"
 
-extern void check_Pairing(void);
+extern void check_pairing_correctness(void);
 #endif /* Test_Pairings_h */

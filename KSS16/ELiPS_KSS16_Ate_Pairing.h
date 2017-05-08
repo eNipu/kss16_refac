@@ -6,11 +6,11 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#ifndef Ate_Pairing_h
-#define Ate_Pairing_h
+#ifndef ELiPS_KSS16_Ate_Pairing_h
+#define ELiPS_KSS16_Ate_Pairing_h
 
 #include "ELiPS_KSS16_Line_Evaluation.h"
 
-extern void Ate_Pairing(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q);
+extern void ate_pairing_kss16(struct Fp16 *ANS,struct EFp16 *P,struct EFp16 *Q);
 
-#endif /* Ate_Pairing_h */
+#endif /* ELiPS_KSS16_Ate_Pairing_h */

@@ -31,7 +31,7 @@ void EFp2_clear(struct EFp2 *A){
 void EFp2_printf(struct EFp2 *A){
     gmp_printf("(%Zd,%Zd)\n(%Zd,%Zd)\n",A->x.x0.x0,A->x.x1.x0,A->y.x0.x0,A->y.x1.x0);
 }
-void EFp2_SCM_BIN(struct EFp2 *ANS,struct EFp2 *P,mpz_t j){
+void EFp2_scm_bin(struct EFp2 *ANS,struct EFp2 *P,mpz_t j){
     int i,length;
     length= (int)mpz_sizeinbase(j,2);
     char j_binary[length];
@@ -41,9 +41,9 @@ void EFp2_SCM_BIN(struct EFp2 *ANS,struct EFp2 *P,mpz_t j){
     EFp2_set(&Q,P);
     EFp2_init(&R);
     for(i=1;j_binary[i]!='\0';i++){
-        EFp2_ECD(&Q,&Q);
+        EFp2_ecd(&Q,&Q);
         if(j_binary[i]=='1'){
-            EFp2_ECA(&Q,&Q,P);
+            EFp2_eca(&Q,&Q,P);
         }
     }
     EFp2_set(ANS,&Q);
@@ -52,7 +52,7 @@ void EFp2_SCM_BIN(struct EFp2 *ANS,struct EFp2 *P,mpz_t j){
     EFp2_clear(&R);
     return;
 }
-void EFp2_ECD(struct EFp2 *ANS, struct EFp2 *P){
+void EFp2_ecd(struct EFp2 *ANS, struct EFp2 *P){
     if(P->PoI==TRUE){
         EFp2_set(ANS,P);
         return;
@@ -95,7 +95,7 @@ void EFp2_ECD(struct EFp2 *ANS, struct EFp2 *P){
     Fp2_clear(&tmp);
     EFp2_clear(&t_ans);
 }
-void EFp2_ECA(struct EFp2 *ANS, struct EFp2 *P1, struct EFp2 *P2){
+void EFp2_eca(struct EFp2 *ANS, struct EFp2 *P1, struct EFp2 *P2){
     if(P2->PoI==TRUE){//if P2==inf
         EFp2_set(ANS,P1);
         return;
@@ -109,7 +109,7 @@ void EFp2_ECA(struct EFp2 *ANS, struct EFp2 *P1, struct EFp2 *P2){
         return;
     }
     else if(EFp2_cmp(P1,P2)==0){ // P=Q
-        EFp2_ECD(ANS,P1);
+        EFp2_ecd(ANS,P1);
         return;
     }
     
@@ -190,7 +190,7 @@ void EFp2_random_set(struct EFp2 *ANS){
     mpz_div(r12_div_r2,p22,params.order_r);
     mpz_div(r12_div_r2,r12_div_r2,params.order_r);
     
-    EFp2_SCM_BIN(ANS,&P,r12_div_r2);
+    EFp2_scm_bin(ANS,&P,r12_div_r2);
 
     EFp2_clear(&P);
     Fp2_clear(&a);

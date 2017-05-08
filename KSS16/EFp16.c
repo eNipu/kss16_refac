@@ -20,7 +20,7 @@ void EFp16_set(struct EFp16 *A,struct EFp16 *B){
     Fp16_set(&A->y,&B->y);
     A->PoI=B->PoI;
 }
-void EFp16_set_PoI(struct EFp16 *A){
+void EFp16_set_poi(struct EFp16 *A){
     Fp16_set_ui(&A->x,0);
     Fp16_set_ui(&A->y,0);
     A->PoI=TRUE;
@@ -48,7 +48,7 @@ void EFp16_printf(struct EFp16 *A){
     gmp_printf("%Zd,%Zd,%Zd,%Zd,\n",A->y.x1.x0.x0.x0.x0,A->y.x1.x0.x0.x1.x0,A->y.x1.x0.x1.x0.x0,A->y.x1.x0.x1.x1.x0);
     gmp_printf("%Zd,%Zd,%Zd,%Zd)\n",A->y.x1.x1.x0.x0.x0,A->y.x1.x1.x0.x1.x0,A->y.x1.x1.x1.x0.x0,A->y.x1.x1.x1.x1.x0);
 }
-void EFp16_SCM_BIN(struct EFp16 *ANS,struct EFp16 *P,mpz_t j){
+void EFp16_scm_bin(struct EFp16 *ANS,struct EFp16 *P,mpz_t j){
     int i,length;
     length= (int)mpz_sizeinbase(j,2);
     char j_binary[length];
@@ -58,9 +58,9 @@ void EFp16_SCM_BIN(struct EFp16 *ANS,struct EFp16 *P,mpz_t j){
     EFp16_set(&Q,P);
     EFp16_init(&R);
     for(i=1;j_binary[i]!='\0';i++){
-        EFp16_ECD(&Q,&Q);
+        EFp16_ecd(&Q,&Q);
         if(j_binary[i]=='1'){
-            EFp16_ECA(&Q,&Q,P);
+            EFp16_eca(&Q,&Q,P);
         }
     }
     EFp16_set(ANS,&Q);
@@ -69,7 +69,7 @@ void EFp16_SCM_BIN(struct EFp16 *ANS,struct EFp16 *P,mpz_t j){
     EFp16_clear(&R);
     return;
 }
-void EFp16_ECD(struct EFp16 *ANS, struct EFp16 *P){
+void EFp16_ecd(struct EFp16 *ANS, struct EFp16 *P){
     if(P->PoI==TRUE){
         EFp16_set(ANS,P);
         return;
@@ -78,7 +78,7 @@ void EFp16_ECD(struct EFp16 *ANS, struct EFp16 *P){
     mpz_init(cmp);
     mpz_set_ui(cmp,0);
     if(Fp16_cmp_mpz(&P->y,cmp)==0){//P.y==0
-        EFp16_set_PoI(ANS);
+        EFp16_set_poi(ANS);
         return;
     }
     
@@ -112,7 +112,7 @@ void EFp16_ECD(struct EFp16 *ANS, struct EFp16 *P){
     Fp16_clear(&tmp);
     EFp16_clear(&t_ans);
 }
-void EFp16_ECA(struct EFp16 *ANS, struct EFp16 *P1, struct EFp16 *P2){
+void EFp16_eca(struct EFp16 *ANS, struct EFp16 *P1, struct EFp16 *P2){
     if(P2->PoI==TRUE){//if P2==inf
         EFp16_set(ANS,P1);
         return;
@@ -122,11 +122,11 @@ void EFp16_ECA(struct EFp16 *ANS, struct EFp16 *P1, struct EFp16 *P2){
         return;
     }
     else if(Fp16_cmp(&P1->x,&P2->x)==0&&Fp16_cmp(&P1->y,&P2->y)==1){ //P1.x==P2.x&&P1.y!=P2.y
-        EFp16_set_PoI(ANS);
+        EFp16_set_poi(ANS);
         return;
     }
     else if(EFp16_cmp(P1,P2)==0){ // P=Q
-        EFp16_ECD(ANS,P1);
+        EFp16_ecd(ANS,P1);
         return;
     }
     
@@ -227,10 +227,10 @@ void EFp16_random_set(struct EFp16 *ANS){
     }while(Fp16_legendre(&a)!=1);
     Fp16_sqrt(&P.y,&a);
     Fp16_set(&P.x,&x);
-    EFp16_SCM_BIN(ANS,&P,r16_div_r2);//R
+    EFp16_scm_bin(ANS,&P,r16_div_r2);//R
     
     
-    EFp16_SCM_BIN(&ans_temp, ANS, params.order_r);//T
+    EFp16_scm_bin(&ans_temp, ANS, params.order_r);//T
     if (ans_temp.PoI == TRUE)
     {
         printf("Check Successful \n");
@@ -273,7 +273,7 @@ void EFp16_random_set_G2(struct EFp16 *ANS){
     Fp16_neg(&tmp_EFp16.y,&P.y);
     Fp16_set(&tmp_EFp16.x,&P.x);
     
-    EFp16_ECA(&tmp_EFp16,&tmp_EFp16,&P_frobenius);
+    EFp16_eca(&tmp_EFp16,&tmp_EFp16,&P_frobenius);
     //    EFp16_printf(&tmp_EFp16);
     EFp16_set(ANS,&tmp_EFp16);
     

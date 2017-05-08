@@ -20,15 +20,15 @@ struct EFp16{
 
 extern void EFp16_init(struct EFp16 *A);
 extern void EFp16_set(struct EFp16 *A,struct EFp16 *B);
-extern void EFp16_set_PoI(struct EFp16 *A);
+extern void EFp16_set_poi(struct EFp16 *A);
 extern void EFp16_set_EFp(struct EFp16 *A,struct EFp *B);
 extern void EFp16_clear(struct EFp16 *A);
 extern void EFp16_printf(struct EFp16 *A);
-extern void EFp16_ECD(struct EFp16 *ANS, struct EFp16 *P);//ANS=2*P
-extern void EFp16_ECA(struct EFp16 *ANS, struct EFp16 *P1, struct EFp16 *P2);//ANS=P1+P2
+extern void EFp16_ecd(struct EFp16 *ANS, struct EFp16 *P);//ANS=2*P
+extern void EFp16_eca(struct EFp16 *ANS, struct EFp16 *P1, struct EFp16 *P2);//ANS=P1+P2
 extern int  EFp16_cmp(struct EFp16 *A,struct EFp16 *B);
-extern void EFp16_SCM_BIN(struct EFp16 *ANS, struct EFp16 *P, mpz_t j);
-extern void EFp16_SCM_WIN(struct EFp16 *ANS, struct EFp16 *P, mpz_t scalar);
+extern void EFp16_scm_bin(struct EFp16 *ANS, struct EFp16 *P, mpz_t j);
+extern void EFp16_scm_win(struct EFp16 *ANS, struct EFp16 *P, mpz_t scalar);
 extern void EFp16_frobenius_map(struct EFp16 *ANS,struct EFp16 *A);
 extern void EFp16_random_set(struct EFp16 *ANS);
 extern void EFp16_random_set_G2(struct EFp16 *ANS);

@@ -8,10 +8,9 @@
 
 #include "KSS16_init.h"
 
-void KSS16_init()
-{
-    set_kss16_params();
-    set_kss16_curve_const();
-    generate_X();
-    pre_calculate();
+void KSS16_init(){
+    set_kss16_params ();
+    set_kss16_curve_const ();
+    generate_mother_parameter ();
+    pre_calculate ();
 }

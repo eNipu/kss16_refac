@@ -12,6 +12,6 @@
 #include "ELiPS_Fp.h"
 #include "ELiPS_EFp.h"
 
-extern void KSS_16_parameters(void);
+extern void generate_kss16_params(void);
 
 #endif /* ELiPS_KSS16_Params_h */

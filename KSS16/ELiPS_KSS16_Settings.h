@@ -84,7 +84,7 @@
  *
  * #KSS16_params hold the KSS16 curves parametets.
  */
-struct KSS16_params{
+struct KSS16_params {
     mpz_t prime;        /**< Prime number or Characteristics of KSS16 curve */
     mpz_t order_r;      /**< Group order r of KSS16 curve */
     mpz_t trace_t;      /**< Frobenius trace of KSS16 curve */
@@ -137,10 +137,10 @@ extern int FALSE;
 /**
  * @brief Chracter arry of size [x_bit+1] that holds the singned binary representation of the mother parameter X.
  * 
- * This X_bit_binary is important since it is used in the Miller's algorithm for efficeint calculation using the singned 
+ * This x_signed_binary is important since it is used in the Miller's algorithm for efficeint calculation using the singned 
  * binary representation of the mother parameter X.
  */
-extern char X_bit_binary[x_bit+1];
+extern char x_signed_binary [x_bit+1];
 /*============================================================================*/
 /* Function declarations                                                      */
 /*============================================================================*/
@@ -149,23 +149,23 @@ extern char X_bit_binary[x_bit+1];
  * @brief Initialize and sets the parameters of KSS16 curve y^2=x^3+1x.
  *
  */
-extern void set_kss16_params(void);
+extern void set_kss16_params (void);
 
 /**
  * @brief Initialize and sets the constant a = 1 of KSS16 curve y^2=x^3+1x.
  *
  */
-extern void set_kss16_curve_const(void);
+extern void set_kss16_curve_const (void);
 
 /**
  * @brief Generate mother parameter X=2^35-2^32-2^18+2^8+1 given in http://eprint.iacr.org/2017/334
  *
  */
-extern void generate_X(void);
+extern void generate_mother_parameter (void);
 
 /**
  * @brief Utility function to calculate the time difference.
  *
  */
-extern float timedifference_msec(struct timeval t0, struct timeval t1);
+extern float timedifference_msec (struct timeval t0, struct timeval t1);
 #endif /* ELiPS_KSS16_Settings_h */

@@ -11,6 +11,6 @@
 
 #include "ELiPS_Fp16.h"
 
-void Final_Exp(struct Fp16 *ANS,struct Fp16 *A);
+void final_exp_kss16(struct Fp16 *ANS,struct Fp16 *A);
 
 #endif /* ELiPS_KSS16_Final_Exp_h */

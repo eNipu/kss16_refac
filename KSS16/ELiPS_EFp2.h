@@ -24,14 +24,14 @@ extern void EFp2_set(struct EFp2 *A,struct EFp2 *B);
 extern void EFp2_set_PoI(struct EFp2 *A);
 extern void EFp2_clear(struct EFp2 *A);
 extern void EFp2_printf(struct EFp2 *A);
-extern void EFp2_ECD(struct EFp2 *ANS, struct EFp2 *P);//ANS=2*P
-extern void EFp2_ECA(struct EFp2 *ANS, struct EFp2 *P1, struct EFp2 *P2);//ANS=P1+P2
+extern void EFp2_ecd(struct EFp2 *ANS, struct EFp2 *P);//ANS=2*P
+extern void EFp2_eca(struct EFp2 *ANS, struct EFp2 *P1, struct EFp2 *P2);//ANS=P1+P2
 extern int  EFp2_cmp(struct EFp2 *A,struct EFp2 *B);
 extern void EFp2_set_EFp(struct EFp2 *A,struct EFp *B);
 extern void EFp2_random_set(struct EFp2 *ANS);
-extern void EFp2_SCM_BIN(struct EFp2 *ANS, struct EFp2 *P, mpz_t j);
-extern void EFp2_SCM_NAF(struct EFp2 *ANS, struct EFp2 *P, mpz_t scalar);
-extern void EFp2_SCM_WIN(struct EFp2 *ANS, struct EFp2 *P, mpz_t scalar);
+extern void EFp2_scm_bin(struct EFp2 *ANS, struct EFp2 *P, mpz_t j);
+extern void EFp2_scm_naf(struct EFp2 *ANS, struct EFp2 *P, mpz_t scalar);
+extern void EFp2_scm_win(struct EFp2 *ANS, struct EFp2 *P, mpz_t scalar);
 extern void EFp2_neg(struct EFp2 *ANS, struct EFp2 *A);
 extern void EFp2_rational_point_check(struct EFp2 *A);
 #endif /* ELiPS_EFp2_h */
