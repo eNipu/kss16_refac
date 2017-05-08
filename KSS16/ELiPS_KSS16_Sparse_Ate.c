@@ -10,7 +10,7 @@
 #include "ELiPS_KSS16_Sparse_Miller.h"
 #include "ELiPS_KSS16_Final_Exp.h"
 
-void Sparse_Ate_Pairing(struct Fp16 *ANS,struct EFp4 *G1,struct EFp4 *G2){
+void sparse_ate_kss16(struct Fp16 *ANS, struct EFp4 *G1, struct EFp4 *G2){
     struct Fp16 t_ans;
     Fp16_init(&t_ans);
     
@@ -18,7 +18,7 @@ void Sparse_Ate_Pairing(struct Fp16 *ANS,struct EFp4 *G1,struct EFp4 *G2){
     mpz_init(tm1);
     mpz_sub_ui(tm1,params.trace_t,1);
     
-    Sparse_type1_Miller(&t_ans,G1,G2,tm1);
+    sparse_miller_kss16(&t_ans,G1,G2,tm1);
     final_exp_kss16(&t_ans,&t_ans);
     Fp16_set(ANS,&t_ans);
     

@@ -13,11 +13,13 @@ void EFp8_init(struct EFp8 *A){
     Fp8_init(&A->y);
     A->PoI=FALSE;
 }
+
 void EFp8_set(struct EFp8 *A,struct EFp8 *B){
     Fp8_set(&A->x,&B->x);
     Fp8_set(&A->y,&B->y);
     A->PoI=B->PoI;
 }
+
 void EFp8_set_poi(struct EFp8 *A){
     Fp8_set_ui(&A->x,0);
     Fp8_set_ui(&A->y,0);

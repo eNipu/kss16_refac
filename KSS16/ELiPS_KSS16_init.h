@@ -11,6 +11,6 @@
 
 #include "ELiPS_Fp.h"
 
-extern void KSS16_init();
+extern void kss16_init(void);
 
 #endif /* KSS16_init_h */

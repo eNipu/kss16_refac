@@ -10,7 +10,7 @@
 #include "ELiPS_KSS16_Sparse_Opt_Miller.h"
 #include "ELiPS_KSS16_Final_Exp.h"
 
-void Sparse_Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2){
+void sparse_opt_ate_kss16(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2){
     struct EFp4 G1_EFp4,G2_EFp4;
     EFp4_init(&G1_EFp4);
     EFp4_init(&G2_EFp4);
@@ -23,7 +23,7 @@ void Sparse_Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2
     EFp4_set_EFp(&G1_EFp4,G1);
     EFp16_to_EFp4_map(&G2_EFp4,G2);
     
-    Sparse_type1_Optimal_Miller(&Miller_X,&G1_EFp4,&G2_EFp4,params.X);
+    sparse_opt_miller_kss16(&Miller_X,&G1_EFp4,&G2_EFp4,params.X);
     final_exp_kss16(&t_ans,&Miller_X);
     Fp16_set(ANS, &t_ans);
     

@@ -8,7 +8,7 @@
 
 #include "ELiPS_KSS16_Sparse_Line_Calc.h"
 
-void Sparse_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *P,struct EFp4 *Q,struct Fp4 *Qx_neg){
+void sparse_add_line_kss16(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *P,struct EFp4 *Q,struct Fp4 *Qx_neg){
     struct Fp4 tmp1,tmp2,tmp3,tmp4,lambda,ltp;
     Fp4_init(&tmp1);
     Fp4_init(&tmp2);
@@ -79,7 +79,7 @@ void Sparse_type1_ADD_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,
     Fp4_clear(&F);
 }
 
-void Sparse_type1_DBL_LINE(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *Q,struct Fp4 *Qx_neg){
+void sparse_dbl_line_kss16(struct Fp16 *l_ANS,struct EFp4 *T_ANS,struct EFp4 *T,struct EFp4 *Q,struct Fp4 *Qx_neg){
     struct Fp4 tmp1,tmp2,tmp3,tmp4,lambda,ltp;
     Fp4_init(&tmp1);
     Fp4_init(&tmp2);

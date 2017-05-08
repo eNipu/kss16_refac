@@ -11,5 +11,6 @@
 
 #include "ELiPS_KSS16_Sparse_Line_Calc.h"
 
-extern void Sparse_Optimal_Ate_Pairing(struct Fp16 *ANS,struct EFp *G1,struct EFp16 *G2);
+extern void sparse_opt_ate_kss16(struct Fp16 *ANS, struct EFp *G1, struct EFp16 *G2);
+
 #endif /* KSS16_Sparse7_Opt_Ate_h */

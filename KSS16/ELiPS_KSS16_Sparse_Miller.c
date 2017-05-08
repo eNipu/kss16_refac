@@ -8,7 +8,7 @@
 
 #include "ELiPS_KSS16_Sparse_Miller.h"
 
-void Sparse_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop){
+void sparse_miller_kss16(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t loop){
     struct Fp16 l_sum;
     Fp16_init(&l_sum);
     Fp_set_ui(&l_sum.x0.x0.x0.x0,1);
@@ -34,13 +34,13 @@ void Sparse_type1_Miller(struct Fp16 *ANS,struct EFp4 *P,struct EFp4 *Q,mpz_t lo
     for(i=r_bit-2;i>=0;i--){
         if(mpz_tstbit(loop,i)==1){
             Fp16_mul(&l_sum,&l_sum,&l_sum);
-            Sparse_type1_DBL_LINE(&ltt,&T,&T,P,&Px_neg);
-            Sparse_type1_ADD_LINE(&ltp,&T,&T,Q,P,&Px_neg);
+            sparse_dbl_line_kss16(&ltt,&T,&T,P,&Px_neg);
+            sparse_add_line_kss16(&ltp,&T,&T,Q,P,&Px_neg);
             Fp16_mul(&l_sum,&l_sum,&ltt);
             Fp16_mul(&l_sum,&l_sum,&ltp);
         }else{
             Fp16_mul(&l_sum,&l_sum,&l_sum);
-            Sparse_type1_DBL_LINE(&ltt,&T,&T,P,&Px_neg);
+            sparse_dbl_line_kss16(&ltt,&T,&T,P,&Px_neg);
             Fp16_mul(&l_sum,&l_sum,&ltt);
         }
     }

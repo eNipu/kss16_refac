@@ -13,7 +13,7 @@
 #include "ELiPS_KSS16_Pairings_Test.h"
 int main(int argc, const char * argv[]) {
 
-    KSS16_init();
+    kss16_init ();
     generate_kss16_params();
     
     check_pairing_correctness();

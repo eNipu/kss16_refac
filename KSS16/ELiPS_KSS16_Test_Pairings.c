@@ -106,7 +106,7 @@ void check_pairing_correctness(void){
 //         printf("G2=");
 //         EFp4_printf(&Q_EFp4);
 //    
-//        Sparse_Ate_Pairing(&tmp1_Fp16,&P_EFp4,&Q_EFp4);
+//        sparse_ate_kss16(&tmp1_Fp16,&P_EFp4,&Q_EFp4);
 //        //
 //        Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
 //        printf("\nf^ab=");
@@ -115,7 +115,7 @@ void check_pairing_correctness(void){
 //        EFp4_scm_bin(&R_EFp4,&P_EFp4,a);
 //        EFp4_scm_bin_sparse(&S_EFp4,&Q_EFp4,b);
 //    
-//        Sparse_Ate_Pairing(&tmp2_Fp16,&R_EFp4,&S_EFp4);
+//        sparse_ate_kss16(&tmp2_Fp16,&R_EFp4,&S_EFp4);
 //    
 //        printf("f'  =");
 //        Fp16_printf(&tmp2_Fp16);
@@ -168,7 +168,7 @@ void check_pairing_correctness(void){
 //    printf("G2=");
 //    EFp16_printf(&Q_Fp16);
 //    
-//    Sparse_Optimal_Ate_Pairing(&tmp1_Fp16,&P_EFp,&Q_Fp16);
+//    sparse_opt_ate_kss16(&tmp1_Fp16,&P_EFp,&Q_Fp16);
 //    
 //    Fp16_pow(&tmp1_Fp16,&tmp1_Fp16,ab);
 //    printf("\nf^ab=");
@@ -177,7 +177,7 @@ void check_pairing_correctness(void){
 //    EFp_scm_bin(&R_EFp,&P_EFp,a);
 //    EFp16_scm_bin(&S_Fp16,&Q_Fp16,b);
 //    
-//    Sparse_Optimal_Ate_Pairing(&tmp2_Fp16,&R_EFp,&S_Fp16);
+//    sparse_opt_ate_kss16(&tmp2_Fp16,&R_EFp,&S_Fp16);
 //    
 //    printf("\nf'  =");
 //    Fp16_printf(&tmp2_Fp16);
