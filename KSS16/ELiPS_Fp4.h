@@ -32,12 +32,6 @@ extern struct Fp4 z_inv2;
 extern void Fp4_init(struct Fp4 *A);
 
 
-/**
- <#Description#>
-
- @param ANS <#ANS description#>
- @param A <#A description#>
- */
 extern void Fp4_set(struct Fp4 *ANS,
                     struct Fp4 *A);
 

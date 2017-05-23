@@ -21,7 +21,7 @@
  */
 
 
-/** @file config.h
+/** @file Common_Headers.h
  *  @brief Brief description about the source file/header file.
  *
  *  Then here write about the small details what this source file is intended for.
@@ -34,8 +34,8 @@
  *  @bug No know bug yet
  */
 
-#ifndef config_h
-#define config_h
+#ifndef Common_Headers_h
+#define Common_Headers_h
 
 /* -- Includes -- */
 /* libc inlcudes. */
@@ -45,4 +45,4 @@
 #include <gmp.h> /* for big integer operation*/
 
 
-#endif /* config_h */
+#endif /* Common_Headers_h */

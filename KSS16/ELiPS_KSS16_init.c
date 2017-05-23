@@ -6,7 +6,7 @@
 //  Copyright © 2017 Khandaker Md. Al-Amin. All rights reserved.
 //
 
-#include "ELiPS_KSS16_init.h"
+#include "ELiPS_KSS16_Init.h"
 
 void kss16_init (void) {
     set_kss16_params ();
